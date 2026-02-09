@@ -1,0 +1,828 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us • KISAASI COLLEGE SCHOOL</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" referrerpolicy="no-referrer">
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@400;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome 6 (PUT THIS IN <head>) -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-5oK6CzFzC7m+X2XyZ5kzZ6GQZz8zv5Kp6tF9M1v5n9E0zYpL3bJk3U8Z1z1Z9QGJpKx2fM8d2Q=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+
+  <!-- Tailwind theme using YOUR KCS colors -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            serif: ['Playfair Display', 'Georgia', 'serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    :root{
+      --kcs-yellow:#FFF4C2;
+      --kcs-green:#1F8A4C;
+      --kcs-blue:#2B6CB0;
+      --kcs-ink:#0f172a;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    .kcs-bg {
+      background:
+        radial-gradient(800px 300px at 10% 20%, rgba(43,108,176,.10), transparent 60%),
+        radial-gradient(700px 280px at 80% 10%, rgba(31,138,76,.10), transparent 60%),
+        radial-gradient(900px 350px at 70% 90%, rgba(255,244,194,.85), transparent 60%);
+    }
+
+    /* Font Awesome alignment helper */
+    .fa-fw { width: 1.25em; text-align: center; }
+  </style>
+</head>
+
+<body class="min-h-screen bg-white text-slate-900 kcs-bg font-sans antialiased">
+
+  <!-- NAVBAR -->
+  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-slate-100">
+    <div class="mx-auto max-w-7xl px-4 py-4 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3">
+        <div class="h-12 w-12 rounded-full bg-white border border-slate-200 overflow-hidden flex items-center justify-center shadow-sm">
+          <img
+            src="assets/images/logo.png"
+            alt="Kisaasi College School Logo"
+            class="h-full w-full object-contain p-1"
+            onerror="this.closest('div').innerHTML='<span class=&quot;font-black text-[var(--kcs-green)]&quot;>KCS</span>';"
+          />
+        </div>
+
+        <div class="leading-tight">
+          <div class="font-extrabold tracking-wide">KISAASI COLLEGE SCHOOL</div>
+          <div class="text-xs text-slate-500">We labour for the future</div>
+        </div>
+      </a>
+
+      <button
+        class="sm:hidden inline-flex items-center justify-center rounded-xl border border-slate-200 px-3 py-2"
+        data-menu-btn aria-expanded="false" aria-label="Open menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <nav class="hidden sm:flex items-center gap-2">
+        <a class="px-3 py-2 rounded-xl hover:bg-slate-100" href="index.html">
+          <i class="fa-solid fa-house fa-fw mr-1 text-[var(--kcs-blue)]"></i> Home
+        </a>
+        <a class="px-3 py-2 rounded-xl bg-slate-100" href="about.html">
+          <i class="fa-solid fa-circle-info fa-fw mr-1 text-[var(--kcs-blue)]"></i> About
+        </a>
+        <a class="px-3 py-2 rounded-xl hover:bg-slate-100" href="academics.html">
+          <i class="fa-solid fa-graduation-cap fa-fw mr-1 text-[var(--kcs-blue)]"></i> Academics
+        </a>
+        <a class="px-3 py-2 rounded-xl hover:bg-slate-100" href="admissions.html">
+          <i class="fa-solid fa-file-signature fa-fw mr-1 text-[var(--kcs-blue)]"></i> Admissions
+        </a>
+        <a class="px-3 py-2 rounded-xl hover:bg-slate-100" href="gallery.html">
+          <i class="fa-regular fa-images fa-fw mr-1 text-[var(--kcs-blue)]"></i> Gallery
+        </a>
+        <a class="px-3 py-2 rounded-xl hover:bg-slate-100" href="contact.html">
+          <i class="fa-solid fa-phone fa-fw mr-1 text-[var(--kcs-blue)]"></i> Contact
+        </a>
+        <a class="ml-2 px-4 py-2 rounded-xl bg-[var(--kcs-blue)] text-white hover:opacity-90 inline-flex items-center gap-2" href="admissions.html">
+          <i class="fa-solid fa-paper-plane"></i> Apply Online
+        </a>
+      </nav>
+    </div>
+
+    <!-- Mobile menu -->
+    <div class="hidden sm:hidden border-t border-slate-100" data-menu>
+      <div class="mx-auto max-w-7xl px-4 py-3 flex flex-col gap-1">
+        <a class="px-3 py-2 rounded-xl hover:bg-slate-100" href="index.html"><i class="fa-solid fa-house fa-fw mr-2 text-[var(--kcs-blue)]"></i>Home</a>
+        <a class="px-3 py-2 rounded-xl bg-slate-100" href="about.html"><i class="fa-solid fa-circle-info fa-fw mr-2 text-[var(--kcs-blue)]"></i>About</a>
+        <a class="px-3 py-2 rounded-xl hover:bg-slate-100" href="academics.html"><i class="fa-solid fa-graduation-cap fa-fw mr-2 text-[var(--kcs-blue)]"></i>Academics</a>
+        <a class="px-3 py-2 rounded-xl hover:bg-slate-100" href="admissions.html"><i class="fa-solid fa-file-signature fa-fw mr-2 text-[var(--kcs-blue)]"></i>Admissions</a>
+        <a class="px-3 py-2 rounded-xl hover:bg-slate-100" href="gallery.html"><i class="fa-regular fa-images fa-fw mr-2 text-[var(--kcs-blue)]"></i>Gallery</a>
+        <a class="px-3 py-2 rounded-xl hover:bg-slate-100" href="contact.html"><i class="fa-solid fa-phone fa-fw mr-2 text-[var(--kcs-blue)]"></i>Contact</a>
+        <a class="px-3 py-2 rounded-xl bg-[var(--kcs-blue)] text-white inline-flex items-center gap-2" href="admissions.html">
+          <i class="fa-solid fa-paper-plane"></i> Apply Online
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="relative overflow-hidden border-b border-slate-200">
+    <div class="absolute inset-0 bg-[var(--kcs-yellow)]/70"></div>
+    <div class="absolute -top-24 -right-24 h-72 w-72 rounded-full bg-[var(--kcs-blue)]/15 blur-2xl"></div>
+    <div class="absolute -bottom-24 -left-24 h-72 w-72 rounded-full bg-[var(--kcs-green)]/15 blur-2xl"></div>
+
+    <div class="relative mx-auto max-w-7xl px-4 py-14 grid lg:grid-cols-2 gap-10 items-center">
+      <div>
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-slate-200 text-sm">
+          <i class="fa-solid fa-school text-[var(--kcs-green)]"></i>
+          Established 1995 • UNEB Center U1536 • Mixed Day & Boarding
+        </div>
+
+        <h1 class="mt-4 text-4xl sm:text-5xl font-black leading-tight text-[var(--kcs-ink)] font-serif">
+          A Better Foundation for the Future
+        </h1>
+
+        <p class="mt-4 text-lg text-slate-700 max-w-xl">
+          Kisaasi College School is an Islamic-based private institution that respects all religions,
+          focusing on academic excellence, character building, sports participation, and leadership skills.
+        </p>
+
+        <div class="mt-6 flex flex-col sm:flex-row gap-3">
+          <a href="#leadership" class="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-[var(--kcs-green)] text-white font-semibold hover:opacity-90">
+            <i class="fa-solid fa-users"></i> Meet Leadership
+          </a>
+          <a href="#milestones" class="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl border border-slate-300 bg-white font-semibold hover:bg-slate-50">
+            <i class="fa-solid fa-timeline text-[var(--kcs-blue)]"></i> School Milestones
+          </a>
+        </div>
+
+        <!-- Stats -->
+        <div class="mt-8 grid grid-cols-2 sm:grid-cols-4 gap-3">
+          <div class="rounded-2xl bg-white border border-slate-200 p-4">
+            <div class="text-2xl font-black text-[var(--kcs-blue)]" data-count="900">0</div>
+            <div class="text-sm text-slate-600"><i class="fa-solid fa-user-graduate mr-1"></i> Students</div>
+          </div>
+          <div class="rounded-2xl bg-white border border-slate-200 p-4">
+            <div class="text-2xl font-black text-[var(--kcs-blue)]" data-count="40">0</div>
+            <div class="text-sm text-slate-600"><i class="fa-solid fa-chalkboard-user mr-1"></i> Staff</div>
+          </div>
+          <div class="rounded-2xl bg-white border border-slate-200 p-4">
+            <div class="text-2xl font-black text-[var(--kcs-blue)]" data-count="1995">0</div>
+            <div class="text-sm text-slate-600"><i class="fa-solid fa-flag mr-1"></i> Founded</div>
+          </div>
+          <div class="rounded-2xl bg-white border border-slate-200 p-4">
+            <div class="text-2xl font-black text-[var(--kcs-blue)]">U1536</div>
+            <div class="text-sm text-slate-600"><i class="fa-solid fa-certificate mr-1"></i> UNEB Center</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="relative">
+        <div class="absolute -inset-6 rounded-[2.2rem] bg-[var(--kcs-blue)]/10 blur-2xl"></div>
+        <div class="relative rounded-[2.2rem] overflow-hidden border border-slate-200 bg-white shadow-sm">
+          <img
+            src="assets/images/kids.jpeg"
+            alt="Kisaasi College School"
+            class="w-full h-[480px] object-cover"
+          />
+          <div class="p-5 border-t border-slate-100">
+            <div class="flex items-start justify-between gap-4">
+              <div>
+                <div class="font-bold"><i class="fa-solid fa-seedling text-[var(--kcs-green)] mr-1"></i> Whole-Child Education</div>
+                <div class="text-sm text-slate-600">Academics • Character • Sports • Leadership</div>
+              </div>
+              <span class="px-3 py-1 rounded-full text-sm bg-[var(--kcs-yellow)] border border-slate-200">
+                <i class="fa-solid fa-heart mr-1 text-[var(--kcs-green)]"></i> Our Culture
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- QUICK NAV -->
+  <section class="mx-auto max-w-7xl px-4 py-8">
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      <a href="#philosophy" class="rounded-2xl border border-slate-200 bg-white p-5 hover:bg-slate-50 transition">
+        <div class="font-extrabold text-[var(--kcs-green)]"><i class="fa-solid fa-lightbulb mr-2"></i>Philosophy</div>
+        <div class="text-sm text-slate-600 mt-1">Whole-child approach</div>
+      </a>
+      <a href="#milestones" class="rounded-2xl border border-slate-200 bg-white p-5 hover:bg-slate-50 transition">
+        <div class="font-extrabold text-[var(--kcs-green)]"><i class="fa-solid fa-trophy mr-2"></i>Milestones</div>
+        <div class="text-sm text-slate-600 mt-1">1995 → Today</div>
+      </a>
+      <a href="#profiles" class="rounded-2xl border border-slate-200 bg-white p-5 hover:bg-slate-50 transition">
+        <div class="font-extrabold text-[var(--kcs-green)]"><i class="fa-solid fa-id-card mr-2"></i>Profiles</div>
+        <div class="text-sm text-slate-600 mt-1">Students & Teachers</div>
+      </a>
+      <a href="#anthem" class="rounded-2xl border border-slate-200 bg-white p-5 hover:bg-slate-50 transition">
+        <div class="font-extrabold text-[var(--kcs-green)]"><i class="fa-solid fa-music mr-2"></i>Anthem</div>
+        <div class="text-sm text-slate-600 mt-1">Read / View</div>
+      </a>
+    </div>
+  </section>
+
+  <!-- PHILOSOPHY -->
+  <section id="philosophy" class="mx-auto max-w-7xl px-4 py-10">
+    <div class="grid lg:grid-cols-3 gap-6">
+      <div class="lg:col-span-2 rounded-3xl border border-slate-200 bg-white p-7 reveal">
+        <h2 class="text-2xl font-extrabold"><i class="fa-solid fa-book-open text-[var(--kcs-blue)] mr-2"></i>School Philosophy</h2>
+        <p class="mt-3 text-slate-700 leading-relaxed">
+          Kisaasi College School nurtures and cherishes the whole child. Emphasis is laid on excellent academic achievements
+          as well as character building, participation in sports activities and developing leadership skills.
+          Children should become responsible, self-driven and critical learners.
+        </p>
+
+        <div class="mt-6 grid sm:grid-cols-3 gap-3">
+          <div class="rounded-2xl bg-slate-50 p-4 border border-slate-200">
+            <div class="font-bold text-[var(--kcs-blue)]"><i class="fa-solid fa-award mr-2"></i>Academic Excellence</div>
+            <div class="text-sm text-slate-600 mt-1">Strong teaching, revision and UNEB readiness.</div>
+          </div>
+          <div class="rounded-2xl bg-slate-50 p-4 border border-slate-200">
+            <div class="font-bold text-[var(--kcs-blue)]"><i class="fa-solid fa-shield-heart mr-2"></i>Character & Morals</div>
+            <div class="text-sm text-slate-600 mt-1">Integrity, respect, time management and discipline.</div>
+          </div>
+          <div class="rounded-2xl bg-slate-50 p-4 border border-slate-200">
+            <div class="font-bold text-[var(--kcs-blue)]"><i class="fa-solid fa-people-group mr-2"></i>Leadership & Sports</div>
+            <div class="text-sm text-slate-600 mt-1">Confidence, teamwork and student responsibility.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="rounded-3xl border border-slate-200 bg-[var(--kcs-green)] text-white p-7 reveal">
+        <h3 class="text-xl font-extrabold"><i class="fa-solid fa-eye mr-2"></i>Vision</h3>
+        <p class="mt-2 text-white/90">
+          To train dependable and reliable citizens of the nation who can meet the challenges of today and tomorrow.
+        </p>
+
+        <div class="mt-6 border-t border-white/20 pt-6">
+          <h3 class="text-xl font-extrabold"><i class="fa-solid fa-bullseye mr-2"></i>Mission</h3>
+          <p class="mt-2 text-white/90">
+            To provide all round education with diligence and accessibility to all.
+          </p>
+        </div>
+
+        <div class="mt-6 border-t border-white/20 pt-6">
+          <h3 class="text-xl font-extrabold"><i class="fa-solid fa-quote-left mr-2"></i>Motto</h3>
+          <p class="mt-2 text-white/90">We labour for the future</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MILESTONES -->
+  <section id="milestones" class="bg-slate-50 border-y border-slate-200">
+    <div class="mx-auto max-w-7xl px-4 py-12">
+      <div class="flex items-end justify-between gap-4 flex-wrap">
+        <div>
+          <h2 class="text-2xl font-extrabold"><i class="fa-solid fa-trophy text-[var(--kcs-blue)] mr-2"></i>Milestones & Growth</h2>
+          <p class="mt-2 text-slate-700 max-w-3xl">
+            From a humble start with over 10 learners, Kisaasi College School has grown into a respected institution
+            with over 900 learners and over 40 staff members, offering O and A Levels with recognizable performance.
+          </p>
+        </div>
+        <a href="admissions.html" class="px-4 py-2 rounded-xl bg-[var(--kcs-blue)] text-white hover:opacity-90 inline-flex items-center gap-2">
+          <i class="fa-solid fa-paper-plane"></i> Apply Now
+        </a>
+      </div>
+
+      <div class="mt-8 grid lg:grid-cols-3 gap-6">
+        <div class="lg:col-span-2 rounded-3xl border border-slate-200 bg-white p-7 reveal">
+          <ol class="relative border-s border-slate-200 ms-3">
+            <li class="mb-8 ms-6">
+              <span class="absolute -start-3 flex h-7 w-7 items-center justify-center rounded-full bg-[var(--kcs-yellow)] border border-slate-200">
+                <i class="fa-solid fa-star text-[var(--kcs-blue)] text-xs"></i>
+              </span>
+              <h3 class="font-extrabold">1995 — Established</h3>
+              <p class="text-slate-700 mt-1">The school began as a private mixed day and boarding institution.</p>
+            </li>
+            <li class="mb-8 ms-6">
+              <span class="absolute -start-3 flex h-7 w-7 items-center justify-center rounded-full bg-[var(--kcs-yellow)] border border-slate-200">
+                <i class="fa-solid fa-check text-[var(--kcs-green)] text-xs"></i>
+              </span>
+              <h3 class="font-extrabold">2003 — Registered</h3>
+              <p class="text-slate-700 mt-1">Registered with the Ministry of Education in Uganda.</p>
+            </li>
+            <li class="mb-8 ms-6">
+              <span class="absolute -start-3 flex h-7 w-7 items-center justify-center rounded-full bg-[var(--kcs-yellow)] border border-slate-200">
+                <i class="fa-solid fa-certificate text-[var(--kcs-blue)] text-xs"></i>
+              </span>
+              <h3 class="font-extrabold">UNEB Center U1536</h3>
+              <p class="text-slate-700 mt-1">Official UNEB center for both O and A Levels.</p>
+            </li>
+            <li class="ms-6">
+              <span class="absolute -start-3 flex h-7 w-7 items-center justify-center rounded-full bg-[var(--kcs-yellow)] border border-slate-200">
+                <i class="fa-solid fa-arrow-trend-up text-[var(--kcs-blue)] text-xs"></i>
+              </span>
+              <h3 class="font-extrabold">Today — Continuous Improvement</h3>
+              <p class="text-slate-700 mt-1">
+                Upgrading professional practice, curricular resources, learning environment, and student outcomes—
+                with students at the center stage.
+              </p>
+            </li>
+          </ol>
+        </div>
+
+        <div class="rounded-3xl border border-slate-200 bg-white p-7 reveal">
+          <h3 class="text-xl font-extrabold"><i class="fa-solid fa-handshake-angle text-[var(--kcs-green)] mr-2"></i>Core Values</h3>
+          <div class="mt-4 grid grid-cols-2 gap-2 text-sm">
+            <span class="px-3 py-2 rounded-xl bg-[var(--kcs-yellow)]/70 border border-slate-200"><i class="fa-solid fa-people-arrows mr-2 text-[var(--kcs-blue)]"></i>Tolerance</span>
+            <span class="px-3 py-2 rounded-xl bg-[var(--kcs-yellow)]/70 border border-slate-200"><i class="fa-solid fa-hands-praying mr-2 text-[var(--kcs-blue)]"></i>Respect</span>
+            <span class="px-3 py-2 rounded-xl bg-[var(--kcs-yellow)]/70 border border-slate-200"><i class="fa-solid fa-clock mr-2 text-[var(--kcs-blue)]"></i>Time Management</span>
+            <span class="px-3 py-2 rounded-xl bg-[var(--kcs-yellow)]/70 border border-slate-200"><i class="fa-solid fa-medal mr-2 text-[var(--kcs-blue)]"></i>Excellence</span>
+            <span class="px-3 py-2 rounded-xl bg-[var(--kcs-yellow)]/70 border border-slate-200"><i class="fa-solid fa-shield mr-2 text-[var(--kcs-blue)]"></i>Integrity</span>
+            <span class="px-3 py-2 rounded-xl bg-[var(--kcs-yellow)]/70 border border-slate-200"><i class="fa-solid fa-heart mr-2 text-[var(--kcs-blue)]"></i>Morals</span>
+          </div>
+
+          <div class="mt-6 rounded-2xl border border-slate-200 bg-slate-50 p-5">
+            <h4 class="font-extrabold text-[var(--kcs-green)]"><i class="fa-solid fa-scale-balanced mr-2"></i>Admissions on Merit</h4>
+            <p class="text-slate-700 mt-2 text-sm">
+              Admission is based on merit and qualifications from one grade level to the next.
+              New students are oriented through a well-planned programme to settle in and understand school culture and policies.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LEADERSHIP (YOUR CONTENT, ICONS ADDED) -->
+  <section id="leadership" class="mx-auto max-w-7xl px-4 py-12">
+    <div class="flex items-end justify-between gap-4 flex-wrap">
+      <div>
+        <h2 class="text-2xl font-extrabold"><i class="fa-solid fa-users text-[var(--kcs-blue)] mr-2"></i>Leadership</h2>
+        <p class="mt-2 text-slate-700 max-w-3xl">
+          Strong leadership sets the tone for discipline, academic focus, and wellbeing support for learners.
+        </p>
+      </div>
+      <a href="#prayer" class="px-4 py-2 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 inline-flex items-center gap-2">
+        <i class="fa-solid fa-hands-praying text-[var(--kcs-green)]"></i> School Prayer
+      </a>
+    </div>
+
+    <!-- KEEP YOUR ORIGINAL PROFILES BELOW (UNCHANGED) -->
+    <!-- (I left your profile cards as-is besides the header icons for safety; you can request icons inside them too.) -->
+    <!-- ... YOUR ORIGINAL PROFILES SECTION CONTENT CONTINUES ... -->
+
+    <div class="mt-6 grid lg:grid-cols-2 gap-6" id="profiles">
+      <!-- Director -->
+      <div class="rounded-3xl bg-white border border-slate-200 overflow-hidden reveal">
+        <div class="grid sm:grid-cols-5">
+          <div class="sm:col-span-2">
+            <img class="w-full h-[320px] sm:h-full object-cover"
+              src="assets/images/director.jpeg"
+              alt="Al-Haj Latif Ssebaggala Sengendo"
+              onerror="this.src='https://images.unsplash.com/photo-1550525811-e5869dd03032?auto=format&fit=crop&w=1200&q=60'" />
+          </div>
+          <div class="sm:col-span-3 p-7">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[var(--kcs-yellow)]/70 border border-slate-200 text-sm">
+              <i class="fa-solid fa-crown text-[var(--kcs-blue)]"></i> Director & Founder
+            </div>
+            <h3 class="mt-3 text-2xl font-extrabold">Al-Haj Latif Ssebaggala Sengendo</h3>
+            <p class="mt-3 text-slate-700 leading-relaxed">
+              “At Kisaasi College School, we nurture the whole child—academically, morally, and socially.
+              We guide learners to become responsible, self-driven, and critical thinkers equipped for today and tomorrow.”
+            </p>
+
+            <div class="mt-5 grid sm:grid-cols-2 gap-3">
+              <div class="rounded-2xl border border-slate-200 bg-slate-50 p-4">
+                <div class="font-bold text-[var(--kcs-green)]"><i class="fa-solid fa-shield-heart mr-2"></i>Character Building</div>
+                <div class="text-sm text-slate-700 mt-1">Integrity, discipline, respect, and morals.</div>
+              </div>
+              <div class="rounded-2xl border border-slate-200 bg-slate-50 p-4">
+                <div class="font-bold text-[var(--kcs-green)]"><i class="fa-solid fa-award mr-2"></i>Academic Excellence</div>
+                <div class="text-sm text-slate-700 mt-1">Strong teaching and UNEB readiness.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CEO -->
+      <div class="rounded-3xl bg-white border border-slate-200 overflow-hidden reveal">
+        <div class="grid sm:grid-cols-5">
+          <div class="sm:col-span-2">
+            <img class="w-full h-[320px] sm:h-full object-cover"
+              src="assets/images/ceo.jpeg"
+              alt="Dr Hanifah Sengendo"
+              onerror="this.src='https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=1200&q=60'" />
+          </div>
+          <div class="sm:col-span-3 p-7">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[var(--kcs-yellow)]/70 border border-slate-200 text-sm">
+              <i class="fa-solid fa-heart-pulse text-[var(--kcs-green)]"></i> Wellbeing & Guidance Support
+            </div>
+            <h3 class="mt-3 text-2xl font-extrabold">Dr Hanifah Sengendo</h3>
+            <p class="mt-1 text-sm text-slate-600">
+              Paediatrician / Teenager Expert • CEO, Stepping Stone Platform
+            </p>
+
+            <p class="mt-3 text-slate-700 leading-relaxed">
+              We support learners not only academically but also with guidance that promotes healthy teenage development,
+              positive decision-making, and confidence-building—so students thrive in school and in life.
+            </p>
+
+            <div class="mt-5 grid sm:grid-cols-2 gap-3">
+              <div class="rounded-2xl border border-slate-200 bg-slate-50 p-4">
+                <div class="font-bold text-[var(--kcs-blue)]"><i class="fa-solid fa-person-chalkboard mr-2"></i>Teenage Guidance</div>
+                <div class="text-sm text-slate-700 mt-1">Mentorship and life skills support.</div>
+              </div>
+              <div class="rounded-2xl border border-slate-200 bg-slate-50 p-4">
+                <div class="font-bold text-[var(--kcs-blue)]"><i class="fa-solid fa-notes-medical mr-2"></i>Health Awareness</div>
+                <div class="text-sm text-slate-700 mt-1">Student wellbeing and smart choices.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Students Profile -->
+      <div class="rounded-3xl bg-white border border-slate-200 p-7 reveal">
+        <h3 class="text-xl font-extrabold"><i class="fa-solid fa-user-graduate text-[var(--kcs-blue)] mr-2"></i>Students Profile</h3>
+        <p class="mt-3 text-slate-700 leading-relaxed">
+          There are over 900 students at Kisaasi College School. Learners come from across Uganda and beyond the borders.
+          Admission is based on merit and qualifications from one grade level to the next.
+        </p>
+        <p class="mt-3 text-slate-700 leading-relaxed">
+          New students are oriented through a well-planned programme to settle in, understand school culture, policies and guidelines.
+          This sets a strong pace for learning. Our fees are middle range and affordable to most parents.
+        </p>
+
+        <div class="mt-5 grid sm:grid-cols-3 gap-3">
+          <div class="rounded-2xl border border-slate-200 bg-[var(--kcs-yellow)]/60 p-4">
+            <div class="font-bold"><i class="fa-solid fa-compass mr-2 text-[var(--kcs-green)]"></i>Orientation</div>
+            <div class="text-sm text-slate-700 mt-1">School culture, policies & routines.</div>
+          </div>
+          <div class="rounded-2xl border border-slate-200 bg-[var(--kcs-yellow)]/60 p-4">
+            <div class="font-bold"><i class="fa-solid fa-scale-balanced mr-2 text-[var(--kcs-green)]"></i>Merit-Based</div>
+            <div class="text-sm text-slate-700 mt-1">Admission by qualifications and performance.</div>
+          </div>
+          <div class="rounded-2xl border border-slate-200 bg-[var(--kcs-yellow)]/60 p-4">
+            <div class="font-bold"><i class="fa-solid fa-hand-holding-dollar mr-2 text-[var(--kcs-green)]"></i>Affordable</div>
+            <div class="text-sm text-slate-700 mt-1">Middle range fees for parents.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Teacher Profile -->
+      <div class="rounded-3xl bg-white border border-slate-200 p-7 reveal">
+        <h3 class="text-xl font-extrabold"><i class="fa-solid fa-chalkboard-user text-[var(--kcs-blue)] mr-2"></i>Teacher Profile</h3>
+        <p class="mt-3 text-slate-700 leading-relaxed">
+          Teachers are role models and mentors for students. They guide learners through academic and co-curricular activities
+          while laying the framework for independent work and leadership.
+        </p>
+        <p class="mt-3 text-slate-700 leading-relaxed">
+          Teachers plan meticulously for all responsibilities in and out of class, aiming for standards aligned with the school mission.
+          Professional development supports exposure to expected standards and practices. Staff are encouraged to be imaginative, creative and motivational.
+        </p>
+
+        <div class="mt-5 grid sm:grid-cols-3 gap-3">
+          <div class="rounded-2xl border border-slate-200 bg-slate-50 p-4">
+            <div class="font-bold text-[var(--kcs-green)]"><i class="fa-solid fa-handshake mr-2"></i>Mentorship</div>
+            <div class="text-sm text-slate-700 mt-1">Guidance and motivation.</div>
+          </div>
+          <div class="rounded-2xl border border-slate-200 bg-slate-50 p-4">
+            <div class="font-bold text-[var(--kcs-green)]"><i class="fa-solid fa-arrow-trend-up mr-2"></i>Professional Growth</div>
+            <div class="text-sm text-slate-700 mt-1">Continuous development.</div>
+          </div>
+          <div class="rounded-2xl border border-slate-200 bg-slate-50 p-4">
+            <div class="font-bold text-[var(--kcs-green)]"><i class="fa-solid fa-people-group mr-2"></i>Harmony</div>
+            <div class="text-sm text-slate-700 mt-1">Respect and teamwork.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRAYER -->
+  <section id="prayer" class="bg-slate-50 border-y border-slate-200">
+    <div class="mx-auto max-w-7xl px-4 py-12">
+      <h2 class="text-2xl font-extrabold"><i class="fa-solid fa-hands-praying text-[var(--kcs-green)] mr-2"></i>School Prayer</h2>
+      <div class="mt-5 rounded-3xl bg-white border border-slate-200 p-7 leading-relaxed text-slate-700 reveal">
+        <p>In the name of God, the most gracious, the most merciful</p>
+        <p>All praise be to God, the Lord of the world.</p>
+        <p>The beneficent, the merciful</p>
+        <p>The master of the Day of Judgment</p>
+        <p>The alone we worship</p>
+        <p>The alone we ask for help</p>
+        <p>Show us the right path</p>
+        <p>The path of those who you have favoured</p>
+        <p>Not the path of those who earn your anger, nor of those who go astray</p>
+        <p class="mt-4 font-bold text-[var(--kcs-green)]">OH GOD, ACCEPT OUR PRAYER</p>
+        <p class="font-extrabold">AMEEN (by all)</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ANTHEM -->
+  <section id="anthem" class="mx-auto max-w-7xl px-4 py-12">
+    <div class="rounded-3xl border border-slate-200 bg-[var(--kcs-yellow)]/70 p-7 reveal">
+      <div class="flex items-start justify-between gap-4 flex-wrap">
+        <div>
+          <h2 class="text-2xl font-extrabold"><i class="fa-solid fa-music text-[var(--kcs-blue)] mr-2"></i>School Anthem</h2>
+          <p class="mt-2 text-slate-700">Celebrating teamwork, mentorship, and purpose.</p>
+        </div>
+
+        <div class="flex gap-2">
+          <button id="openAnthem"
+                  class="px-4 py-2 rounded-xl bg-[var(--kcs-blue)] text-white font-semibold hover:opacity-90 inline-flex items-center gap-2">
+            <i class="fa-solid fa-eye"></i> View Full Anthem
+          </button>
+          <a href="gallery.html"
+             class="px-4 py-2 rounded-xl border border-slate-200 bg-white font-semibold hover:bg-slate-50 inline-flex items-center gap-2">
+            <i class="fa-regular fa-images text-[var(--kcs-blue)]"></i> View Gallery
+          </a>
+        </div>
+      </div>
+
+      <div class="mt-6 grid lg:grid-cols-3 gap-4">
+        <div class="rounded-2xl bg-white border border-slate-200 p-5">
+          <div class="text-sm text-slate-500">Theme</div>
+          <div class="font-extrabold text-[var(--kcs-green)]">We labour for the future</div>
+          <p class="mt-2 text-sm text-slate-700">A message of discipline, growth, and purpose.</p>
+        </div>
+        <div class="rounded-2xl bg-white border border-slate-200 p-5">
+          <div class="text-sm text-slate-500">Focus</div>
+          <div class="font-extrabold text-[var(--kcs-green)]">Teachers & Mentors</div>
+          <p class="mt-2 text-sm text-slate-700">Guidance that builds academic excellence and morals.</p>
+        </div>
+        <div class="rounded-2xl bg-white border border-slate-200 p-5">
+          <div class="text-sm text-slate-500">Goal</div>
+          <div class="font-extrabold text-[var(--kcs-green)]">Responsible Citizens</div>
+          <p class="mt-2 text-sm text-slate-700">Preparing learners to face today and tomorrow.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ANTHEM MODAL -->
+  <div id="anthemModal" class="fixed inset-0 hidden items-center justify-center z-[60]">
+    <div class="absolute inset-0 bg-black/50" id="anthemBackdrop"></div>
+
+    <div class="relative w-[95%] max-w-3xl rounded-3xl bg-white border border-slate-200 shadow-lg overflow-hidden">
+      <div class="p-5 border-b border-slate-200 flex items-center justify-between">
+        <div>
+          <div class="font-extrabold text-lg"><i class="fa-solid fa-music text-[var(--kcs-blue)] mr-2"></i>Kisaasi College School Anthem</div>
+          <div class="text-sm text-slate-500">We labour for the future</div>
+        </div>
+        <button id="closeAnthem" class="px-3 py-2 rounded-xl border border-slate-200 hover:bg-slate-50" aria-label="Close">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <div class="p-6 max-h-[70vh] overflow-auto text-slate-800 leading-relaxed">
+        <div class="space-y-4">
+          <p><b>1st Stanza</b><br>
+            Kisaasi College School our teachers and our mentors, teach us for the future success we always labour for the future.
+          </p>
+          <p><b>2nd Stanza</b><br>
+            Kisaasi College School, a better foundation for the future, our founders you are heroes, a good cooperation is success.
+          </p>
+          <p><b>3rd Stanza</b><br>
+            Kisaasi College School, strive harder for prosperity, teach us to be responsible citizens and eradicate ways of had I known,
+            Teach us to be responsible citizens and eradicate ways of had I known.
+          </p>
+        </div>
+
+        <div class="mt-6 rounded-2xl bg-[var(--kcs-yellow)]/60 border border-slate-200 p-4">
+          <div class="font-bold text-[var(--kcs-green)]"><i class="fa-solid fa-circle-exclamation mr-2"></i>Reminder</div>
+          <p class="text-sm text-slate-700 mt-1">
+            This anthem reflects our school spirit: mentorship, cooperation, discipline, and a future-focused mindset.
+          </p>
+        </div>
+      </div>
+
+      <div class="p-5 border-t border-slate-200 flex items-center justify-end gap-2">
+        <button id="printAnthem" class="px-4 py-2 rounded-xl border border-slate-200 hover:bg-slate-50 font-semibold inline-flex items-center gap-2">
+          <i class="fa-solid fa-print"></i> Print
+        </button>
+        <button id="closeAnthem2" class="px-4 py-2 rounded-xl bg-[var(--kcs-blue)] text-white hover:opacity-90 font-semibold inline-flex items-center gap-2">
+          <i class="fa-solid fa-xmark"></i> Close
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <section class="mx-auto max-w-7xl px-4 pb-14">
+    <div class="rounded-[2rem] border border-slate-200 bg-white p-8 reveal">
+      <div class="grid lg:grid-cols-3 gap-6 items-center">
+        <div class="lg:col-span-2">
+          <h2 class="text-2xl sm:text-3xl font-black text-[var(--kcs-ink)] font-serif">
+            <i class="fa-solid fa-paper-plane text-[var(--kcs-blue)] mr-2"></i>Join Kisaasi College School
+          </h2>
+          <p class="mt-2 text-slate-700 max-w-3xl">
+            Become part of a disciplined, supportive environment focused on academic excellence, strong morals,
+            leadership and sports. Apply online today and our team will guide you through the next steps.
+          </p>
+          <div class="mt-5 flex flex-col sm:flex-row gap-3">
+            <a href="admissions.html" class="px-5 py-3 rounded-xl bg-[var(--kcs-green)] text-white font-semibold hover:opacity-90 inline-flex items-center gap-2">
+              <i class="fa-solid fa-file-signature"></i> Apply Online
+            </a>
+            <a href="contact.html" class="px-5 py-3 rounded-xl border border-slate-200 bg-white font-semibold hover:bg-slate-50 inline-flex items-center gap-2">
+              <i class="fa-solid fa-phone text-[var(--kcs-blue)]"></i> Contact Admissions
+            </a>
+          </div>
+        </div>
+
+        <div class="rounded-3xl bg-[var(--kcs-yellow)]/70 border border-slate-200 p-6">
+          <div class="font-extrabold text-[var(--kcs-green)]"><i class="fa-solid fa-address-book mr-2"></i>Admissions Contacts</div>
+          <div class="mt-3 text-slate-800 text-sm space-y-2">
+            <p><i class="fa-solid fa-phone fa-fw text-[var(--kcs-blue)]"></i> +256 701 750 708</p>
+            <p><i class="fa-solid fa-phone fa-fw text-[var(--kcs-blue)]"></i> +256 392 001 705</p>
+            <p><i class="fa-solid fa-phone fa-fw text-[var(--kcs-blue)]"></i> +256 772 420 741</p>
+            <p><i class="fa-solid fa-phone fa-fw text-[var(--kcs-blue)]"></i> +256 703 704 281</p>
+            <p class="pt-2"><i class="fa-solid fa-envelope fa-fw text-[var(--kcs-green)]"></i> kisaasicollege.sch@gmail.com</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BACK TO TOP -->
+  <button id="backToTop"
+          class="hidden fixed bottom-5 right-5 z-50 rounded-2xl bg-[var(--kcs-blue)] text-white px-4 py-3 shadow-lg hover:opacity-90 inline-flex items-center gap-2">
+    <i class="fa-solid fa-arrow-up"></i> Top
+  </button>
+
+  <!-- FOOTER -->
+  <footer class="bg-[var(--kcs-ink)] text-white">
+    <div class="mx-auto max-w-7xl px-4 py-12 grid md:grid-cols-3 gap-8">
+      <div>
+        <div class="flex items-center gap-3">
+          <div class="h-12 w-12 rounded-full bg-white border border-white/20 overflow-hidden flex items-center justify-center">
+            <img src="assets/images/logo.png" alt="Kisaasi College School Logo" class="h-full w-full object-contain p-1"
+                 onerror="this.closest('div').innerHTML='<span class=&quot;font-black text-[var(--kcs-green)]&quot;>KCS</span>';" />
+          </div>
+          <div>
+            <div class="font-extrabold text-lg">KISAASI COLLEGE SCHOOL</div>
+            <div class="text-white/70 text-sm">We labour for the future</div>
+          </div>
+        </div>
+
+        <p class="mt-4 text-white/70">
+          A private mixed day and boarding institution established in 1995. Islamic-based and welcoming to all religions.
+        </p>
+
+        <p class="mt-4 text-sm text-white/70">
+          © <span id="yr"></span> Kisaasi College School. All rights reserved.
+        </p>
+      </div>
+
+      <div>
+        <div class="font-bold"><i class="fa-solid fa-location-dot mr-2 text-[var(--kcs-yellow)]"></i>Address</div>
+        <div class="mt-3 space-y-2 text-white/80">
+          <p>P.O. Box 5167, Kampala-Uganda</p>
+          <p>
+            <i class="fa-solid fa-globe mr-2 text-[var(--kcs-yellow)]"></i>
+            Website:
+            <a class="hover:text-white underline underline-offset-4" href="https://www.kisaasicollegeschool.com" target="_blank" rel="noopener">
+              www.kisaasicollegeschool.com
+            </a>
+          </p>
+          <p><i class="fa-brands fa-facebook mr-2 text-[var(--kcs-yellow)]"></i>Facebook: <span class="font-semibold">Kisaasi College School</span></p>
+          <p><i class="fa-brands fa-tiktok mr-2 text-[var(--kcs-yellow)]"></i>TikTok: <span class="font-semibold">Kisaasicollegeschool</span></p>
+        </div>
+      </div>
+
+      <div>
+        <div class="font-bold"><i class="fa-solid fa-phone mr-2 text-[var(--kcs-yellow)]"></i>Contact</div>
+        <div class="mt-3 space-y-2 text-white/80">
+          <p><i class="fa-solid fa-phone fa-fw"></i> +256 701 750 708</p>
+          <p><i class="fa-solid fa-phone fa-fw"></i> +256 392 001 705</p>
+          <p><i class="fa-solid fa-phone fa-fw"></i> +256 772 420 741</p>
+          <p><i class="fa-solid fa-phone fa-fw"></i> +256 703 704 281</p>
+          <p class="pt-2">
+            <i class="fa-solid fa-envelope fa-fw"></i>
+            <a class="hover:text-white underline underline-offset-4" href="mailto:kisaasicollege.sch@gmail.com">kisaasicollege.sch@gmail.com</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JS: menu + reveal + counters + modal + print + back-to-top -->
+  <script>
+    document.getElementById('yr').textContent = new Date().getFullYear();
+
+    // Mobile menu
+    (function () {
+      const btn = document.querySelector('[data-menu-btn]');
+      const menu = document.querySelector('[data-menu]');
+      if (!btn || !menu) return;
+
+      btn.addEventListener('click', () => {
+        const willShow = menu.classList.contains('hidden');
+        menu.classList.toggle('hidden');
+        btn.setAttribute('aria-expanded', willShow ? 'true' : 'false');
+      });
+    })();
+
+    // Reveal
+    (function () {
+      const els = document.querySelectorAll('.reveal');
+      els.forEach(el => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(14px)';
+        el.style.transition = 'opacity .6s ease, transform .6s ease';
+      });
+
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+          if (e.isIntersecting) {
+            e.target.style.opacity = '1';
+            e.target.style.transform = 'translateY(0)';
+            io.unobserve(e.target);
+          }
+        });
+      }, { threshold: 0.15 });
+
+      els.forEach(el => io.observe(el));
+    })();
+
+    // Counters
+    (function () {
+      const counters = document.querySelectorAll('[data-count]');
+      if (!counters.length) return;
+
+      const animate = (el) => {
+        const target = parseInt(el.getAttribute('data-count'), 10);
+        if (!Number.isFinite(target)) return;
+
+        const duration = 900;
+        const start = performance.now();
+
+        const step = (t) => {
+          const p = Math.min((t - start) / duration, 1);
+          const val = Math.floor(target * (0.15 + 0.85 * p));
+          el.textContent = val.toLocaleString();
+          if (p < 1) requestAnimationFrame(step);
+          else el.textContent = target.toLocaleString();
+        };
+        requestAnimationFrame(step);
+      };
+
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+          if (e.isIntersecting) {
+            animate(e.target);
+            io.unobserve(e.target);
+          }
+        });
+      }, { threshold: 0.6 });
+
+      counters.forEach(c => io.observe(c));
+    })();
+
+    // Anthem modal
+    (function () {
+      const openBtn = document.getElementById('openAnthem');
+      const modal = document.getElementById('anthemModal');
+      const closeBtn = document.getElementById('closeAnthem');
+      const closeBtn2 = document.getElementById('closeAnthem2');
+      const backdrop = document.getElementById('anthemBackdrop');
+      const printBtn = document.getElementById('printAnthem');
+
+      const open = () => {
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+        document.body.style.overflow = 'hidden';
+      };
+      const close = () => {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+        document.body.style.overflow = '';
+      };
+
+      if (openBtn) openBtn.addEventListener('click', open);
+      if (closeBtn) closeBtn.addEventListener('click', close);
+      if (closeBtn2) closeBtn2.addEventListener('click', close);
+      if (backdrop) backdrop.addEventListener('click', close);
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modal && !modal.classList.contains('hidden')) close();
+      });
+
+      if (printBtn) printBtn.addEventListener('click', () => window.print());
+    })();
+
+    // Back to top
+    (function () {
+      const btn = document.getElementById('backToTop');
+      if (!btn) return;
+
+      const toggle = () => {
+        if (window.scrollY > 600) btn.classList.remove('hidden');
+        else btn.classList.add('hidden');
+      };
+      window.addEventListener('scroll', toggle);
+      toggle();
+
+      btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+    })();
+  </script>
+</body>
+</html>

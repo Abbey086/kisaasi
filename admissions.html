@@ -1,0 +1,783 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admissions • KISAASI COLLEGE SCHOOL</title>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" referrerpolicy="no-referrer">
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@400;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome 6 -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-5oK6CzFzC7m+X2XyZ5kzZ6GQZz8zv5Kp6tF9M1v5n9E0zYpL3bJk3U8Z1z1Z9QGJpKx2fM8d2Q=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+
+  <!-- Tailwind font theme -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            serif: ['Playfair Display', 'Georgia', 'serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    :root{
+      --kcs-yellow:#FFF4C2;
+      --kcs-green:#1F8A4C;
+      --kcs-blue:#2B6CB0;
+      --kcs-ink:#0f172a;
+    }
+    html { scroll-behavior:smooth; }
+    .kcs-bg{
+      background:
+        radial-gradient(900px 350px at 10% 10%, rgba(43,108,176,.10), transparent 60%),
+        radial-gradient(900px 350px at 90% 20%, rgba(31,138,76,.10), transparent 60%),
+        radial-gradient(900px 350px at 70% 95%, rgba(255,244,194,.55), transparent 60%);
+    }
+    .fa-fw{ width: 1.25em; text-align: center; }
+  </style>
+</head>
+
+<body class="min-h-screen bg-white text-slate-900 kcs-bg font-sans  antialiased">
+
+  <!-- NAVBAR -->
+  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-slate-100">
+    <div class="mx-auto max-w-7xl px-4 py-4 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3">
+        <div class="h-12 w-12 rounded-full bg-white border border-slate-200 overflow-hidden flex items-center justify-center shadow-sm">
+          <img
+            src="assets/images/logo.png"
+            alt="Kisaasi College School Logo"
+            class="h-full w-full object-contain p-1"
+            onerror="this.closest('div').innerHTML='<span class=&quot;font-black text-[var(--kcs-green)]&quot;>KCS</span>';"
+          />
+        </div>
+
+        <div class="leading-tight">
+          <div class="font-extrabold tracking-wide">KISAASI COLLEGE SCHOOL</div>
+          <div class="text-xs text-slate-500">We labour for the future</div>
+        </div>
+      </a>
+
+      <button class="sm:hidden inline-flex items-center justify-center rounded-xl border border-slate-200 px-3 py-2"
+              data-menu-btn aria-expanded="false" aria-label="Open menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <nav class="hidden sm:flex items-center gap-2">
+        <a class="px-3 py-2 rounded-xl hover:bg-slate-100" href="index.html">
+          <i class="fa-solid fa-house fa-fw mr-1 text-[var(--kcs-blue)]"></i>Home
+        </a>
+        <a class="px-3 py-2 rounded-xl hover:bg-slate-100" href="about.html">
+          <i class="fa-solid fa-circle-info fa-fw mr-1 text-[var(--kcs-blue)]"></i>About
+        </a>
+        <a class="px-3 py-2 rounded-xl hover:bg-slate-100" href="academics.html">
+          <i class="fa-solid fa-graduation-cap fa-fw mr-1 text-[var(--kcs-blue)]"></i>Academics
+        </a>
+        <a class="px-3 py-2 rounded-xl bg-slate-100" href="admissions.html">
+          <i class="fa-solid fa-file-signature fa-fw mr-1 text-[var(--kcs-blue)]"></i>Admissions
+        </a>
+        <a class="px-3 py-2 rounded-xl hover:bg-slate-100" href="gallery.html">
+          <i class="fa-regular fa-images fa-fw mr-1 text-[var(--kcs-blue)]"></i>Gallery
+        </a>
+        <a class="px-3 py-2 rounded-xl hover:bg-slate-100" href="contact.html">
+          <i class="fa-solid fa-phone fa-fw mr-1 text-[var(--kcs-blue)]"></i>Contact
+        </a>
+        <a class="ml-2 px-4 py-2 rounded-xl bg-[var(--kcs-blue)] text-white hover:opacity-90 inline-flex items-center gap-2" href="#apply">
+          <i class="fa-solid fa-paper-plane"></i> Apply Online
+        </a>
+      </nav>
+    </div>
+
+    <!-- Mobile menu -->
+    <div class="hidden sm:hidden border-t border-slate-100" data-menu>
+      <div class="mx-auto max-w-7xl px-4 py-3 flex flex-col gap-1">
+        <a class="px-3 py-2 rounded-xl hover:bg-slate-100" href="index.html"><i class="fa-solid fa-house fa-fw mr-2 text-[var(--kcs-blue)]"></i>Home</a>
+        <a class="px-3 py-2 rounded-xl hover:bg-slate-100" href="about.html"><i class="fa-solid fa-circle-info fa-fw mr-2 text-[var(--kcs-blue)]"></i>About</a>
+        <a class="px-3 py-2 rounded-xl hover:bg-slate-100" href="academics.html"><i class="fa-solid fa-graduation-cap fa-fw mr-2 text-[var(--kcs-blue)]"></i>Academics</a>
+        <a class="px-3 py-2 rounded-xl bg-slate-100" href="admissions.html"><i class="fa-solid fa-file-signature fa-fw mr-2 text-[var(--kcs-blue)]"></i>Admissions</a>
+        <a class="px-3 py-2 rounded-xl hover:bg-slate-100" href="gallery.html"><i class="fa-regular fa-images fa-fw mr-2 text-[var(--kcs-blue)]"></i>Gallery</a>
+        <a class="px-3 py-2 rounded-xl hover:bg-slate-100" href="contact.html"><i class="fa-solid fa-phone fa-fw mr-2 text-[var(--kcs-blue)]"></i>Contact</a>
+        <a class="px-3 py-2 rounded-xl bg-[var(--kcs-blue)] text-white inline-flex items-center gap-2" href="#apply">
+          <i class="fa-solid fa-paper-plane"></i> Apply Online
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="relative overflow-hidden border-b border-slate-200">
+    <div class="absolute inset-0 bg-[var(--kcs-yellow)]/40"></div>
+    <div class="absolute -top-24 -right-24 h-72 w-72 rounded-full bg-[var(--kcs-blue)]/15 blur-2xl"></div>
+    <div class="absolute -bottom-24 -left-24 h-72 w-72 rounded-full bg-[var(--kcs-green)]/15 blur-2xl"></div>
+
+    <div class="relative mx-auto max-w-7xl px-4 py-14 grid lg:grid-cols-2 gap-10 items-center">
+      <div>
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-slate-200 text-sm">
+          <i class="fa-solid fa-clipboard-list text-[var(--kcs-green)]"></i>
+          Admissions • Day & Boarding • O & A Levels
+        </div>
+
+        <h1 class="mt-4 text-4xl sm:text-5xl font-black leading-tight text-[var(--kcs-ink)] font-serif">
+          Online Application
+        </h1>
+
+        <p class="mt-4 text-lg text-slate-700 max-w-xl">
+          Fill the form below and submit. Our admissions team will contact you with the next steps.
+          Admission is based on merit and qualifications from one grade level to the next.
+        </p>
+
+        <div class="mt-6 flex flex-col sm:flex-row gap-3">
+          <a href="#apply" class="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-[var(--kcs-green)] text-white font-semibold hover:opacity-90">
+            <i class="fa-solid fa-pen-to-square"></i> Start Application
+          </a>
+          <a href="#steps" class="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl border border-slate-300 bg-white font-semibold hover:bg-slate-50">
+            <i class="fa-regular fa-circle-question text-[var(--kcs-blue)]"></i> See Steps
+          </a>
+        </div>
+
+        <div class="mt-8 grid sm:grid-cols-3 gap-3">
+          <div class="rounded-2xl bg-white border border-slate-200 p-4 reveal">
+            <div class="font-bold text-[var(--kcs-blue)]"><i class="fa-solid fa-certificate mr-2"></i>UNEB Center</div>
+            <div class="text-sm text-slate-600">U1536 (O & A Levels)</div>
+          </div>
+          <div class="rounded-2xl bg-white border border-slate-200 p-4 reveal">
+            <div class="font-bold text-[var(--kcs-blue)]"><i class="fa-solid fa-compass mr-2"></i>Orientation</div>
+            <div class="text-sm text-slate-600">New learners settle in fast</div>
+          </div>
+          <div class="rounded-2xl bg-white border border-slate-200 p-4 reveal">
+            <div class="font-bold text-[var(--kcs-blue)]"><i class="fa-solid fa-handshake-angle mr-2"></i>Support</div>
+            <div class="text-sm text-slate-600">Guidance & mentorship</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="relative reveal">
+        <div class="absolute -inset-6 rounded-[2.2rem] bg-[var(--kcs-blue)]/10 blur-2xl"></div>
+        <div class="relative rounded-[2.2rem] overflow-hidden border border-slate-200 bg-white shadow-sm">
+          <img
+            src="assets/images/admissions-hero.jpg"
+            alt="Admissions at Kisaasi College School"
+            class="w-full h-[560px] object-cover"
+            onerror="this.src='https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=1600&q=60'"
+          />
+          <div class="p-5 border-t border-slate-100">
+            <div class="flex items-start justify-between gap-4">
+              <div>
+                <div class="font-bold"><i class="fa-solid fa-people-group text-[var(--kcs-green)] mr-2"></i>Join a Strong Learning Community</div>
+                <div class="text-sm text-slate-600">Academics • Morals • Leadership</div>
+              </div>
+              <span class="px-3 py-1 rounded-full text-sm bg-[var(--kcs-yellow)] border border-slate-200">
+                <i class="fa-solid fa-paper-plane mr-1 text-[var(--kcs-blue)]"></i> Apply
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STEPS -->
+  <section id="steps" class="mx-auto max-w-7xl px-4 py-12">
+    <div class="flex items-end justify-between flex-wrap gap-4">
+      <div>
+        <h2 class="text-2xl font-extrabold font-serif"><i class="fa-solid fa-list-check text-[var(--kcs-blue)] mr-2"></i>Admission Steps</h2>
+        <p class="mt-2 text-slate-700 max-w-3xl">
+          Simple process: submit details → we review → we contact you → you complete registration.
+        </p>
+      </div>
+      <a href="#apply" class="px-4 py-2 rounded-xl bg-[var(--kcs-blue)] text-white hover:opacity-90 inline-flex items-center gap-2">
+        <i class="fa-solid fa-paper-plane"></i> Apply Now
+      </a>
+    </div>
+
+    <div class="mt-6 grid md:grid-cols-4 gap-4">
+      <div class="rounded-3xl border border-slate-200 bg-white p-6 reveal">
+        <div class="text-sm text-slate-500"><i class="fa-solid fa-1 mr-2 text-[var(--kcs-blue)]"></i>Step 1</div>
+        <div class="mt-2 font-extrabold text-[var(--kcs-green)]">Fill Form</div>
+        <p class="mt-2 text-slate-700 text-sm">Student + Parent/Guardian details.</p>
+      </div>
+      <div class="rounded-3xl border border-slate-200 bg-white p-6 reveal">
+        <div class="text-sm text-slate-500"><i class="fa-solid fa-2 mr-2 text-[var(--kcs-blue)]"></i>Step 2</div>
+        <div class="mt-2 font-extrabold text-[var(--kcs-green)]">Submit</div>
+        <p class="mt-2 text-slate-700 text-sm">You receive a reference number.</p>
+      </div>
+      <div class="rounded-3xl border border-slate-200 bg-white p-6 reveal">
+        <div class="text-sm text-slate-500"><i class="fa-solid fa-3 mr-2 text-[var(--kcs-blue)]"></i>Step 3</div>
+        <div class="mt-2 font-extrabold text-[var(--kcs-green)]">Review</div>
+        <p class="mt-2 text-slate-700 text-sm">Our admissions team reviews.</p>
+      </div>
+      <div class="rounded-3xl border border-slate-200 bg-white p-6 reveal">
+        <div class="text-sm text-slate-500"><i class="fa-solid fa-4 mr-2 text-[var(--kcs-blue)]"></i>Step 4</div>
+        <div class="mt-2 font-extrabold text-[var(--kcs-green)]">Contact</div>
+        <p class="mt-2 text-slate-700 text-sm">We call/email for next steps.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FORM -->
+  <main id="apply" class="mx-auto max-w-7xl px-4 pb-14">
+    <div class="grid lg:grid-cols-3 gap-6 items-start">
+      <!-- side info -->
+      <aside class="rounded-3xl border border-slate-200 bg-white p-7 reveal">
+        <div class="font-extrabold text-lg"><i class="fa-regular fa-circle-question text-[var(--kcs-blue)] mr-2"></i>Need Help?</div>
+        <p class="mt-2 text-slate-700">
+          Contact admissions using the numbers below. We will guide you.
+        </p>
+
+        <div class="mt-4 rounded-2xl bg-[var(--kcs-yellow)]/70 border border-slate-200 p-4">
+          <div class="font-bold text-[var(--kcs-green)]"><i class="fa-solid fa-headset mr-2"></i>Admissions Contacts</div>
+          <div class="mt-3 text-slate-800 text-sm space-y-2">
+            <p><i class="fa-solid fa-phone fa-fw mr-2 text-[var(--kcs-blue)]"></i>+256 701 750 708</p>
+            <p><i class="fa-solid fa-phone fa-fw mr-2 text-[var(--kcs-blue)]"></i>+256 392 001 705</p>
+            <p><i class="fa-solid fa-phone fa-fw mr-2 text-[var(--kcs-blue)]"></i>+256 772 420 741</p>
+            <p><i class="fa-solid fa-phone fa-fw mr-2 text-[var(--kcs-blue)]"></i>+256 703 704 281</p>
+            <p class="pt-2"><i class="fa-solid fa-envelope fa-fw mr-2 text-[var(--kcs-blue)]"></i>kisaasicollege.sch@gmail.com</p>
+          </div>
+        </div>
+
+        <div class="mt-5 text-sm text-slate-600">
+          <b>Note:</b> Feel free to reach out with any questions, we look forward to hearing from you.
+        </div>
+      </aside>
+
+      <!-- application form -->
+      <section class="lg:col-span-2 rounded-3xl border border-slate-200 bg-white shadow-sm overflow-hidden reveal">
+        <!-- progress bar -->
+        <div class="p-5 border-b border-slate-200 bg-slate-50">
+          <div class="flex items-center justify-between gap-4">
+            <div>
+              <div class="font-extrabold"><i class="fa-solid fa-clipboard-list mr-2 text-[var(--kcs-blue)]"></i>Application Form</div>
+              <div class="text-sm text-slate-600">Complete all required fields.</div>
+            </div>
+            <div class="text-sm text-slate-600">
+              <i class="fa-solid fa-chart-simple mr-1 text-[var(--kcs-blue)]"></i>
+              Progress: <span id="progressPct" class="font-bold text-[var(--kcs-blue)]">0%</span>
+            </div>
+          </div>
+          <div class="mt-3 h-2 rounded-full bg-white border border-slate-200 overflow-hidden">
+            <div id="progressBar" class="h-full w-0 bg-[var(--kcs-blue)]"></div>
+          </div>
+        </div>
+
+        <form id="appForm" class="p-7" action="#" method="POST" autocomplete="on" novalidate>
+          <!-- STUDENT -->
+          <div class="flex items-center justify-between flex-wrap gap-2">
+            <h2 class="text-lg font-extrabold"><i class="fa-solid fa-user-graduate mr-2 text-[var(--kcs-green)]"></i>Student Details</h2>
+            <span class="text-xs px-3 py-1 rounded-full bg-[var(--kcs-yellow)]/70 border border-slate-200">
+              <i class="fa-solid fa-asterisk mr-1 text-[var(--kcs-blue)]"></i> All fields marked * are required
+            </span>
+          </div>
+
+          <div class="mt-5 grid sm:grid-cols-2 gap-4">
+            <div>
+              <label class="text-sm font-semibold">Student Full Name *</label>
+              <input required name="student_name" data-required
+                     class="mt-1 w-full rounded-xl border border-slate-200 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[var(--kcs-blue)]"
+                     placeholder="e.g. Amina N."
+              />
+              <p class="mt-1 text-xs text-red-600 hidden" data-err>Required</p>
+            </div>
+
+            <div>
+              <label class="text-sm font-semibold">Gender *</label>
+              <select required name="gender" data-required
+                      class="mt-1 w-full rounded-xl border border-slate-200 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[var(--kcs-blue)]">
+                <option value="">Select</option>
+                <option>Male</option>
+                <option>Female</option>
+              </select>
+              <p class="mt-1 text-xs text-red-600 hidden" data-err>Required</p>
+            </div>
+
+            <div>
+              <label class="text-sm font-semibold">Date of Birth *</label>
+              <input required type="date" name="dob" data-required
+                     class="mt-1 w-full rounded-xl border border-slate-200 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[var(--kcs-blue)]" />
+              <p class="mt-1 text-xs text-red-600 hidden" data-err>Required</p>
+            </div>
+
+            <div>
+              <label class="text-sm font-semibold">Class Applying For *</label>
+              <select required name="class" id="classSelect" data-required
+                      class="mt-1 w-full rounded-xl border border-slate-200 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[var(--kcs-blue)]">
+                <option value="">Select</option>
+                <option>S1</option><option>S2</option><option>S3</option><option>S4</option><option>S5</option><option>S6</option>
+              </select>
+              <p class="mt-1 text-xs text-red-600 hidden" data-err>Required</p>
+            </div>
+
+            <div class="sm:col-span-2">
+              <label class="text-sm font-semibold">Previous School *</label>
+              <input required name="previous_school" data-required
+                     class="mt-1 w-full rounded-xl border border-slate-200 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[var(--kcs-blue)]"
+                     placeholder="e.g. School name"
+              />
+              <p class="mt-1 text-xs text-red-600 hidden" data-err>Required</p>
+            </div>
+
+            <div>
+              <label class="text-sm font-semibold">Day / Boarding *</label>
+              <select required name="residence" id="residenceSelect" data-required
+                      class="mt-1 w-full rounded-xl border border-slate-200 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[var(--kcs-blue)]">
+                <option value="">Select</option>
+                <option>Day</option>
+                <option>Boarding</option>
+              </select>
+              <p class="mt-1 text-xs text-red-600 hidden" data-err>Required</p>
+            </div>
+
+            <div>
+              <label class="text-sm font-semibold">Religion (Optional)</label>
+              <input name="religion"
+                     placeholder="e.g. Muslim / Christian / Other"
+                     class="mt-1 w-full rounded-xl border border-slate-200 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[var(--kcs-blue)]" />
+            </div>
+          </div>
+
+          <!-- A-LEVEL combos -->
+          <div id="aLevelBlock" class="hidden mt-6 rounded-3xl border border-slate-200 bg-slate-50 p-5">
+            <div class="flex items-start justify-between gap-4 flex-wrap">
+              <div>
+                <div class="font-extrabold text-[var(--kcs-ink)]"><i class="fa-solid fa-graduation-cap mr-2 text-[var(--kcs-blue)]"></i>A’ Level Combination (For S5 / S6)</div>
+                <div class="text-sm text-slate-600 mt-1">
+                  Choose one preferred combination. (You can customize later.)
+                </div>
+              </div>
+              <span class="text-xs px-3 py-1 rounded-full bg-white border border-slate-200"><i class="fa-regular fa-circle-check mr-1 text-[var(--kcs-green)]"></i>Optional</span>
+            </div>
+
+            <div class="mt-4 grid sm:grid-cols-2 gap-3">
+              <label class="flex items-center gap-2 rounded-2xl bg-white border border-slate-200 p-4 cursor-pointer">
+                <input type="radio" name="alevel_combo" value="PCM">
+                <span class="font-semibold">PCM</span>
+                <span class="text-sm text-slate-600">Physics • Chemistry • Math</span>
+              </label>
+
+              <label class="flex items-center gap-2 rounded-2xl bg-white border border-slate-200 p-4 cursor-pointer">
+                <input type="radio" name="alevel_combo" value="PCB">
+                <span class="font-semibold">PCB</span>
+                <span class="text-sm text-slate-600">Physics • Chemistry • Biology</span>
+              </label>
+
+              <label class="flex items-center gap-2 rounded-2xl bg-white border border-slate-200 p-4 cursor-pointer">
+                <input type="radio" name="alevel_combo" value="MEG">
+                <span class="font-semibold">MEG</span>
+                <span class="text-sm text-slate-600">Math • Economics • Geography</span>
+              </label>
+
+              <label class="flex items-center gap-2 rounded-2xl bg-white border border-slate-200 p-4 cursor-pointer">
+                <input type="radio" name="alevel_combo" value="HEG">
+                <span class="font-semibold">HEG</span>
+                <span class="text-sm text-slate-600">History • Economics • Geography</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Documents -->
+          <div class="mt-6">
+            <h2 class="text-lg font-extrabold"><i class="fa-solid fa-paperclip mr-2 text-[var(--kcs-blue)]"></i>Optional Attachments</h2>
+            <p class="mt-1 text-sm text-slate-600">
+              You may attach a passport photo or results slip (frontend only for now).
+            </p>
+
+            <div class="mt-4 grid sm:grid-cols-2 gap-4">
+              <div>
+                <label class="text-sm font-semibold">Passport Photo (Optional)</label>
+                <input type="file" accept="image/*" name="passport_photo"
+                       class="mt-1 w-full rounded-xl border border-slate-200 px-4 py-3 bg-white" />
+              </div>
+              <div>
+                <label class="text-sm font-semibold">Results Slip (Optional)</label>
+                <input type="file" accept=".pdf,image/*" name="results_slip"
+                       class="mt-1 w-full rounded-xl border border-slate-200 px-4 py-3 bg-white" />
+              </div>
+            </div>
+          </div>
+
+          <!-- GUARDIAN -->
+          <div class="mt-8 border-t border-slate-200 pt-6">
+            <h2 class="text-lg font-extrabold"><i class="fa-solid fa-user-shield mr-2 text-[var(--kcs-green)]"></i>Parent / Guardian Details</h2>
+
+            <div class="mt-5 grid sm:grid-cols-2 gap-4">
+              <div>
+                <label class="text-sm font-semibold">Parent/Guardian Name *</label>
+                <input required name="guardian_name" data-required
+                       class="mt-1 w-full rounded-xl border border-slate-200 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[var(--kcs-blue)]" />
+                <p class="mt-1 text-xs text-red-600 hidden" data-err>Required</p>
+              </div>
+
+              <div>
+                <label class="text-sm font-semibold">Phone Number *</label>
+                <input required name="guardian_phone" data-required inputmode="tel"
+                       placeholder="+256 7xx xxx xxx"
+                       class="mt-1 w-full rounded-xl border border-slate-200 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[var(--kcs-blue)]" />
+                <p class="mt-1 text-xs text-red-600 hidden" data-err>Required</p>
+              </div>
+
+              <div class="sm:col-span-2">
+                <label class="text-sm font-semibold">Email Address *</label>
+                <input required type="email" name="guardian_email" data-required
+                       class="mt-1 w-full rounded-xl border border-slate-200 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[var(--kcs-blue)]" />
+                <p class="mt-1 text-xs text-red-600 hidden" data-err>Required + valid email</p>
+              </div>
+
+              <div class="sm:col-span-2">
+                <label class="text-sm font-semibold">Address / District *</label>
+                <input required name="address" data-required
+                       class="mt-1 w-full rounded-xl border border-slate-200 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[var(--kcs-blue)]" />
+                <p class="mt-1 text-xs text-red-600 hidden" data-err>Required</p>
+              </div>
+
+              <div class="sm:col-span-2">
+                <label class="text-sm font-semibold">Any Notes (Optional)</label>
+                <textarea name="notes" rows="4"
+                          class="mt-1 w-full rounded-xl border border-slate-200 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-[var(--kcs-blue)]"
+                          placeholder="Anything you want the admissions team to know..."></textarea>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-7 flex flex-col sm:flex-row gap-3">
+            <button id="submitBtn" type="submit"
+                    class="px-6 py-3 rounded-xl bg-[var(--kcs-green)] text-white font-semibold hover:opacity-90 inline-flex items-center justify-center gap-2">
+              <i class="fa-solid fa-paper-plane"></i> Submit Application
+            </button>
+            <button type="reset"
+                    class="px-6 py-3 rounded-xl border border-slate-200 bg-white font-semibold hover:bg-slate-50 inline-flex items-center justify-center gap-2">
+              <i class="fa-solid fa-rotate-left text-[var(--kcs-blue)]"></i> Clear Form
+            </button>
+          </div>
+
+          <p class="mt-4 text-sm text-slate-600">
+            <i class="fa-solid fa-circle-info mr-2 text-[var(--kcs-blue)]"></i>
+            Note: This is a front-end form. Later, we will connect it to PHP to store submissions and email the school.
+          </p>
+        </form>
+      </section>
+    </div>
+  </main>
+
+  <!-- SUCCESS MODAL -->
+  <div id="successModal" class="fixed inset-0 hidden items-center justify-center z-[70]">
+    <div class="absolute inset-0 bg-black/50" id="successBackdrop"></div>
+
+    <div class="relative w-[95%] max-w-xl rounded-3xl bg-white border border-slate-200 shadow-lg overflow-hidden">
+      <div class="p-5 border-b border-slate-200 flex items-center justify-between">
+        <div>
+          <div class="font-extrabold text-lg"><i class="fa-solid fa-circle-check text-[var(--kcs-green)] mr-2"></i>Application Submitted</div>
+          <div class="text-sm text-slate-500">KISAASI COLLEGE SCHOOL</div>
+        </div>
+        <button id="closeSuccess" class="px-3 py-2 rounded-xl border border-slate-200 hover:bg-slate-50" aria-label="Close">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <div class="p-6">
+        <div class="rounded-2xl bg-[var(--kcs-yellow)]/60 border border-slate-200 p-4">
+          <div class="font-bold text-[var(--kcs-green)]"><i class="fa-solid fa-hashtag mr-2"></i>Reference Number</div>
+          <div class="mt-2 flex items-center justify-between gap-3 flex-wrap">
+            <div class="text-2xl font-black text-[var(--kcs-ink)]" id="refNo">KCS-APP-000000</div>
+            <button id="copyRef" class="px-4 py-2 rounded-xl bg-[var(--kcs-blue)] text-white hover:opacity-90 inline-flex items-center gap-2">
+              <i class="fa-regular fa-copy"></i> Copy
+            </button>
+          </div>
+          <p class="mt-2 text-sm text-slate-700">
+            Keep this reference number. Our admissions team will contact you with next steps.
+          </p>
+        </div>
+
+        <div class="mt-5 text-slate-700">
+          <b><i class="fa-solid fa-arrow-right mr-2 text-[var(--kcs-blue)]"></i>Next Steps:</b>
+          <ol class="mt-2 list-decimal list-inside space-y-1">
+            <li>Wait for a call/email from the admissions office.</li>
+            <li>Prepare previous academic documents and identification.</li>
+            <li>Visit the school if requested for confirmation and registration.</li>
+          </ol>
+        </div>
+
+        <div class="mt-6 flex justify-end gap-2">
+          <a href="contact.html" class="px-4 py-2 rounded-xl border border-slate-200 hover:bg-slate-50 font-semibold inline-flex items-center gap-2">
+            <i class="fa-solid fa-phone text-[var(--kcs-blue)]"></i> Contact Us
+          </a>
+          <button id="closeSuccess2" class="px-4 py-2 rounded-xl bg-[var(--kcs-green)] text-white hover:opacity-90 font-semibold inline-flex items-center gap-2">
+            <i class="fa-solid fa-check"></i> Done
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BACK TO TOP -->
+  <button id="backToTop"
+          class="hidden fixed bottom-5 right-5 z-50 rounded-2xl bg-[var(--kcs-blue)] text-white px-4 py-3 shadow-lg hover:opacity-90 inline-flex items-center gap-2">
+    <i class="fa-solid fa-arrow-up"></i> Top
+  </button>
+
+  <!-- FOOTER -->
+  <footer class="bg-[var(--kcs-ink)] text-white">
+    <div class="mx-auto max-w-7xl px-4 py-12 grid md:grid-cols-3 gap-8">
+      <div>
+        <div class="flex items-center gap-3">
+          <div class="h-12 w-12 rounded-full bg-white border border-white/20 overflow-hidden flex items-center justify-center">
+            <img src="assets/images/logo.png" alt="Kisaasi College School Logo" class="h-full w-full object-contain p-1"
+                 onerror="this.closest('div').innerHTML='<span class=&quot;font-black text-[var(--kcs-green)]&quot;>KCS</span>';" />
+          </div>
+          <div>
+            <div class="font-extrabold text-lg">KISAASI COLLEGE SCHOOL</div>
+            <div class="text-white/70 text-sm">We labour for the future</div>
+          </div>
+        </div>
+
+        <p class="mt-4 text-white/70">
+          A private mixed day and boarding institution established in 1995. Islamic-based and welcoming to all religions.
+        </p>
+
+        <p class="mt-4 text-sm text-white/70">
+          © <span id="yr"></span> Kisaasi College School. All rights reserved.
+        </p>
+      </div>
+
+      <div>
+        <div class="font-bold"><i class="fa-solid fa-location-dot mr-2 text-[var(--kcs-yellow)]"></i>Address</div>
+        <div class="mt-3 space-y-2 text-white/80">
+          <p>P.O. Box 5167, Kampala-Uganda</p>
+          <p>
+            <i class="fa-solid fa-globe mr-2 text-[var(--kcs-yellow)]"></i>
+            Website:
+            <a class="hover:text-white underline underline-offset-4" href="https://www.kisaasicollegeschool.com" target="_blank" rel="noopener">www.kisaasicollegeschool.com</a>
+          </p>
+          <p><i class="fa-brands fa-facebook mr-2 text-[var(--kcs-yellow)]"></i>Facebook: <span class="font-semibold">Kisaasi College School</span></p>
+          <p><i class="fa-brands fa-tiktok mr-2 text-[var(--kcs-yellow)]"></i>TikTok: <span class="font-semibold">Kisaasicollegeschool</span></p>
+        </div>
+      </div>
+
+      <div>
+        <div class="font-bold"><i class="fa-solid fa-phone mr-2 text-[var(--kcs-yellow)]"></i>Contact</div>
+        <div class="mt-3 space-y-2 text-white/80">
+          <p><i class="fa-solid fa-phone fa-fw"></i> +256 701 750 708</p>
+          <p><i class="fa-solid fa-phone fa-fw"></i> +256 392 001 705</p>
+          <p><i class="fa-solid fa-phone fa-fw"></i> +256 772 420 741</p>
+          <p><i class="fa-solid fa-phone fa-fw"></i> +256 703 704 281</p>
+          <p class="pt-2">
+            <i class="fa-solid fa-envelope fa-fw"></i>
+            <a class="hover:text-white underline underline-offset-4" href="mailto:kisaasicollege.sch@gmail.com">kisaasicollege.sch@gmail.com</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Year
+    document.getElementById('yr').textContent = new Date().getFullYear();
+
+    // Mobile menu
+    (function () {
+      const btn = document.querySelector('[data-menu-btn]');
+      const menu = document.querySelector('[data-menu]');
+      if (!btn || !menu) return;
+
+      btn.addEventListener('click', () => {
+        const willShow = menu.classList.contains('hidden');
+        menu.classList.toggle('hidden');
+        btn.setAttribute('aria-expanded', willShow ? 'true' : 'false');
+      });
+    })();
+
+    // Reveal on scroll
+    (function () {
+      const els = document.querySelectorAll('.reveal');
+      els.forEach(el => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(14px)';
+        el.style.transition = 'opacity .6s ease, transform .6s ease';
+      });
+
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+          if (e.isIntersecting) {
+            e.target.style.opacity = '1';
+            e.target.style.transform = 'translateY(0)';
+            io.unobserve(e.target);
+          }
+        });
+      }, { threshold: 0.15 });
+
+      els.forEach(el => io.observe(el));
+    })();
+
+    // Back to top
+    (function () {
+      const btn = document.getElementById('backToTop');
+      if (!btn) return;
+
+      const toggle = () => {
+        if (window.scrollY > 600) btn.classList.remove('hidden');
+        else btn.classList.add('hidden');
+      };
+      window.addEventListener('scroll', toggle);
+      toggle();
+
+      btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+    })();
+
+    // Form UX: progress + validation + modal
+    (function () {
+      const form = document.getElementById('appForm');
+      const required = Array.from(form.querySelectorAll('[data-required]'));
+      const progressBar = document.getElementById('progressBar');
+      const progressPct = document.getElementById('progressPct');
+      const submitBtn = document.getElementById('submitBtn');
+
+      const classSelect = document.getElementById('classSelect');
+      const aLevelBlock = document.getElementById('aLevelBlock');
+
+      const successModal = document.getElementById('successModal');
+      const successBackdrop = document.getElementById('successBackdrop');
+      const closeSuccess = document.getElementById('closeSuccess');
+      const closeSuccess2 = document.getElementById('closeSuccess2');
+      const refNoEl = document.getElementById('refNo');
+      const copyRef = document.getElementById('copyRef');
+
+      function showALevelBlock() {
+        const v = (classSelect.value || '').toUpperCase();
+        const show = (v === 'S5' || v === 'S6');
+        aLevelBlock.classList.toggle('hidden', !show);
+      }
+
+      function setFieldState(el, ok) {
+        const err = el.parentElement.querySelector('[data-err]');
+        if (ok) {
+          el.classList.remove('border-red-400');
+          el.classList.add('border-slate-200');
+          if (err) err.classList.add('hidden');
+        } else {
+          el.classList.add('border-red-400');
+          if (err) err.classList.remove('hidden');
+        }
+      }
+
+      function isValid(el) {
+        const v = (el.value || '').trim();
+        if (el.type === 'email') return v.includes('@') && v.includes('.');
+        return v !== '';
+      }
+
+      function updateProgress() {
+        const filled = required.filter(isValid).length;
+        const pct = Math.round((filled / required.length) * 100);
+        progressBar.style.width = pct + '%';
+        progressPct.textContent = pct + '%';
+      }
+
+      required.forEach(el => {
+        el.addEventListener('input', () => {
+          setFieldState(el, isValid(el));
+          updateProgress();
+        });
+        el.addEventListener('blur', () => {
+          setFieldState(el, isValid(el));
+          updateProgress();
+        });
+      });
+
+      if (classSelect) {
+        classSelect.addEventListener('change', () => {
+          showALevelBlock();
+          updateProgress();
+        });
+        showALevelBlock();
+      }
+
+      function genRef() {
+        const n = Math.floor(100000 + Math.random() * 900000);
+        return `KCS-APP-${n}`;
+      }
+
+      function openSuccess(ref) {
+        refNoEl.textContent = ref;
+        successModal.classList.remove('hidden');
+        successModal.classList.add('flex');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeSuccessModal() {
+        successModal.classList.add('hidden');
+        successModal.classList.remove('flex');
+        document.body.style.overflow = '';
+      }
+
+      if (successBackdrop) successBackdrop.addEventListener('click', closeSuccessModal);
+      if (closeSuccess) closeSuccess.addEventListener('click', closeSuccessModal);
+      if (closeSuccess2) closeSuccess2.addEventListener('click', closeSuccessModal);
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && successModal && !successModal.classList.contains('hidden')) closeSuccessModal();
+      });
+
+      if (copyRef) {
+        copyRef.addEventListener('click', async () => {
+          try {
+            await navigator.clipboard.writeText(refNoEl.textContent.trim());
+            copyRef.innerHTML = '<i class="fa-solid fa-check"></i> Copied!';
+            setTimeout(() => copyRef.innerHTML = '<i class="fa-regular fa-copy"></i> Copy', 1200);
+          } catch {
+            alert('Copy not supported on this browser.');
+          }
+        });
+      }
+
+      updateProgress();
+
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        let ok = true;
+        required.forEach(el => {
+          const v = isValid(el);
+          setFieldState(el, v);
+          if (!v) ok = false;
+        });
+        updateProgress();
+
+        if (!ok) {
+          alert('Please fill all required fields correctly.');
+          return;
+        }
+
+        // Fake submit (frontend demo)
+        const old = submitBtn.textContent;
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Submitting...';
+
+        setTimeout(() => {
+          submitBtn.disabled = false;
+          submitBtn.textContent = old;
+          openSuccess(genRef());
+          form.reset();
+          showALevelBlock();
+          updateProgress();
+        }, 700);
+      });
+    })();
+  </script>
+</body>
+</html>

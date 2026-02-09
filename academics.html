@@ -1,0 +1,784 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Academics • KISAASI COLLEGE SCHOOL</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" referrerpolicy="no-referrer">
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@400;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome 6 -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-5oK6CzFzC7m+X2XyZ5kzZ6GQZz8zv5Kp6tF9M1v5n9E0zYpL3bJk3U8Z1z1Z9QGJpKx2fM8d2Q=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+
+  <!-- Tailwind font theme -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            serif: ['Playfair Display', 'Georgia', 'serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    :root{
+      --kcs-yellow:#FFF4C2;
+      --kcs-green:#1F8A4C;
+      --kcs-blue:#2B6CB0;
+      --kcs-ink:#0f172a;
+    }
+    html { scroll-behavior: smooth; }
+    .kcs-bg{
+      background:
+        radial-gradient(900px 350px at 10% 10%, rgba(43,108,176,.10), transparent 60%),
+        radial-gradient(900px 350px at 90% 20%, rgba(31,138,76,.10), transparent 60%),
+        radial-gradient(900px 350px at 70% 95%, rgba(255,244,194,.55), transparent 60%);
+    }
+    .fa-fw{ width: 1.25em; text-align: center; }
+  </style>
+</head>
+
+<body class="min-h-screen bg-white text-slate-900 kcs-bg font-sans antialiased">
+
+  <!-- NAVBAR -->
+  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-slate-100">
+    <div class="mx-auto max-w-7xl px-4 py-4 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3">
+        <div class="h-12 w-12 rounded-full bg-white border border-slate-200 overflow-hidden flex items-center justify-center shadow-sm">
+          <img
+            src="assets/images/logo.png"
+            alt="Kisaasi College School Logo"
+            class="h-full w-full object-contain p-1"
+            onerror="this.closest('div').innerHTML='<span class=&quot;font-black text-[var(--kcs-green)]&quot;>KCS</span>';"
+          />
+        </div>
+
+        <div class="leading-tight">
+          <div class="font-extrabold tracking-wide">KISAASI COLLEGE SCHOOL</div>
+          <div class="text-xs text-slate-500">We labour for the future</div>
+        </div>
+      </a>
+
+      <button class="sm:hidden inline-flex items-center justify-center rounded-xl border border-slate-200 px-3 py-2"
+              data-menu-btn aria-expanded="false" aria-label="Open menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <nav class="hidden sm:flex items-center gap-2">
+        <a class="px-3 py-2 rounded-xl hover:bg-slate-100" href="index.html">
+          <i class="fa-solid fa-house fa-fw mr-1 text-[var(--kcs-blue)]"></i>Home
+        </a>
+        <a class="px-3 py-2 rounded-xl hover:bg-slate-100" href="about.html">
+          <i class="fa-solid fa-circle-info fa-fw mr-1 text-[var(--kcs-blue)]"></i>About
+        </a>
+        <a class="px-3 py-2 rounded-xl bg-slate-100" href="academics.html">
+          <i class="fa-solid fa-graduation-cap fa-fw mr-1 text-[var(--kcs-blue)]"></i>Academics
+        </a>
+        <a class="px-3 py-2 rounded-xl hover:bg-slate-100" href="admissions.html">
+          <i class="fa-solid fa-file-signature fa-fw mr-1 text-[var(--kcs-blue)]"></i>Admissions
+        </a>
+        <a class="px-3 py-2 rounded-xl hover:bg-slate-100" href="gallery.html">
+          <i class="fa-regular fa-images fa-fw mr-1 text-[var(--kcs-blue)]"></i>Gallery
+        </a>
+        <a class="px-3 py-2 rounded-xl hover:bg-slate-100" href="contact.html">
+          <i class="fa-solid fa-phone fa-fw mr-1 text-[var(--kcs-blue)]"></i>Contact
+        </a>
+        <a class="ml-2 px-4 py-2 rounded-xl bg-[var(--kcs-blue)] text-white hover:opacity-90 inline-flex items-center gap-2" href="admissions.html">
+          <i class="fa-solid fa-paper-plane"></i> Apply Online
+        </a>
+      </nav>
+    </div>
+
+    <!-- Mobile menu -->
+    <div class="hidden sm:hidden border-t border-slate-100" data-menu>
+      <div class="mx-auto max-w-7xl px-4 py-3 flex flex-col gap-1">
+        <a class="px-3 py-2 rounded-xl hover:bg-slate-100" href="index.html"><i class="fa-solid fa-house fa-fw mr-2 text-[var(--kcs-blue)]"></i>Home</a>
+        <a class="px-3 py-2 rounded-xl hover:bg-slate-100" href="about.html"><i class="fa-solid fa-circle-info fa-fw mr-2 text-[var(--kcs-blue)]"></i>About</a>
+        <a class="px-3 py-2 rounded-xl bg-slate-100" href="academics.html"><i class="fa-solid fa-graduation-cap fa-fw mr-2 text-[var(--kcs-blue)]"></i>Academics</a>
+        <a class="px-3 py-2 rounded-xl hover:bg-slate-100" href="admissions.html"><i class="fa-solid fa-file-signature fa-fw mr-2 text-[var(--kcs-blue)]"></i>Admissions</a>
+        <a class="px-3 py-2 rounded-xl hover:bg-slate-100" href="gallery.html"><i class="fa-regular fa-images fa-fw mr-2 text-[var(--kcs-blue)]"></i>Gallery</a>
+        <a class="px-3 py-2 rounded-xl hover:bg-slate-100" href="contact.html"><i class="fa-solid fa-phone fa-fw mr-2 text-[var(--kcs-blue)]"></i>Contact</a>
+        <a class="px-3 py-2 rounded-xl bg-[var(--kcs-blue)] text-white inline-flex items-center gap-2" href="admissions.html">
+          <i class="fa-solid fa-paper-plane"></i> Apply Online
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="relative overflow-hidden border-b border-slate-200">
+    <div class="absolute inset-0 bg-[var(--kcs-yellow)]/40"></div>
+    <div class="absolute -top-24 -right-24 h-72 w-72 rounded-full bg-[var(--kcs-blue)]/15 blur-2xl"></div>
+    <div class="absolute -bottom-24 -left-24 h-72 w-72 rounded-full bg-[var(--kcs-green)]/15 blur-2xl"></div>
+
+    <div class="relative mx-auto max-w-7xl px-4 py-14 grid lg:grid-cols-2 gap-10 items-center">
+      <div>
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-slate-200 text-sm">
+          <i class="fa-solid fa-book-open text-[var(--kcs-green)]"></i>
+          Academics • O & A Levels • Discipline • Excellence
+        </div>
+
+        <h1 class="mt-4 text-4xl sm:text-5xl font-black leading-tight text-[var(--kcs-ink)] font-serif">
+          Academics that Build Strong Minds & Strong Character
+        </h1>
+
+        <p class="mt-4 text-lg text-slate-700 max-w-xl">
+          We provide a balanced learning experience with emphasis on excellent academic achievement, character building,
+          leadership development and sports participation — helping learners become responsible, self-driven and critical thinkers.
+        </p>
+
+        <div class="mt-6 flex flex-col sm:flex-row gap-3">
+          <a href="#levels" class="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-[var(--kcs-green)] text-white font-semibold hover:opacity-90">
+            <i class="fa-solid fa-layer-group"></i> Explore Levels
+          </a>
+          <a href="#projects" class="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl border border-slate-300 bg-white font-semibold hover:bg-slate-50">
+            <i class="fa-solid fa-diagram-project text-[var(--kcs-blue)]"></i> View Projects
+          </a>
+        </div>
+
+        <div class="mt-8 grid grid-cols-2 sm:grid-cols-4 gap-3">
+          <div class="rounded-2xl bg-white border border-slate-200 p-4">
+            <div class="text-2xl font-black text-[var(--kcs-blue)]" data-count="900">0</div>
+            <div class="text-sm text-slate-600"><i class="fa-solid fa-user-graduate mr-1"></i>Students</div>
+          </div>
+          <div class="rounded-2xl bg-white border border-slate-200 p-4">
+            <div class="text-2xl font-black text-[var(--kcs-blue)]" data-count="40">0</div>
+            <div class="text-sm text-slate-600"><i class="fa-solid fa-chalkboard-user mr-1"></i>Staff</div>
+          </div>
+          <div class="rounded-2xl bg-white border border-slate-200 p-4">
+            <div class="text-2xl font-black text-[var(--kcs-blue)]">U1536</div>
+            <div class="text-sm text-slate-600"><i class="fa-solid fa-certificate mr-1"></i>UNEB Center</div>
+          </div>
+          <div class="rounded-2xl bg-white border border-slate-200 p-4">
+            <div class="text-2xl font-black text-[var(--kcs-blue)]">O & A</div>
+            <div class="text-sm text-slate-600"><i class="fa-solid fa-graduation-cap mr-1"></i>Levels</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="relative reveal">
+        <div class="absolute -inset-6 rounded-[2.2rem] bg-[var(--kcs-blue)]/10 blur-2xl"></div>
+        <div class="relative rounded-[2.2rem] overflow-hidden border border-slate-200 bg-white shadow-sm">
+          <img
+            src="assets/images/academics-hero.jpg"
+            alt="Academics at Kisaasi College School"
+            class="w-full h-[560px] object-cover"
+            onerror="this.src='https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1600&q=60'"
+          />
+          <div class="p-5 border-t border-slate-100">
+            <div class="flex items-start justify-between gap-4">
+              <div>
+                <div class="font-bold"><i class="fa-solid fa-bullseye text-[var(--kcs-green)] mr-2"></i>Focused Learning Culture</div>
+                <div class="text-sm text-slate-600">Guidance • Revision • Continuous Assessment</div>
+              </div>
+              <span class="px-3 py-1 rounded-full text-sm bg-[var(--kcs-yellow)] border border-slate-200">
+                <i class="fa-solid fa-book mr-1 text-[var(--kcs-blue)]"></i> Academics
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- LEVELS -->
+  <section id="levels" class="mx-auto max-w-7xl px-4 py-12">
+    <div class="flex items-end justify-between gap-6 flex-wrap">
+      <div>
+        <h2 class="text-2xl font-extrabold font-serif"><i class="fa-solid fa-layer-group text-[var(--kcs-blue)] mr-2"></i>Learning Levels</h2>
+        <p class="mt-2 text-slate-700 max-w-3xl">
+          O’ Level builds a strong foundation. A’ Level supports career direction through focused combinations.
+          Both levels operate in a disciplined environment with mentorship and guidance.
+        </p>
+      </div>
+      <a href="admissions.html" class="px-4 py-2 rounded-xl bg-[var(--kcs-blue)] text-white hover:opacity-90 inline-flex items-center gap-2">
+        <i class="fa-solid fa-paper-plane"></i> Apply Online
+      </a>
+    </div>
+
+    <div class="mt-6 rounded-3xl border border-slate-200 bg-white overflow-hidden reveal">
+      <div class="p-4 border-b border-slate-200 flex flex-col sm:flex-row gap-3 sm:items-center sm:justify-between">
+        <div class="flex gap-2">
+          <button class="px-4 py-2 rounded-xl border border-slate-200 bg-slate-100 font-semibold inline-flex items-center gap-2"
+                  data-tab-btn="olevel">
+            <i class="fa-solid fa-school text-[var(--kcs-green)]"></i> O’ Level
+          </button>
+          <button class="px-4 py-2 rounded-xl border border-slate-200 bg-white font-semibold hover:bg-slate-50 inline-flex items-center gap-2"
+                  data-tab-btn="alevel">
+            <i class="fa-solid fa-graduation-cap text-[var(--kcs-blue)]"></i> A’ Level
+          </button>
+        </div>
+        <div class="text-sm text-slate-600">
+          <i class="fa-regular fa-lightbulb mr-1 text-[var(--kcs-blue)]"></i>
+          Tip: Click a tab to switch level details.
+        </div>
+      </div>
+
+      <!-- O'LEVEL -->
+      <div class="p-7" data-tab-panel="olevel">
+        <div class="grid lg:grid-cols-3 gap-6">
+          <div class="lg:col-span-2">
+            <h3 class="text-2xl font-extrabold font-serif">O’ Level Programme</h3>
+            <p class="mt-3 text-slate-700 leading-relaxed">
+              O’ Level provides a strong foundation in sciences, arts and practical learning. We emphasize structured learning,
+              revision, continuous assessment, guidance and discipline to help learners grow academically and morally.
+            </p>
+
+            <div class="mt-5 grid sm:grid-cols-3 gap-3">
+              <div class="rounded-2xl bg-slate-50 border border-slate-200 p-4">
+                <div class="font-bold text-[var(--kcs-green)]"><i class="fa-solid fa-list-check mr-2"></i>Structured Learning</div>
+                <div class="text-sm text-slate-600 mt-1">Lessons + revision plans.</div>
+              </div>
+              <div class="rounded-2xl bg-slate-50 border border-slate-200 p-4">
+                <div class="font-bold text-[var(--kcs-green)]"><i class="fa-solid fa-clipboard-check mr-2"></i>Continuous Assessment</div>
+                <div class="text-sm text-slate-600 mt-1">Tests, coursework & feedback.</div>
+              </div>
+              <div class="rounded-2xl bg-slate-50 border border-slate-200 p-4">
+                <div class="font-bold text-[var(--kcs-green)]"><i class="fa-solid fa-shield-heart mr-2"></i>Discipline & Guidance</div>
+                <div class="text-sm text-slate-600 mt-1">Mentorship and morals.</div>
+              </div>
+            </div>
+
+            <div class="mt-6">
+              <div class="text-sm text-slate-500 font-semibold"><i class="fa-solid fa-book mr-2"></i>Common Subjects</div>
+              <div class="mt-3 flex flex-wrap gap-2">
+                <span class="px-3 py-2 rounded-xl bg-[var(--kcs-yellow)]/70 border border-slate-200 text-sm">Mathematics</span>
+                <span class="px-3 py-2 rounded-xl bg-[var(--kcs-yellow)]/70 border border-slate-200 text-sm">English</span>
+                <span class="px-3 py-2 rounded-xl bg-[var(--kcs-yellow)]/70 border border-slate-200 text-sm">Biology</span>
+                <span class="px-3 py-2 rounded-xl bg-[var(--kcs-yellow)]/70 border border-slate-200 text-sm">Chemistry</span>
+                <span class="px-3 py-2 rounded-xl bg-[var(--kcs-yellow)]/70 border border-slate-200 text-sm">Physics</span>
+                <span class="px-3 py-2 rounded-xl bg-[var(--kcs-yellow)]/70 border border-slate-200 text-sm">Geography</span>
+                <span class="px-3 py-2 rounded-xl bg-[var(--kcs-yellow)]/70 border border-slate-200 text-sm">History</span>
+                <span class="px-3 py-2 rounded-xl bg-[var(--kcs-yellow)]/70 border border-slate-200 text-sm">CRE / IRE</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="rounded-3xl border border-slate-200 bg-[var(--kcs-green)] text-white p-6">
+            <h4 class="text-xl font-extrabold"><i class="fa-solid fa-star mr-2"></i>O’ Level Outcomes</h4>
+            <ul class="mt-4 space-y-2 text-white/90">
+              <li><i class="fa-solid fa-check mr-2"></i>Strong foundation for A’ Level and future careers</li>
+              <li><i class="fa-solid fa-check mr-2"></i>Improved study discipline and time management</li>
+              <li><i class="fa-solid fa-check mr-2"></i>Growth in morals, responsibility and confidence</li>
+              <li><i class="fa-solid fa-check mr-2"></i>Participation in leadership and sports activities</li>
+            </ul>
+            <a href="admissions.html" class="mt-6 inline-flex w-full items-center justify-center gap-2 px-4 py-2 rounded-xl bg-white text-[var(--kcs-green)] font-semibold hover:opacity-90">
+              <i class="fa-solid fa-file-signature"></i> Apply for O’ Level
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- A'LEVEL -->
+      <div class="p-7 hidden" data-tab-panel="alevel">
+        <div class="grid lg:grid-cols-3 gap-6">
+          <div class="lg:col-span-2">
+            <h3 class="text-2xl font-extrabold font-serif">A’ Level Programme</h3>
+            <p class="mt-3 text-slate-700 leading-relaxed">
+              A’ Level offers focused subject combinations to support career direction. We strengthen mentorship, exam preparedness,
+              and guidance so learners can confidently pursue university and professional pathways.
+            </p>
+
+            <div class="mt-5 grid sm:grid-cols-3 gap-3">
+              <div class="rounded-2xl bg-slate-50 border border-slate-200 p-4">
+                <div class="font-bold text-[var(--kcs-blue)]"><i class="fa-solid fa-compass mr-2"></i>Career Guidance</div>
+                <div class="text-sm text-slate-600 mt-1">Choosing the right path.</div>
+              </div>
+              <div class="rounded-2xl bg-slate-50 border border-slate-200 p-4">
+                <div class="font-bold text-[var(--kcs-blue)]"><i class="fa-solid fa-file-circle-check mr-2"></i>Exam Preparedness</div>
+                <div class="text-sm text-slate-600 mt-1">Past papers + coaching.</div>
+              </div>
+              <div class="rounded-2xl bg-slate-50 border border-slate-200 p-4">
+                <div class="font-bold text-[var(--kcs-blue)]"><i class="fa-solid fa-handshake mr-2"></i>Mentorship</div>
+                <div class="text-sm text-slate-600 mt-1">Academic and personal growth.</div>
+              </div>
+            </div>
+
+            <div class="mt-6">
+              <div class="text-sm text-slate-500 font-semibold"><i class="fa-solid fa-cubes mr-2"></i>Example Combinations</div>
+              <div class="mt-3 flex flex-wrap gap-2">
+                <span class="px-3 py-2 rounded-xl bg-white border border-slate-200 text-sm">PCM</span>
+                <span class="px-3 py-2 rounded-xl bg-white border border-slate-200 text-sm">PCB</span>
+                <span class="px-3 py-2 rounded-xl bg-white border border-slate-200 text-sm">MEG</span>
+                <span class="px-3 py-2 rounded-xl bg-white border border-slate-200 text-sm">HEG</span>
+                <span class="px-3 py-2 rounded-xl bg-white border border-slate-200 text-sm">PEM</span>
+                <span class="px-3 py-2 rounded-xl bg-white border border-slate-200 text-sm">LIT/ARTS</span>
+              </div>
+              <p class="mt-3 text-sm text-slate-600">
+                (You can customize these combinations later to match what the school offers exactly.)
+              </p>
+            </div>
+          </div>
+
+          <div class="rounded-3xl border border-slate-200 bg-[var(--kcs-blue)] text-white p-6">
+            <h4 class="text-xl font-extrabold"><i class="fa-solid fa-star mr-2"></i>A’ Level Outcomes</h4>
+            <ul class="mt-4 space-y-2 text-white/90">
+              <li><i class="fa-solid fa-check mr-2"></i>Strong university readiness</li>
+              <li><i class="fa-solid fa-check mr-2"></i>Clear career direction & confidence</li>
+              <li><i class="fa-solid fa-check mr-2"></i>Leadership and mentoring culture</li>
+              <li><i class="fa-solid fa-check mr-2"></i>Responsible and critical thinking</li>
+            </ul>
+            <a href="admissions.html" class="mt-6 inline-flex w-full items-center justify-center gap-2 px-4 py-2 rounded-xl bg-white text-[var(--kcs-blue)] font-semibold hover:opacity-90">
+              <i class="fa-solid fa-file-signature"></i> Apply for A’ Level
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Culture cards -->
+    <div class="mt-6 grid lg:grid-cols-3 gap-4">
+      <div class="rounded-3xl border border-slate-200 bg-white p-6 reveal">
+        <div class="font-extrabold text-[var(--kcs-green)]"><i class="fa-solid fa-compass mr-2"></i>Orientation Programme</div>
+        <p class="mt-2 text-slate-700">
+          We orient new students through a well-planned programme to facilitate learners to settle in, understand school culture,
+          policies and guidelines — setting a good pace for learning.
+        </p>
+      </div>
+      <div class="rounded-3xl border border-slate-200 bg-white p-6 reveal">
+        <div class="font-extrabold text-[var(--kcs-green)]"><i class="fa-solid fa-chalkboard-user mr-2"></i>Professional Teachers</div>
+        <p class="mt-2 text-slate-700">
+          Teachers are role models and mentors. They plan meticulously and undergo professional development to maintain
+          expected standards and practices.
+        </p>
+      </div>
+      <div class="rounded-3xl border border-slate-200 bg-white p-6 reveal">
+        <div class="font-extrabold text-[var(--kcs-green)]"><i class="fa-solid fa-heart mr-2"></i>Whole Child Support</div>
+        <p class="mt-2 text-slate-700">
+          We support learners academically, socially and morally, encouraging creativity, leadership and responsible citizenship.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="bg-slate-50 border-y border-slate-200">
+    <div class="mx-auto max-w-7xl px-4 py-12">
+      <div class="flex items-end justify-between flex-wrap gap-4">
+        <div>
+          <h2 class="text-2xl font-extrabold font-serif"><i class="fa-solid fa-diagram-project text-[var(--kcs-blue)] mr-2"></i>Student Projects</h2>
+          <p class="mt-2 text-slate-700 max-w-3xl">
+            Projects help learners develop critical thinking, teamwork, creativity and leadership.
+            Below are sample categories you can showcase on the website.
+          </p>
+        </div>
+        <a href="gallery.html" class="px-4 py-2 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 inline-flex items-center gap-2">
+          <i class="fa-regular fa-images text-[var(--kcs-blue)]"></i> View in Gallery
+        </a>
+      </div>
+
+      <!-- filters -->
+      <div class="mt-6 flex flex-wrap gap-2">
+        <button class="px-4 py-2 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 font-semibold inline-flex items-center gap-2"
+                data-filter-btn="all"><i class="fa-solid fa-border-all text-[var(--kcs-blue)]"></i> All</button>
+        <button class="px-4 py-2 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 font-semibold inline-flex items-center gap-2"
+                data-filter-btn="science"><i class="fa-solid fa-flask text-[var(--kcs-green)]"></i> Science</button>
+        <button class="px-4 py-2 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 font-semibold inline-flex items-center gap-2"
+                data-filter-btn="leadership"><i class="fa-solid fa-people-group text-[var(--kcs-blue)]"></i> Leadership</button>
+        <button class="px-4 py-2 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 font-semibold inline-flex items-center gap-2"
+                data-filter-btn="arts"><i class="fa-solid fa-palette text-[var(--kcs-blue)]"></i> Arts</button>
+        <button class="px-4 py-2 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 font-semibold inline-flex items-center gap-2"
+                data-filter-btn="ict"><i class="fa-solid fa-laptop-code text-[var(--kcs-green)]"></i> ICT</button>
+      </div>
+
+      <!-- (YOUR PROJECT CARDS REMAIN THE SAME; OPTIONAL icons can be added later inside cards) -->
+      <div class="mt-6 grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <!-- cards unchanged -->
+        <!-- ... keep all your existing cards here exactly as they are ... -->
+        <!-- I kept them untouched to avoid breaking your modal/filter attributes -->
+        <!-- START: Your original cards -->
+        <!-- card -->
+        <button class="text-left rounded-3xl border border-slate-200 bg-white overflow-hidden hover:shadow-sm transition reveal"
+                data-project data-category="science"
+                data-title="Science & Innovation"
+                data-desc="Models, experiments, innovation challenges, and science exhibitions to improve curiosity and problem-solving."
+                data-img="assets/images/project-science.jpg">
+          <img class="w-full h-44 object-cover"
+               src="assets/images/project-science.jpg"
+               alt="Science project"
+               onerror="this.src='https://images.unsplash.com/photo-1554475901-4538ddfbccc2?auto=format&fit=crop&w=1200&q=60'">
+          <div class="p-5">
+            <div class="font-extrabold text-[var(--kcs-blue)]">Science & Innovation</div>
+            <p class="mt-2 text-sm text-slate-700">Experiments, models, exhibitions and innovation.</p>
+            <div class="mt-3 inline-flex text-xs px-2 py-1 rounded-full bg-[var(--kcs-yellow)]/70 border border-slate-200">
+              Science
+            </div>
+          </div>
+        </button>
+
+        <button class="text-left rounded-3xl border border-slate-200 bg-white overflow-hidden hover:shadow-sm transition reveal"
+                data-project data-category="leadership"
+                data-title="Leadership & Community"
+                data-desc="Debate, prefect leadership initiatives, outreach, and community responsibility activities."
+                data-img="assets/images/project-leadership.jpg">
+          <img class="w-full h-44 object-cover"
+               src="assets/images/project-leadership.jpg"
+               alt="Leadership project"
+               onerror="this.src='https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1200&q=60'">
+          <div class="p-5">
+            <div class="font-extrabold text-[var(--kcs-blue)]">Leadership & Community</div>
+            <p class="mt-2 text-sm text-slate-700">Debate, outreach, discipline and responsibility.</p>
+            <div class="mt-3 inline-flex text-xs px-2 py-1 rounded-full bg-[var(--kcs-yellow)]/70 border border-slate-200">
+              Leadership
+            </div>
+          </div>
+        </button>
+
+        <button class="text-left rounded-3xl border border-slate-200 bg-white overflow-hidden hover:shadow-sm transition reveal"
+                data-project data-category="arts"
+                data-title="Arts & Creativity"
+                data-desc="Music, drama, art and talent development that builds confidence and expression."
+                data-img="assets/images/project-arts.jpg">
+          <img class="w-full h-44 object-cover"
+               src="assets/images/project-arts.jpg"
+               alt="Arts project"
+               onerror="this.src='https://images.unsplash.com/photo-1526498460520-4c246339dccb?auto=format&fit=crop&w=1200&q=60'">
+          <div class="p-5">
+            <div class="font-extrabold text-[var(--kcs-blue)]">Arts & Creativity</div>
+            <p class="mt-2 text-sm text-slate-700">Music, drama, art and student talent.</p>
+            <div class="mt-3 inline-flex text-xs px-2 py-1 rounded-full bg-[var(--kcs-yellow)]/70 border border-slate-200">
+              Arts
+            </div>
+          </div>
+        </button>
+
+        <button class="text-left rounded-3xl border border-slate-200 bg-white overflow-hidden hover:shadow-sm transition reveal"
+                data-project data-category="ict"
+                data-title="ICT & Digital Skills"
+                data-desc="Computer skills, digital literacy, presentations, basic coding, and creative tech projects."
+                data-img="assets/images/project-ict.jpg">
+          <img class="w-full h-44 object-cover"
+               src="assets/images/project-ict.jpg"
+               alt="ICT project"
+               onerror="this.src='https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1200&q=60'">
+          <div class="p-5">
+            <div class="font-extrabold text-[var(--kcs-blue)]">ICT & Digital Skills</div>
+            <p class="mt-2 text-sm text-slate-700">Digital literacy, presentations and tech projects.</p>
+            <div class="mt-3 inline-flex text-xs px-2 py-1 rounded-full bg-[var(--kcs-yellow)]/70 border border-slate-200">
+              ICT
+            </div>
+          </div>
+        </button>
+
+        <button class="text-left rounded-3xl border border-slate-200 bg-white overflow-hidden hover:shadow-sm transition reveal"
+                data-project data-category="science"
+                data-title="Practical Learning"
+                data-desc="Hands-on lessons, demonstrations and practical tasks that deepen understanding."
+                data-img="assets/images/project-practical.jpg">
+          <img class="w-full h-44 object-cover"
+               src="assets/images/project-practical.jpg"
+               alt="Practical learning"
+               onerror="this.src='https://images.unsplash.com/photo-1588072432836-7fb78f2f8f5f?auto=format&fit=crop&w=1200&q=60'">
+          <div class="p-5">
+            <div class="font-extrabold text-[var(--kcs-blue)]">Practical Learning</div>
+            <p class="mt-2 text-sm text-slate-700">Hands-on tasks and demonstrations.</p>
+            <div class="mt-3 inline-flex text-xs px-2 py-1 rounded-full bg-[var(--kcs-yellow)]/70 border border-slate-200">
+              Science
+            </div>
+          </div>
+        </button>
+
+        <button class="text-left rounded-3xl border border-slate-200 bg-white overflow-hidden hover:shadow-sm transition reveal"
+                data-project data-category="leadership"
+                data-title="Debate & Public Speaking"
+                data-desc="Debate and speaking programmes to build confidence, logic and communication skills."
+                data-img="assets/images/project-debate.jpg">
+          <img class="w-full h-44 object-cover"
+               src="assets/images/project-debate.jpg"
+               alt="Debate project"
+               onerror="this.src='https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1200&q=60'">
+          <div class="p-5">
+            <div class="font-extrabold text-[var(--kcs-blue)]">Debate & Public Speaking</div>
+            <p class="mt-2 text-sm text-slate-700">Confidence, logic and communication.</p>
+            <div class="mt-3 inline-flex text-xs px-2 py-1 rounded-full bg-[var(--kcs-yellow)]/70 border border-slate-200">
+              Leadership
+            </div>
+          </div>
+        </button>
+        <!-- END: Your original cards -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Project Modal -->
+  <div id="projectModal" class="fixed inset-0 hidden items-center justify-center z-[60]">
+    <div class="absolute inset-0 bg-black/50" id="projectBackdrop"></div>
+    <div class="relative w-[95%] max-w-3xl rounded-3xl bg-white border border-slate-200 shadow-lg overflow-hidden">
+      <div class="p-5 border-b border-slate-200 flex items-center justify-between">
+        <div>
+          <div class="font-extrabold text-lg" id="pmTitle">Project</div>
+          <div class="text-sm text-slate-500">Student Projects • KISAASI COLLEGE SCHOOL</div>
+        </div>
+        <button id="pmClose" class="px-3 py-2 rounded-xl border border-slate-200 hover:bg-slate-50" aria-label="Close">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      <img id="pmImg" class="w-full h-64 object-cover" alt="Project image"
+           onerror="this.src='https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1600&q=60'">
+      <div class="p-6 text-slate-800">
+        <p id="pmDesc" class="leading-relaxed"></p>
+        <div class="mt-5 flex justify-end gap-2">
+          <a href="gallery.html" class="px-4 py-2 rounded-xl border border-slate-200 hover:bg-slate-50 font-semibold inline-flex items-center gap-2">
+            <i class="fa-regular fa-images text-[var(--kcs-blue)]"></i> View Gallery
+          </a>
+          <button id="pmClose2" class="px-4 py-2 rounded-xl bg-[var(--kcs-blue)] text-white hover:opacity-90 font-semibold inline-flex items-center gap-2">
+            <i class="fa-solid fa-xmark"></i> Close
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BACK TO TOP -->
+  <button id="backToTop"
+          class="hidden fixed bottom-5 right-5 z-50 rounded-2xl bg-[var(--kcs-blue)] text-white px-4 py-3 shadow-lg hover:opacity-90 inline-flex items-center gap-2">
+    <i class="fa-solid fa-arrow-up"></i> Top
+  </button>
+
+  <!-- FOOTER -->
+  <footer class="bg-[var(--kcs-ink)] text-white">
+    <div class="mx-auto max-w-7xl px-4 py-12 grid md:grid-cols-3 gap-8">
+      <div>
+        <div class="flex items-center gap-3">
+          <div class="h-12 w-12 rounded-full bg-white border border-white/20 overflow-hidden flex items-center justify-center">
+            <img src="assets/images/logo.png" alt="Kisaasi College School Logo" class="h-full w-full object-contain p-1"
+                 onerror="this.closest('div').innerHTML='<span class=&quot;font-black text-[var(--kcs-green)]&quot;>KCS</span>';" />
+          </div>
+          <div>
+            <div class="font-extrabold text-lg">KISAASI COLLEGE SCHOOL</div>
+            <div class="text-white/70 text-sm">We labour for the future</div>
+          </div>
+        </div>
+
+        <p class="mt-4 text-white/70">
+          A private mixed day and boarding institution established in 1995. Islamic-based and welcoming to all religions.
+        </p>
+
+        <p class="mt-4 text-sm text-white/70">
+          © <span id="yr"></span> Kisaasi College School. All rights reserved.
+        </p>
+      </div>
+
+      <div>
+        <div class="font-bold"><i class="fa-solid fa-location-dot mr-2 text-[var(--kcs-yellow)]"></i>Address</div>
+        <div class="mt-3 space-y-2 text-white/80">
+          <p>P.O. Box 5167, Kampala-Uganda</p>
+          <p>
+            <i class="fa-solid fa-globe mr-2 text-[var(--kcs-yellow)]"></i>
+            Website:
+            <a class="hover:text-white underline underline-offset-4" href="https://www.kisaasicollegeschool.com" target="_blank" rel="noopener">
+              www.kisaasicollegeschool.com
+            </a>
+          </p>
+          <p><i class="fa-brands fa-facebook mr-2 text-[var(--kcs-yellow)]"></i>Facebook: <span class="font-semibold">Kisaasi College School</span></p>
+          <p><i class="fa-brands fa-tiktok mr-2 text-[var(--kcs-yellow)]"></i>TikTok: <span class="font-semibold">Kisaasicollegeschool</span></p>
+        </div>
+      </div>
+
+      <div>
+        <div class="font-bold"><i class="fa-solid fa-phone mr-2 text-[var(--kcs-yellow)]"></i>Contact</div>
+        <div class="mt-3 space-y-2 text-white/80">
+          <p><i class="fa-solid fa-phone fa-fw"></i> +256 701 750 708</p>
+          <p><i class="fa-solid fa-phone fa-fw"></i> +256 392 001 705</p>
+          <p><i class="fa-solid fa-phone fa-fw"></i> +256 772 420 741</p>
+          <p><i class="fa-solid fa-phone fa-fw"></i> +256 703 704 281</p>
+          <p class="pt-2">
+            <i class="fa-solid fa-envelope fa-fw"></i>
+            <a class="hover:text-white underline underline-offset-4" href="mailto:kisaasicollege.sch@gmail.com">kisaasicollege.sch@gmail.com</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Year
+    document.getElementById('yr').textContent = new Date().getFullYear();
+
+    // Mobile menu
+    (function () {
+      const btn = document.querySelector('[data-menu-btn]');
+      const menu = document.querySelector('[data-menu]');
+      if (!btn || !menu) return;
+      btn.addEventListener('click', () => {
+        const willShow = menu.classList.contains('hidden');
+        menu.classList.toggle('hidden');
+        btn.setAttribute('aria-expanded', willShow ? 'true' : 'false');
+      });
+    })();
+
+    // Reveal on scroll
+    (function () {
+      const els = document.querySelectorAll('.reveal');
+      els.forEach(el => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(14px)';
+        el.style.transition = 'opacity .6s ease, transform .6s ease';
+      });
+
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+          if (e.isIntersecting) {
+            e.target.style.opacity = '1';
+            e.target.style.transform = 'translateY(0)';
+            io.unobserve(e.target);
+          }
+        });
+      }, { threshold: 0.15 });
+
+      els.forEach(el => io.observe(el));
+    })();
+
+    // Counters
+    (function () {
+      const counters = document.querySelectorAll('[data-count]');
+      if (!counters.length) return;
+
+      const animate = (el) => {
+        const target = parseInt(el.getAttribute('data-count'), 10);
+        if (!Number.isFinite(target)) return;
+        const duration = 900;
+        const start = performance.now();
+
+        const step = (t) => {
+          const p = Math.min((t - start) / duration, 1);
+          const val = Math.floor(target * (0.10 + 0.90 * p));
+          el.textContent = val.toLocaleString();
+          if (p < 1) requestAnimationFrame(step);
+          else el.textContent = target.toLocaleString();
+        };
+        requestAnimationFrame(step);
+      };
+
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+          if (e.isIntersecting) {
+            animate(e.target);
+            io.unobserve(e.target);
+          }
+        });
+      }, { threshold: 0.7 });
+
+      counters.forEach(c => io.observe(c));
+    })();
+
+    // Tabs
+    (function () {
+      const btns = document.querySelectorAll('[data-tab-btn]');
+      const panels = document.querySelectorAll('[data-tab-panel]');
+      if (!btns.length || !panels.length) return;
+
+      const setActive = (name) => {
+        btns.forEach(b => {
+          const isActive = b.getAttribute('data-tab-btn') === name;
+          b.classList.toggle('bg-slate-100', isActive);
+          b.classList.toggle('bg-white', !isActive);
+        });
+
+        panels.forEach(p => {
+          const isActive = p.getAttribute('data-tab-panel') === name;
+          p.classList.toggle('hidden', !isActive);
+        });
+      };
+
+      btns.forEach(b => b.addEventListener('click', () => setActive(b.getAttribute('data-tab-btn'))));
+      setActive('olevel');
+    })();
+
+    // Project filter + modal
+    (function () {
+      const cards = Array.from(document.querySelectorAll('[data-project]'));
+      const filterBtns = Array.from(document.querySelectorAll('[data-filter-btn]'));
+
+      const modal = document.getElementById('projectModal');
+      const backdrop = document.getElementById('projectBackdrop');
+      const close = document.getElementById('pmClose');
+      const close2 = document.getElementById('pmClose2');
+      const pmTitle = document.getElementById('pmTitle');
+      const pmDesc = document.getElementById('pmDesc');
+      const pmImg = document.getElementById('pmImg');
+
+      const openModal = (title, desc, img) => {
+        pmTitle.textContent = title;
+        pmDesc.textContent = desc;
+        pmImg.src = img;
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+        document.body.style.overflow = 'hidden';
+      };
+
+      const closeModal = () => {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+        document.body.style.overflow = '';
+      };
+
+      if (backdrop) backdrop.addEventListener('click', closeModal);
+      if (close) close.addEventListener('click', closeModal);
+      if (close2) close2.addEventListener('click', closeModal);
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modal && !modal.classList.contains('hidden')) closeModal();
+      });
+
+      cards.forEach(card => {
+        card.addEventListener('click', () => {
+          openModal(
+            card.getAttribute('data-title') || 'Project',
+            card.getAttribute('data-desc') || '',
+            card.getAttribute('data-img') || ''
+          );
+        });
+      });
+
+      const applyFilter = (cat) => {
+        cards.forEach(c => {
+          const ok = (cat === 'all') || (c.getAttribute('data-category') === cat);
+          c.style.display = ok ? '' : 'none';
+        });
+
+        filterBtns.forEach(b => {
+          const active = b.getAttribute('data-filter-btn') === cat;
+          b.classList.toggle('bg-slate-100', active);
+        });
+      };
+
+      filterBtns.forEach(b => b.addEventListener('click', () => applyFilter(b.getAttribute('data-filter-btn'))));
+      applyFilter('all');
+    })();
+
+    // Back to top
+    (function () {
+      const btn = document.getElementById('backToTop');
+      if (!btn) return;
+
+      const toggle = () => {
+        if (window.scrollY > 600) btn.classList.remove('hidden');
+        else btn.classList.add('hidden');
+      };
+      window.addEventListener('scroll', toggle);
+      toggle();
+
+      btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+    })();
+  </script>
+</body>
+</html>

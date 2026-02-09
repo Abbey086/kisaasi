@@ -1,0 +1,841 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#2B6CB0" />
+  <title>Kisaasi College School • We Labour for the Future</title>
+  <meta name="description" content="Kisaasi College School is a private mixed day & boarding institution (O & A Levels). Islamic-based, welcoming to all religions, committed to academic excellence, character building, sports and leadership." />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" referrerpolicy="no-referrer">
+
+  <!-- Fonts (same vibe as your example) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@400;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- ✅ Font Awesome 6 (as you requested) -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-5oK6CzFzC7m+X2XyZ5kzZ6GQZz8zv5Kp6tF9M1v5n9E0zYpL3bJk3U8Z1z1Z9QGJpKx2fM8d2Q=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Tailwind theme using YOUR KCS colors -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            serif: ['Playfair Display', 'Georgia', 'serif'],
+          },
+          colors: {
+            kcs: {
+              yellow: '#FFFF8F',
+              green:  '#1F8A4C',
+              blue:   '#2B6CB0',
+              ink:    '#0f172a',
+            },
+            cream: { DEFAULT: '#F6F3EA', dark: '#EFE8D8' },
+            dark:  { DEFAULT: '#0f172a', card: '#141b2a' },
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { background: #F6F3EA; color: #0f172a; }
+
+    /* marquee like your reference */
+    @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+    .animate-marquee { animation: marquee 20s linear infinite; }
+    .animate-marquee:hover { animation-play-state: paused; }
+
+    /* small fade utility for image switches */
+    .fade-img { transition: opacity .25s ease; }
+
+    /* make FA icons align nicely inside circles */
+    .fa-center { line-height: 1; display: inline-flex; align-items: center; justify-content: center; }
+  </style>
+</head>
+
+<body class="font-sans antialiased">
+
+  <!-- ===== NAVBAR ===== -->
+  <header id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm shadow-sm transition-shadow">
+    <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 lg:px-8">
+
+      <!-- Logo -->
+      <a href="#" class="flex items-center gap-2">
+        <div class="flex h-10 w-10 items-center justify-center rounded-full border-2 border-kcs-blue bg-white overflow-hidden">
+          <img src="assets/images/logo.png"
+               alt="Kisaasi College School"
+               class="h-full w-full object-contain p-1"
+               onerror="this.closest('div').innerHTML='<span style=&quot;font-weight:900;color:#1F8A4C;font-size:12px&quot;>KCS</span>';" />
+        </div>
+        <span class="text-sm font-extrabold text-kcs-ink leading-tight">
+          Kisaasi<br/>College School
+        </span>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden items-center gap-6 lg:flex">
+        <a href="index.html" class="text-sm font-medium text-kcs-ink/70 transition-colors hover:text-kcs-blue">
+          <i class="fa-solid fa-house mr-2"></i>Home
+        </a>
+        <a href="about.html" class="text-sm font-medium text-kcs-ink/70 transition-colors hover:text-kcs-blue">
+          <i class="fa-solid fa-circle-info mr-2"></i>About
+        </a>
+        <a href="gallery.html" class="text-sm font-medium text-kcs-ink/70 transition-colors hover:text-kcs-blue">
+          <i class="fa-solid fa-graduation-cap mr-2"></i>Programs
+        </a>
+        <a href="contact.html" class="text-sm font-medium text-kcs-ink/70 transition-colors hover:text-kcs-blue">
+          <i class="fa-solid fa-file-signature mr-2"></i>Admissions
+        </a>
+        <a href="academics.html" class="text-sm font-medium text-kcs-ink/70 transition-colors hover:text-kcs-blue">
+          <i class="fa-solid fa-calendar-days mr-2"></i>Calendar
+        </a>
+        <a href="admissions.html" class="rounded-full bg-kcs-blue px-6 py-2.5 text-sm font-semibold text-white transition-colors hover:opacity-90">
+          <i class="fa-solid fa-paper-plane mr-2"></i>Apply Online
+        </a>
+      </nav>
+
+      <!-- Mobile Toggle -->
+      <button id="menuToggle" class="lg:hidden text-kcs-ink" aria-label="Toggle menu">
+        <i id="menuOpen" class="fa-solid fa-bars text-xl"></i>
+        <i id="menuClose" class="fa-solid fa-xmark text-xl hidden"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Nav -->
+    <div id="mobileMenu" class="hidden border-t border-gray-200 bg-white px-4 pb-4 lg:hidden">
+      <a href="index.html" class="block py-3 text-sm font-medium text-kcs-ink/70 hover:text-kcs-blue" onclick="closeMobileMenu()">
+        <i class="fa-solid fa-house mr-2"></i>Home
+      </a>
+      <a href="about.html" class="block py-3 text-sm font-medium text-kcs-ink/70 hover:text-kcs-blue" onclick="closeMobileMenu()">
+        <i class="fa-solid fa-circle-info mr-2"></i>About
+      </a>
+      <a href="academics.html" class="block py-3 text-sm font-medium text-kcs-ink/70 hover:text-kcs-blue" onclick="closeMobileMenu()">
+        <i class="fa-solid fa-graduation-cap mr-2"></i>Academics
+      </a>
+      <a href="gallery.html" class="block py-3 text-sm font-medium text-kcs-ink/70 hover:text-kcs-blue" onclick="closeMobileMenu()">
+        <i class="fa-solid fa-file-signature mr-2"></i>Gallary
+      </a>
+      <a href="contact.html" class="block py-3 text-sm font-medium text-kcs-ink/70 hover:text-kcs-blue" onclick="closeMobileMenu()">
+        <i class="fa-solid fa-calendar-days mr-2"></i>Contact 
+      </a>
+      <a href="admissions.html" class="mt-2 block rounded-full bg-kcs-blue px-6 py-2.5 text-center text-sm font-semibold text-white" onclick="closeMobileMenu()">
+        <i class="fa-solid fa-paper-plane mr-2"></i>Apply Online
+      </a>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ===== HERO ===== -->
+    <section class="relative flex min-h-[620px] items-end overflow-hidden pt-20 lg:min-h-[720px]">
+      <img src="assets/images/feli.jpeg" alt="Students of Kisaasi College School" class="absolute inset-0 h-full w-full object-cover object-top" />
+      <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/45 to-black/20"></div>
+
+      <div class="relative z-10 mx-auto w-full max-w-7xl px-4 pb-16 lg:px-8 lg:pb-24">
+        <p class="mb-2 text-xs font-semibold uppercase tracking-widest text-white/70">
+          <i class="fa-solid fa-school mr-2"></i>Welcome to our school
+        </p>
+
+        <h1 class="font-serif text-4xl font-bold leading-tight text-white md:text-5xl lg:text-6xl" style="text-wrap:balance">
+          Kisaasi<br/>College<br/>School
+        </h1>
+
+        <p class="mt-4 max-w-xl text-sm leading-relaxed text-white/80">
+          Private mixed day & boarding institution • UNEB Center U1536 • O & A Levels • Islamic-based, welcoming to all religions.
+        </p>
+
+        <div class="mt-8 flex flex-wrap gap-4">
+          <a href="admissions.html" class="rounded-full bg-kcs-blue px-8 py-3 text-sm font-semibold text-white transition-colors hover:opacity-90">
+            <i class="fa-solid fa-file-signature mr-2"></i>Apply Online
+          </a>
+          <a href="#about" class="rounded-full border-2 border-white/90 px-8 py-3 text-sm font-semibold text-white transition-colors hover:bg-white hover:text-kcs-ink">
+            <i class="fa-solid fa-circle-info mr-2"></i>About Us
+          </a>
+        </div>
+
+        <div class="mt-10 flex flex-wrap gap-2">
+          <span class="rounded-full bg-white/10 px-4 py-2 text-xs text-white/85 border border-white/15 backdrop-blur">
+            <i class="fa-solid fa-flag mr-2"></i>Established 1995
+          </span>
+          <span class="rounded-full bg-white/10 px-4 py-2 text-xs text-white/85 border border-white/15 backdrop-blur">
+            <i class="fa-solid fa-award mr-2"></i>Strong UNEB readiness
+          </span>
+          <span class="rounded-full bg-white/10 px-4 py-2 text-xs text-white/85 border border-white/15 backdrop-blur">
+            <i class="fa-solid fa-people-group mr-2"></i>Character & leadership
+          </span>
+        </div>
+      </div>
+
+      <div class="absolute bottom-0 left-0 right-0">
+        <svg viewBox="0 0 1440 60" fill="none" class="w-full" preserveAspectRatio="none">
+          <path d="M0 60L1440 60L1440 0L0 60Z" fill="#F6F3EA"/>
+        </svg>
+      </div>
+    </section>
+
+    <!-- ===== WELCOME / ABOUT ===== -->
+    <section id="about" class="py-20 lg:py-28">
+      <div class="mx-auto max-w-7xl px-4 lg:px-8">
+        <div class="grid items-center gap-12 lg:grid-cols-2">
+
+          <div>
+            <p class="mb-2 text-xs font-semibold uppercase tracking-widest text-kcs-blue">
+              <i class="fa-solid fa-circle-info mr-2"></i>About School
+            </p>
+
+            <h2 class="font-serif text-3xl font-bold leading-tight text-kcs-ink md:text-4xl" style="text-wrap:balance">
+              Welcome to <span class="text-kcs-blue">Kisaasi College</span> School
+            </h2>
+
+            <p class="mt-6 leading-relaxed text-kcs-ink/70">
+              Kisaasi College School nurtures and cherishes the whole child. Emphasis is laid on excellent academic achievements,
+              character building, participation in sports activities and leadership skills.
+            </p>
+
+            <p class="mt-4 leading-relaxed text-kcs-ink/70">
+              We are Islamic-based and welcoming to all religions, building responsible, self-driven, and critical learners in a supportive environment.
+            </p>
+
+            <div class="mt-8 grid grid-cols-2 gap-3">
+              <div class="rounded-2xl bg-white p-4 border border-gray-200 shadow-sm">
+                <div class="text-sm font-bold text-kcs-green">
+                  <i class="fa-solid fa-book-open mr-2"></i>Academics
+                </div>
+                <p class="mt-1 text-xs text-kcs-ink/60">Structured learning & continuous assessment.</p>
+              </div>
+              <div class="rounded-2xl bg-white p-4 border border-gray-200 shadow-sm">
+                <div class="text-sm font-bold text-kcs-green">
+                  <i class="fa-solid fa-shield-halved mr-2"></i>Discipline
+                </div>
+                <p class="mt-1 text-xs text-kcs-ink/60">Integrity, respect & time management.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="relative">
+            <div class="grid grid-cols-2 gap-4">
+              <div class="space-y-4">
+                <div class="overflow-hidden rounded-2xl">
+                  <img src="assets/images/kids1.jpeg" alt="Students learning together"
+                       class="h-64 w-full object-cover transition-transform duration-500 hover:scale-105"/>
+                </div>
+                <div class="overflow-hidden rounded-2xl">
+                  <img src="assets/images/lib.jpeg" alt="Library"
+                       class="h-40 w-full object-cover transition-transform duration-500 hover:scale-105"/>
+                </div>
+              </div>
+              <div class="space-y-4 pt-8">
+                <div class="overflow-hidden rounded-2xl">
+                  <img src="assets/images/Felista1.jpg" alt="Student life"
+                       class="h-40 w-full object-cover transition-transform duration-500 hover:scale-105"/>
+                </div>
+                <div class="overflow-hidden rounded-2xl">
+                  <img src="assets/images/director.jpeg" alt="School leadership"
+                       class="h-64 w-full object-cover transition-transform duration-500 hover:scale-105"/>
+                </div>
+              </div>
+            </div>
+
+            <div class="absolute -bottom-4 -left-4 -z-10 h-24 w-24 rounded-full bg-kcs-blue/10"></div>
+            <div class="absolute -right-4 -top-4 -z-10 h-16 w-16 rounded-full bg-kcs-yellow/60"></div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== WHY LEARN WITH US ===== -->
+    <section class="bg-white py-20 lg:py-28">
+      <div class="mx-auto max-w-7xl px-4 lg:px-8">
+        <div class="text-center">
+          <p class="mb-2 text-xs font-semibold uppercase tracking-widest text-kcs-blue">
+            <i class="fa-solid fa-star mr-2"></i>Our Features
+          </p>
+          <h2 class="font-serif text-3xl font-bold text-kcs-ink md:text-4xl">Why Learn With Us?</h2>
+        </div>
+
+        <div class="mt-14 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+
+          <div class="group flex flex-col items-center rounded-2xl bg-cream p-8 text-center shadow-sm transition-shadow hover:shadow-md">
+            <div class="mb-5 flex h-16 w-16 items-center justify-center rounded-full bg-kcs-blue/10 transition-colors group-hover:bg-kcs-blue/20">
+              <i class="fa-solid fa-certificate text-kcs-blue text-2xl"></i>
+            </div>
+            <h3 class="mb-2 text-sm font-bold text-kcs-ink">Certified School</h3>
+            <p class="text-xs leading-relaxed text-kcs-ink/60">UNEB readiness with structured teaching and assessment.</p>
+          </div>
+
+          <div class="group flex flex-col items-center rounded-2xl bg-cream p-8 text-center shadow-sm transition-shadow hover:shadow-md">
+            <div class="mb-5 flex h-16 w-16 items-center justify-center rounded-full bg-kcs-blue/10 transition-colors group-hover:bg-kcs-blue/20">
+              <i class="fa-solid fa-globe text-kcs-blue text-2xl"></i>
+            </div>
+            <h3 class="mb-2 text-sm font-bold text-kcs-ink">Holistic Growth</h3>
+            <p class="text-xs leading-relaxed text-kcs-ink/60">Academics, sports participation, morals and leadership.</p>
+          </div>
+
+          <div class="group flex flex-col items-center rounded-2xl bg-cream p-8 text-center shadow-sm transition-shadow hover:shadow-md">
+            <div class="mb-5 flex h-16 w-16 items-center justify-center rounded-full bg-kcs-blue/10 transition-colors group-hover:bg-kcs-blue/20">
+              <i class="fa-solid fa-heart text-kcs-blue text-2xl"></i>
+            </div>
+            <h3 class="mb-2 text-sm font-bold text-kcs-ink">Supportive Environment</h3>
+            <p class="text-xs leading-relaxed text-kcs-ink/60">A disciplined culture where every learner is valued.</p>
+          </div>
+
+          <div class="group flex flex-col items-center rounded-2xl bg-cream p-8 text-center shadow-sm transition-shadow hover:shadow-md">
+            <div class="mb-5 flex h-16 w-16 items-center justify-center rounded-full bg-kcs-blue/10 transition-colors group-hover:bg-kcs-blue/20">
+              <i class="fa-solid fa-chalkboard-user text-kcs-blue text-2xl"></i>
+            </div>
+            <h3 class="mb-2 text-sm font-bold text-kcs-ink">Dedicated Staff</h3>
+            <p class="text-xs leading-relaxed text-kcs-ink/60">Committed teachers supporting strong performance and growth.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== QUICK LINKS ===== -->
+    <section id="connect" class="py-20 lg:py-28">
+      <div class="mx-auto max-w-7xl px-4 lg:px-8">
+        <div class="text-center">
+          <p class="mb-2 text-xs font-semibold uppercase tracking-widest text-kcs-blue">
+            <i class="fa-solid fa-link mr-2"></i>Connection
+          </p>
+          <h2 class="font-serif text-3xl font-bold text-kcs-ink md:text-4xl">Quick Links to<br/>Connect</h2>
+        </div>
+
+        <div class="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <a href="admissions.html" class="group flex flex-col items-center rounded-2xl border border-gray-200 bg-white p-8 text-center transition-all hover:-translate-y-1 hover:shadow-lg">
+            <div class="mb-5 flex h-14 w-14 items-center justify-center rounded-xl bg-kcs-blue text-white transition-transform group-hover:scale-110">
+              <i class="fa-solid fa-file-signature text-xl"></i>
+            </div>
+            <h3 class="mb-2 text-sm font-bold text-kcs-ink">Admissions</h3>
+            <p class="text-xs leading-relaxed text-kcs-ink/60">Requirements, fees structure, and how to apply.</p>
+          </a>
+
+          <a href="academics.html" class="group flex flex-col items-center rounded-2xl border border-gray-200 bg-white p-8 text-center transition-all hover:-translate-y-1 hover:shadow-lg">
+            <div class="mb-5 flex h-14 w-14 items-center justify-center rounded-xl bg-kcs-ink text-white transition-transform group-hover:scale-110">
+              <i class="fa-solid fa-book-open text-xl"></i>
+            </div>
+            <h3 class="mb-2 text-sm font-bold text-kcs-ink">Academics</h3>
+            <p class="text-xs leading-relaxed text-kcs-ink/60">Subjects, curriculum, and assessment approach.</p>
+          </a>
+
+          <a href="gallery.html" class="group flex flex-col items-center rounded-2xl border border-gray-200 bg-white p-8 text-center transition-all hover:-translate-y-1 hover:shadow-lg">
+            <div class="mb-5 flex h-14 w-14 items-center justify-center rounded-xl bg-kcs-ink text-white transition-transform group-hover:scale-110">
+              <i class="fa-solid fa-images text-xl"></i>
+            </div>
+            <h3 class="mb-2 text-sm font-bold text-kcs-ink">Gallery</h3>
+            <p class="text-xs leading-relaxed text-kcs-ink/60">See school life, events, and student moments.</p>
+          </a>
+
+          <a href="contact.html" class="group flex flex-col items-center rounded-2xl border border-gray-200 bg-white p-8 text-center transition-all hover:-translate-y-1 hover:shadow-lg">
+            <div class="mb-5 flex h-14 w-14 items-center justify-center rounded-xl bg-kcs-blue text-white transition-transform group-hover:scale-110">
+              <i class="fa-solid fa-phone text-xl"></i>
+            </div>
+            <h3 class="mb-2 text-sm font-bold text-kcs-ink">Contact School</h3>
+            <p class="text-xs leading-relaxed text-kcs-ink/60">Call, email, or visit the campus for guidance.</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== MARQUEE BANNER ===== -->
+    <div class="relative overflow-hidden bg-kcs-yellow py-4" style="transform:rotate(-2deg);margin:0 -20px">
+      <div class="flex animate-marquee whitespace-nowrap">
+        <span class="mx-8 text-sm font-extrabold tracking-wider text-kcs-ink">
+          <i class="fa-solid fa-diamond mr-2 text-kcs-blue"></i>WE LABOUR FOR THE FUTURE
+          <span class="mx-8 text-kcs-blue">&#9830;</span>
+        </span>
+        <span class="mx-8 text-sm font-extrabold tracking-wider text-kcs-ink">
+          <i class="fa-solid fa-diamond mr-2 text-kcs-blue"></i>WE LABOUR FOR THE FUTURE
+          <span class="mx-8 text-kcs-blue">&#9830;</span>
+        </span>
+        <span class="mx-8 text-sm font-extrabold tracking-wider text-kcs-ink">
+          <i class="fa-solid fa-diamond mr-2 text-kcs-blue"></i>WE LABOUR FOR THE FUTURE
+          <span class="mx-8 text-kcs-blue">&#9830;</span>
+        </span>
+        <span class="mx-8 text-sm font-extrabold tracking-wider text-kcs-ink">
+          <i class="fa-solid fa-diamond mr-2 text-kcs-blue"></i>WE LABOUR FOR THE FUTURE
+          <span class="mx-8 text-kcs-blue">&#9830;</span>
+        </span>
+        <span class="mx-8 text-sm font-extrabold tracking-wider text-kcs-ink">
+          <i class="fa-solid fa-diamond mr-2 text-kcs-blue"></i>WE LABOUR FOR THE FUTURE
+          <span class="mx-8 text-kcs-blue">&#9830;</span>
+        </span>
+        <span class="mx-8 text-sm font-extrabold tracking-wider text-kcs-ink">
+          <i class="fa-solid fa-diamond mr-2 text-kcs-blue"></i>WE LABOUR FOR THE FUTURE
+          <span class="mx-8 text-kcs-blue">&#9830;</span>
+        </span>
+      </div>
+    </div>
+
+    <!-- ===== PROGRAMS ===== -->
+    <section id="programs" class="bg-white py-20 lg:py-28">
+      <div class="mx-auto max-w-7xl px-4 lg:px-8">
+        <div class="text-center">
+          <p class="mb-2 text-xs font-semibold uppercase tracking-widest text-kcs-blue">
+            <i class="fa-solid fa-route mr-2"></i>Our Program
+          </p>
+          <h2 class="font-serif text-3xl font-bold text-kcs-ink md:text-4xl">Journey of Education at <span class="text-kcs-blue">KCS</span></h2>
+        </div>
+
+        <div class="mt-10 flex flex-wrap justify-center gap-2">
+          <button onclick="switchTab('lower')" id="tab-lower" class="tab-btn rounded-full px-6 py-2.5 text-sm font-semibold transition-colors bg-kcs-blue text-white">
+            <i class="fa-solid fa-layer-group mr-2"></i>Lower Secondary
+          </button>
+          <button onclick="switchTab('upper')" id="tab-upper" class="tab-btn rounded-full px-6 py-2.5 text-sm font-semibold transition-colors bg-cream text-kcs-ink hover:bg-kcs-blue/10">
+            <i class="fa-solid fa-arrow-up-right-dots mr-2"></i>Upper Secondary
+          </button>
+          <button onclick="switchTab('alevel')" id="tab-alevel" class="tab-btn rounded-full px-6 py-2.5 text-sm font-semibold transition-colors bg-cream text-kcs-ink hover:bg-kcs-blue/10">
+            <i class="fa-solid fa-user-graduate mr-2"></i>Advanced Level
+          </button>
+        </div>
+
+        <div class="mt-12 grid items-center gap-10 lg:grid-cols-2">
+          <div class="overflow-hidden rounded-2xl border border-gray-200">
+            <img id="program-image" src="assets/images/kids1.jpeg" alt="Lower Secondary" class="h-80 w-full object-cover lg:h-96 transition-opacity duration-300 fade-img"/>
+          </div>
+
+          <div>
+            <h3 id="program-title" class="font-serif text-2xl font-bold text-kcs-ink md:text-3xl">Lower Secondary (S1–S2)</h3>
+            <p id="program-desc" class="mt-4 leading-relaxed text-kcs-ink/70">
+              Building strong foundations: discipline, study habits, and solid understanding of core subjects in a supportive environment.
+            </p>
+
+            <ul id="program-highlights" class="mt-6 grid grid-cols-2 gap-3"></ul>
+
+            <div class="mt-8 flex flex-wrap gap-3">
+              <a href="academics.html" class="rounded-full bg-kcs-green px-7 py-3 text-sm font-semibold text-white hover:opacity-90">
+                <i class="fa-solid fa-book-open mr-2"></i>Explore Academics
+              </a>
+              <a href="contact.html" class="rounded-full border border-gray-300 bg-white px-7 py-3 text-sm font-semibold text-kcs-ink hover:bg-cream">
+                <i class="fa-solid fa-comments mr-2"></i>Talk to Us
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ACADEMIC CALENDAR ===== -->
+    <section id="calendar" class="py-20 lg:py-28">
+      <div class="mx-auto max-w-7xl px-4 lg:px-8">
+        <div class="text-center">
+          <p class="mb-2 text-xs font-semibold uppercase tracking-widest text-kcs-blue">
+            <i class="fa-solid fa-calendar-days mr-2"></i>Stay Updated
+          </p>
+          <h2 class="font-serif text-3xl font-bold text-kcs-ink md:text-4xl">Academic Calendar</h2>
+        </div>
+
+        <div class="mt-14 grid gap-8 lg:grid-cols-3">
+          <div class="lg:col-span-2 rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
+            <div class="mb-6 flex items-center justify-between">
+              <button onclick="prevMonth()" class="flex h-9 w-9 items-center justify-center rounded-full bg-cream transition-colors hover:bg-kcs-blue/10" aria-label="Previous month">
+                <i class="fa-solid fa-chevron-left"></i>
+              </button>
+              <h3 id="calendarMonthYear" class="text-lg font-bold text-kcs-ink">September 2026</h3>
+              <button onclick="nextMonth()" class="flex h-9 w-9 items-center justify-center rounded-full bg-cream transition-colors hover:bg-kcs-blue/10" aria-label="Next month">
+                <i class="fa-solid fa-chevron-right"></i>
+              </button>
+            </div>
+            <div id="calendarGrid" class="grid grid-cols-7 gap-1"></div>
+          </div>
+
+          <div class="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
+            <h3 id="eventsSidebarTitle" class="mb-4 text-lg font-bold text-kcs-ink">September 2026</h3>
+            <ul id="eventsList" class="space-y-4"></ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TESTIMONIALS ===== -->
+    <section class="bg-white py-20 lg:py-28">
+      <div class="mx-auto max-w-7xl px-4 lg:px-8">
+        <div class="grid items-center gap-12 lg:grid-cols-2">
+          <div>
+            <p class="mb-2 text-xs font-semibold uppercase tracking-widest text-kcs-blue">
+              <i class="fa-solid fa-quote-left mr-2"></i>Testimonials
+            </p>
+            <h2 class="font-serif text-3xl font-bold text-kcs-ink md:text-4xl" style="text-wrap:balance">
+              What Parents Say<br/>About Us
+            </h2>
+            <p class="mt-4 text-sm text-kcs-ink/70">Real feedback from our community (replace with actual quotes anytime).</p>
+          </div>
+
+          <div class="relative rounded-2xl bg-cream p-8 shadow-sm lg:p-10">
+            <div class="mb-4 text-kcs-blue/30 text-4xl">
+              <i class="fa-solid fa-quote-left"></i>
+            </div>
+
+            <p id="testimonial-quote" class="leading-relaxed text-kcs-ink/70 italic">
+              "KCS helped my child grow in discipline and confidence. Teachers are supportive and the learning environment is excellent."
+            </p>
+
+            <div class="mt-6 flex items-center gap-4">
+              <img id="testimonial-image" src="assets/images/parent-testimonial.jpg" alt="Parent" class="h-12 w-12 rounded-full object-cover"
+                   onerror="this.style.display='none'" />
+              <div>
+                <p id="testimonial-name" class="text-sm font-bold text-kcs-ink">Parent</p>
+                <p id="testimonial-role" class="text-xs text-kcs-ink/60">KCS Community</p>
+              </div>
+            </div>
+
+            <div class="mt-6 flex gap-2">
+              <button onclick="prevTestimonial()" class="flex h-9 w-9 items-center justify-center rounded-full border border-gray-200 transition-colors hover:bg-kcs-blue hover:text-white hover:border-kcs-blue" aria-label="Previous testimonial">
+                <i class="fa-solid fa-chevron-left"></i>
+              </button>
+              <button onclick="nextTestimonial()" class="flex h-9 w-9 items-center justify-center rounded-full border border-gray-200 transition-colors hover:bg-kcs-blue hover:text-white hover:border-kcs-blue" aria-label="Next testimonial">
+                <i class="fa-solid fa-chevron-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CTA ===== -->
+    <section class="relative overflow-hidden py-24 lg:py-32">
+      <img src="assets/images/cta-bg.jpg" alt="" class="absolute inset-0 h-full w-full object-cover" onerror="this.style.display='none'"/>
+      <div class="absolute inset-0 bg-dark/85"></div>
+
+      <div class="relative z-10 mx-auto max-w-7xl px-4 text-center lg:px-8">
+        <div class="mx-auto flex h-14 w-14 items-center justify-center rounded-full border-2 border-kcs-blue bg-white/10 backdrop-blur-sm">
+          <i class="fa-solid fa-graduation-cap text-kcs-yellow text-xl"></i>
+        </div>
+
+        <p class="mt-4 text-xs font-semibold uppercase tracking-widest text-white/60">
+          <i class="fa-solid fa-file-signature mr-2"></i>Admissions
+        </p>
+
+        <h2 class="mt-2 font-serif text-3xl font-bold text-white md:text-4xl lg:text-5xl" style="text-wrap:balance">
+          Let's Secure Your<br/>Child's Future
+        </h2>
+
+        <p class="mx-auto mt-4 max-w-xl text-sm leading-relaxed text-white/70">
+          Apply online and our team will contact you with the next steps.
+        </p>
+
+        <div class="mt-8 flex flex-wrap justify-center gap-4">
+          <a href="admissions.html" class="rounded-full bg-kcs-blue px-8 py-3 text-sm font-semibold text-white transition-colors hover:opacity-90">
+            <i class="fa-solid fa-paper-plane mr-2"></i>Apply Now
+          </a>
+          <a href="contact.html" class="rounded-full border-2 border-white/30 px-8 py-3 text-sm font-semibold text-white transition-colors hover:border-white hover:bg-white/10">
+            <i class="fa-solid fa-phone mr-2"></i>Contact Us
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer id="contact" class="bg-dark text-white">
+    <div class="mx-auto max-w-7xl px-4 py-16 lg:px-8">
+      <div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+
+        <div>
+          <div class="flex items-center gap-2">
+            <div class="flex h-10 w-10 items-center justify-center rounded-full border-2 border-kcs-blue bg-white overflow-hidden">
+              <img src="assets/images/logo.png" alt="KCS" class="h-full w-full object-contain p-1"
+                   onerror="this.closest('div').innerHTML='<span style=&quot;font-weight:900;color:#1F8A4C;font-size:12px&quot;>KCS</span>';" />
+            </div>
+            <span class="text-sm font-extrabold leading-tight text-white">Kisaasi<br/>College School</span>
+          </div>
+          <p class="mt-4 text-xs leading-relaxed text-white/60">
+            A private mixed day & boarding institution established in 1995. Islamic-based and welcoming to all religions.
+          </p>
+        </div>
+
+        <div>
+          <h3 class="mb-4 text-sm font-bold text-white"><i class="fa-solid fa-link mr-2 text-kcs-yellow"></i>Quick Links</h3>
+          <ul class="space-y-2">
+            <li><a href="#" class="text-xs text-white/60 transition-colors hover:text-kcs-yellow"><i class="fa-solid fa-house mr-2"></i>Home</a></li>
+            <li><a href="#about" class="text-xs text-white/60 transition-colors hover:text-kcs-yellow"><i class="fa-solid fa-circle-info mr-2"></i>About Us</a></li>
+            <li><a href="#programs" class="text-xs text-white/60 transition-colors hover:text-kcs-yellow"><i class="fa-solid fa-graduation-cap mr-2"></i>Programs</a></li>
+            <li><a href="#connect" class="text-xs text-white/60 transition-colors hover:text-kcs-yellow"><i class="fa-solid fa-file-signature mr-2"></i>Admissions</a></li>
+            <li><a href="#calendar" class="text-xs text-white/60 transition-colors hover:text-kcs-yellow"><i class="fa-solid fa-calendar-days mr-2"></i>Calendar</a></li>
+            <li><a href="contact.html" class="text-xs text-white/60 transition-colors hover:text-kcs-yellow"><i class="fa-solid fa-phone mr-2"></i>Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="mb-4 text-sm font-bold text-white"><i class="fa-solid fa-location-dot mr-2 text-kcs-yellow"></i>Address</h3>
+          <p class="text-xs text-white/60">P.O. Box 5167, Kampala-Uganda</p>
+          <p class="mt-2 text-xs text-white/60"><i class="fa-brands fa-facebook mr-2"></i>Facebook: <span class="text-white/80 font-semibold">Kisaasi College School</span></p>
+          <p class="mt-1 text-xs text-white/60"><i class="fa-brands fa-tiktok mr-2"></i>TikTok: <span class="text-white/80 font-semibold">Kisaasicollegeschool</span></p>
+        </div>
+
+        <div>
+          <h3 class="mb-4 text-sm font-bold text-white"><i class="fa-solid fa-phone mr-2 text-kcs-yellow"></i>Contact</h3>
+          <ul class="space-y-2 text-xs text-white/60">
+            <li><i class="fa-solid fa-phone mr-2"></i>+256 701 750 708</li>
+            <li><i class="fa-solid fa-phone mr-2"></i>+256 392 001 705</li>
+            <li><i class="fa-solid fa-phone mr-2"></i>+256 772 420 741</li>
+            <li><i class="fa-solid fa-phone mr-2"></i>+256 703 704 281</li>
+            <li class="pt-2">
+              <i class="fa-solid fa-envelope mr-2"></i>
+              <a class="underline underline-offset-4 hover:text-white" href="mailto:kisaasicollege.sch@gmail.com">kisaasicollege.sch@gmail.com</a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="border-t border-white/10">
+      <div class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-2 px-4 py-4 text-xs text-white/40 sm:flex-row lg:px-8">
+        <p>&copy; <span id="yr"></span> Kisaasi College School. All rights reserved.</p>
+        <div class="flex gap-4">
+          <a href="#" class="hover:text-white/70">Privacy Policy</a>
+          <a href="#" class="hover:text-white/70">Terms</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== JAVASCRIPT ===== -->
+  <script>
+    // Footer year
+    document.getElementById('yr').textContent = new Date().getFullYear();
+
+    // ---- Mobile Menu ----
+    const menuToggle = document.getElementById('menuToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const menuOpen = document.getElementById('menuOpen');
+    const menuClose = document.getElementById('menuClose');
+    let menuIsOpen = false;
+
+    menuToggle.addEventListener('click', function() {
+      menuIsOpen = !menuIsOpen;
+      mobileMenu.classList.toggle('hidden', !menuIsOpen);
+      menuOpen.classList.toggle('hidden', menuIsOpen);
+      menuClose.classList.toggle('hidden', !menuIsOpen);
+    });
+
+    function closeMobileMenu() {
+      menuIsOpen = false;
+      mobileMenu.classList.add('hidden');
+      menuOpen.classList.remove('hidden');
+      menuClose.classList.add('hidden');
+    }
+    window.closeMobileMenu = closeMobileMenu;
+
+    // ---- Programs Tabs (KCS) ----
+    const programsData = {
+      lower: {
+        title: 'Lower Secondary (S1–S2)',
+        image: 'assets/images/kids1.jpeg',
+        description: 'Building strong foundations: discipline, study habits, and solid understanding of core subjects in a supportive environment.',
+        highlights: ['Orientation & mentorship', 'Study routines', 'Core subjects', 'Co-curricular activities']
+      },
+      upper: {
+        title: 'Upper Secondary (S3–S4)',
+        image: 'assets/images/lib.jpeg',
+        description: 'Focused subject mastery and exam technique to prepare learners for O-Level success, including regular assessment and support.',
+        highlights: ['Regular mock exams', 'Remedials', 'Consultations', 'Career guidance']
+      },
+      alevel: {
+        title: 'Advanced Level (S5–S6)',
+        image: 'assets/images/Felista1.jpg',
+        description: 'Deep academic focus, leadership development, and preparation for university and life beyond school.',
+        highlights: ['Subject combinations', 'Leadership roles', 'Academic excellence', 'University preparation']
+      }
+    };
+
+    function switchTab(tabId) {
+      const data = programsData[tabId];
+      if (!data) return;
+
+      document.querySelectorAll('.tab-btn').forEach(function(btn) {
+        btn.classList.remove('bg-kcs-blue', 'text-white');
+        btn.classList.add('bg-cream', 'text-kcs-ink');
+      });
+
+      const active = document.getElementById('tab-' + tabId);
+      active.classList.remove('bg-cream', 'text-kcs-ink');
+      active.classList.add('bg-kcs-blue', 'text-white');
+
+      const img = document.getElementById('program-image');
+      img.style.opacity = '0';
+      setTimeout(function() {
+        img.src = data.image;
+        img.alt = data.title;
+        img.style.opacity = '1';
+      }, 150);
+
+      document.getElementById('program-title').textContent = data.title;
+      document.getElementById('program-desc').textContent = data.description;
+
+      const highlightsList = document.getElementById('program-highlights');
+      highlightsList.innerHTML = '';
+      data.highlights.forEach(function(h) {
+        const li = document.createElement('li');
+        li.className = 'flex items-center gap-2 text-sm text-kcs-ink';
+        li.innerHTML =
+          '<span class="flex h-5 w-5 items-center justify-center rounded-full bg-kcs-blue/10">' +
+          '<i class="fa-solid fa-check text-kcs-blue text-[11px]"></i></span>' + h;
+        highlightsList.appendChild(li);
+      });
+    }
+
+    switchTab('lower');
+
+    // ---- Academic Calendar (simple demo) ----
+    const calendarEvents = {
+      '2026-2-3':  ['Term I Opens'],
+      '2026-3-10': ['Mid-Term Assessments'],
+      '2026-4-2':  ['Visiting Day'],
+      '2026-5-15': ['End of Term I'],
+      '2026-6-7':  ['Term II Opens'],
+      '2026-9-8':  ['Term III Opens'],
+      '2026-10-12':['UNEB Exams Begin']
+    };
+
+    const MONTHS = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+    const DAYS = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+
+    const now = new Date();
+    let calMonth = now.getMonth();
+    let calYear  = now.getFullYear();
+
+    function renderCalendar() {
+      const daysInMonth = new Date(calYear, calMonth + 1, 0).getDate();
+      const firstDay = new Date(calYear, calMonth, 1).getDay();
+
+      document.getElementById('calendarMonthYear').textContent = MONTHS[calMonth] + ' ' + calYear;
+      document.getElementById('eventsSidebarTitle').textContent = MONTHS[calMonth] + ' ' + calYear;
+
+      const grid = document.getElementById('calendarGrid');
+      grid.innerHTML = '';
+
+      DAYS.forEach(function(d) {
+        const div = document.createElement('div');
+        div.className = 'pb-2 text-center text-xs font-semibold text-kcs-ink/40';
+        div.textContent = d;
+        grid.appendChild(div);
+      });
+
+      for (let i = 0; i < firstDay; i++) grid.appendChild(document.createElement('div'));
+
+      for (let day = 1; day <= daysInMonth; day++) {
+        const key = calYear + '-' + (calMonth + 1) + '-' + day;
+        const hasEvent = calendarEvents[key] && calendarEvents[key].length > 0;
+
+        const div = document.createElement('div');
+        div.className =
+          'relative flex h-10 items-center justify-center rounded-lg text-sm transition-colors cursor-default ' +
+          (hasEvent ? 'bg-kcs-blue font-bold text-white' : 'text-kcs-ink hover:bg-cream');
+
+        div.textContent = day;
+        if (hasEvent) div.title = calendarEvents[key].join(', ');
+        grid.appendChild(div);
+      }
+
+      const eventsList = document.getElementById('eventsList');
+      eventsList.innerHTML = '';
+
+      const monthEvts = Object.entries(calendarEvents).filter(function(entry) {
+        const parts = entry[0].split('-').map(Number);
+        return parts[0] === calYear && parts[1] === calMonth + 1;
+      });
+
+      if (monthEvts.length === 0) {
+        eventsList.innerHTML = '<li class="text-sm text-kcs-ink/60">No events this month.</li>';
+      } else {
+        monthEvts.sort((a,b)=> Number(a[0].split('-')[2]) - Number(b[0].split('-')[2]));
+        monthEvts.forEach(function(entry) {
+          const dayNum = entry[0].split('-')[2];
+          const evts = entry[1];
+          const li = document.createElement('li');
+          li.className = 'flex gap-3';
+          li.innerHTML =
+            '<div class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-kcs-green text-sm font-bold text-white">' +
+              '<i class="fa-solid fa-calendar-check mr-1"></i>' + dayNum +
+            '</div><div>' +
+            evts.map(function(e) { return '<p class="text-sm font-medium text-kcs-ink"><i class="fa-solid fa-bell mr-2 text-kcs-blue"></i>' + e + '</p>'; }).join('') +
+            '</div>';
+          eventsList.appendChild(li);
+        });
+      }
+    }
+
+    function prevMonth() {
+      if (calMonth === 0) { calMonth = 11; calYear--; }
+      else calMonth--;
+      renderCalendar();
+    }
+
+    function nextMonth() {
+      if (calMonth === 11) { calMonth = 0; calYear++; }
+      else calMonth++;
+      renderCalendar();
+    }
+
+    window.prevMonth = prevMonth;
+    window.nextMonth = nextMonth;
+    renderCalendar();
+
+    // ---- Testimonials ----
+    const testimonials = [
+      {
+        quote: 'KCS helped my child grow in discipline and confidence. Teachers are supportive and the learning environment is excellent.',
+        name: 'Parent',
+        role: 'KCS Community',
+        image: 'assets/images/parent-testimonial.jpg'
+      },
+      {
+        quote: 'The school balances academics and morals very well. My child feels safe, guided, and motivated to improve.',
+        name: 'Parent',
+        role: 'KCS Community',
+        image: 'assets/images/parent-testimonial.jpg'
+      },
+      {
+        quote: 'Great leadership and organized learning. We appreciate the school’s commitment to performance and character.',
+        name: 'Parent',
+        role: 'KCS Community',
+        image: 'assets/images/parent-testimonial.jpg'
+      }
+    ];
+
+    let currentTestimonial = 0;
+
+    function renderTestimonial() {
+      const t = testimonials[currentTestimonial];
+      document.getElementById('testimonial-quote').textContent = '"' + t.quote + '"';
+      document.getElementById('testimonial-name').textContent = t.name;
+      document.getElementById('testimonial-role').textContent = t.role;
+
+      const img = document.getElementById('testimonial-image');
+      if (img) { img.src = t.image; img.alt = t.name; }
+    }
+
+    function prevTestimonial() {
+      currentTestimonial = currentTestimonial === 0 ? testimonials.length - 1 : currentTestimonial - 1;
+      renderTestimonial();
+    }
+
+    function nextTestimonial() {
+      currentTestimonial = currentTestimonial === testimonials.length - 1 ? 0 : currentTestimonial + 1;
+      renderTestimonial();
+    }
+
+    window.prevTestimonial = prevTestimonial;
+    window.nextTestimonial = nextTestimonial;
+    renderTestimonial();
+  </script>
+
+</body>
+</html>
