@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#2B6CB0" />
+  <meta name="theme-color" content="#1F8A4C" />
   <title>Kisaasi College School • We Labour for the Future</title>
   <meta name="description" content="Kisaasi College School is a private mixed day & boarding institution (O & A Levels). Islamic-based, welcoming to all religions, committed to academic excellence, character building, sports and leadership." />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" referrerpolicy="no-referrer">
@@ -36,8 +36,8 @@
           colors: {
             kcs: {
               yellow: '#FFFF8F',
-              green:  '#1F8A4C',
-              blue:   '#2B6CB0',
+              green:  '#2B6CB0',
+              blue:   '#1F8A4C',
               ink:    '#0f172a',
             },
             cream: { DEFAULT: '#F6F3EA', dark: '#EFE8D8' },
@@ -55,7 +55,7 @@
 
     /* marquee like your reference */
     @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
-    .animate-marquee { animation: marquee 20s linear infinite; }
+    .animate-marquee { animation: marquee 5s linear infinite; }
     .animate-marquee:hover { animation-play-state: paused; }
 
     /* small fade utility for image switches */
@@ -69,19 +69,19 @@
 <body class="font-sans antialiased">
 
   <!-- ===== NAVBAR ===== -->
-  <header id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm shadow-sm transition-shadow">
-    <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 lg:px-8">
+  <header id="navbar" class="fixed top-0 left-0 right-0 z-50 w-screen bg-white/95 backdrop-blur-sm shadow-sm transition-shadow">
+    <div class="mx-auto flex max-w-7xl items-center justify-between  px-4 py-2 lg:px-8">
 
       <!-- Logo -->
-      <a href="#" class="flex items-center gap-2">
-        <div class="flex h-10 w-10 items-center justify-center rounded-full border-2 border-kcs-blue bg-white overflow-hidden">
+      <a href="index.html" class="flex items-center gap-2">
+        <div class="flex h-12 w-12 items-center justify-center rounded-full bg-white overflow-hidden">
           <img src="assets/images/logo.png"
                alt="Kisaasi College School"
                class="h-full w-full object-contain p-1"
                onerror="this.closest('div').innerHTML='<span style=&quot;font-weight:900;color:#1F8A4C;font-size:12px&quot;>KCS</span>';" />
         </div>
-        <span class="text-sm font-extrabold text-kcs-ink leading-tight">
-          Kisaasi<br/>College School
+        <span class=" font-extrabold text-kcs-ink leading-tight">
+          Kisaasi College School
         </span>
       </a>
 
@@ -126,7 +126,7 @@
         <i class="fa-solid fa-graduation-cap mr-2"></i>Academics
       </a>
       <a href="gallery.html" class="block py-3 text-sm font-medium text-kcs-ink/70 hover:text-kcs-blue" onclick="closeMobileMenu()">
-        <i class="fa-solid fa-file-signature mr-2"></i>Gallary
+        <i class="fa-solid fa-file-signature mr-2"></i>Gallery
       </a>
       <a href="contact.html" class="block py-3 text-sm font-medium text-kcs-ink/70 hover:text-kcs-blue" onclick="closeMobileMenu()">
         <i class="fa-solid fa-calendar-days mr-2"></i>Contact 
@@ -140,17 +140,17 @@
   <main>
 
     <!-- ===== HERO ===== -->
-    <section class="relative flex min-h-[620px] items-end overflow-hidden pt-20 lg:min-h-[720px]">
-      <img src="assets/images/feli.jpeg" alt="Students of Kisaasi College School" class="absolute inset-0 h-full w-full object-cover object-top" />
+    <section class="relative flex min-h-[620px] items-end overflow-hidden pt-6 lg:min-h-[720px]">
+      <img src="assets/images/feli.jpeg" alt="Students of Kisaasi College School" class="absolute mt-16 inset-0 h-full w-full object-cover object-top" />
       <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/45 to-black/20"></div>
 
-      <div class="relative z-10 mx-auto w-full max-w-7xl px-4 pb-16 lg:px-8 lg:pb-24">
+      <div class="relative z-10 mx-auto w-full max-w-7xl px-4 pb-10 lg:pb-16 lg:pt-24">
         <p class="mb-2 text-xs font-semibold uppercase tracking-widest text-white/70">
           <i class="fa-solid fa-school mr-2"></i>Welcome to our school
         </p>
 
-        <h1 class="font-serif text-4xl font-bold leading-tight text-white md:text-5xl lg:text-6xl" style="text-wrap:balance">
-          Kisaasi<br/>College<br/>School
+        <h1 class="font-serif text-5xl font-bold leading-tight text-white md:text-5xl lg:text-7xl" style="text-wrap:balance">
+          Kisaasi College School
         </h1>
 
         <p class="mt-4 max-w-xl text-sm leading-relaxed text-white/80">
@@ -158,25 +158,14 @@
         </p>
 
         <div class="mt-8 flex flex-wrap gap-4">
-          <a href="admissions.html" class="rounded-full bg-kcs-blue px-8 py-3 text-sm font-semibold text-white transition-colors hover:opacity-90">
+          <a href="admissions.html" class="rounded-full bg-kcs-green px-4 py-3 text-sm font-semibold text-white transition-colors hover:opacity-90">
             <i class="fa-solid fa-file-signature mr-2"></i>Apply Online
           </a>
-          <a href="#about" class="rounded-full border-2 border-white/90 px-8 py-3 text-sm font-semibold text-white transition-colors hover:bg-white hover:text-kcs-ink">
+          <a href="#about" class="rounded-full border-2 border-white/90 px-4 py-3 text-sm font-semibold text-white transition-colors hover:bg-white hover:text-kcs-ink">
             <i class="fa-solid fa-circle-info mr-2"></i>About Us
           </a>
         </div>
 
-        <div class="mt-10 flex flex-wrap gap-2">
-          <span class="rounded-full bg-white/10 px-4 py-2 text-xs text-white/85 border border-white/15 backdrop-blur">
-            <i class="fa-solid fa-flag mr-2"></i>Established 1995
-          </span>
-          <span class="rounded-full bg-white/10 px-4 py-2 text-xs text-white/85 border border-white/15 backdrop-blur">
-            <i class="fa-solid fa-award mr-2"></i>Strong UNEB readiness
-          </span>
-          <span class="rounded-full bg-white/10 px-4 py-2 text-xs text-white/85 border border-white/15 backdrop-blur">
-            <i class="fa-solid fa-people-group mr-2"></i>Character & leadership
-          </span>
-        </div>
       </div>
 
       <div class="absolute bottom-0 left-0 right-0">
@@ -185,6 +174,44 @@
         </svg>
       </div>
     </section>
+  <marquee class="mt-4 overflow-y-visible py-3 space-x-3">
+          <span class="rounded-full bg-black/10 px-4 py-2 text-xs text-black/85 border border-black/15 backdrop-blur">
+            <i class="fa-solid fa-flag mr-2"></i>Established 1995
+          </span>
+          <span class="rounded-full bg-black/10 px-4 py-2 text-xs text-black/85 border border-black/15 backdrop-blur">
+            <i class="fa-solid fa-award mr-2"></i>Strong UNEB readiness
+          </span>
+          <span class="rounded-full bg-black/10 px-4 py-2 text-xs text-black/85 border border-black/15 backdrop-blur">
+            <i class="fa-solid fa-people-group mr-2"></i>Character & leadership
+          </span>
+          <span class="rounded-full bg-black/10 px-4 py-2 text-xs text-black/85 border border-black/15 backdrop-blur">
+            <i class="fa-solid fa-flag mr-2"></i>Established 1995
+          </span>
+          <span class="rounded-full bg-black/10 px-4 py-2 text-xs text-black/85 border border-black/15 backdrop-blur">
+            <i class="fa-solid fa-award mr-2"></i>Strong UNEB readiness
+          </span>
+          <span class="rounded-full bg-black/10 px-4 py-2 text-xs text-black/85 border border-black/15 backdrop-blur">
+            <i class="fa-solid fa-people-group mr-2"></i>Character & leadership
+          </span>
+          <span class="rounded-full bg-black/10 px-4 py-2 text-xs text-black/85 border border-black/15 backdrop-blur">
+            <i class="fa-solid fa-flag mr-2"></i>Established 1995
+          </span>
+          <span class="rounded-full bg-black/10 px-4 py-2 text-xs text-black/85 border border-black/15 backdrop-blur">
+            <i class="fa-solid fa-award mr-2"></i>Strong UNEB readiness
+          </span>
+          <span class="rounded-full bg-black/10 px-4 py-2 text-xs text-black/85 border border-black/15 backdrop-blur">
+            <i class="fa-solid fa-people-group mr-2"></i>Character & leadership
+          </span>
+          <span class="rounded-full bg-black/10 px-4 py-2 text-xs text-black/85 border border-black/15 backdrop-blur">
+            <i class="fa-solid fa-flag mr-2"></i>Established 1995
+          </span>
+          <span class="rounded-full bg-black/10 px-4 py-2 text-xs text-black/85 border border-black/15 backdrop-blur">
+            <i class="fa-solid fa-award mr-2"></i>Strong UNEB readiness
+          </span>
+          <span class="rounded-full bg-black/10 px-4 py-2 text-xs text-black/85 border border-black/15 backdrop-blur">
+            <i class="fa-solid fa-people-group mr-2"></i>Character & leadership
+          </span>
+        </marquee>
 
     <!-- ===== WELCOME / ABOUT ===== -->
     <section id="about" class="py-20 lg:py-28">
@@ -239,7 +266,7 @@
               </div>
               <div class="space-y-4 pt-8">
                 <div class="overflow-hidden rounded-2xl">
-                  <img src="assets/images/Felista1.jpg" alt="Student life"
+                  <img src="assets/images/kids.jpeg" alt="Student life"
                        class="h-40 w-full object-cover transition-transform duration-500 hover:scale-105"/>
                 </div>
                 <div class="overflow-hidden rounded-2xl">
@@ -325,7 +352,7 @@
           </a>
 
           <a href="academics.html" class="group flex flex-col items-center rounded-2xl border border-gray-200 bg-white p-8 text-center transition-all hover:-translate-y-1 hover:shadow-lg">
-            <div class="mb-5 flex h-14 w-14 items-center justify-center rounded-xl bg-kcs-ink text-white transition-transform group-hover:scale-110">
+            <div class="mb-5 flex h-14 w-14 items-center justify-center rounded-xl bg-kcs-green text-white transition-transform group-hover:scale-110">
               <i class="fa-solid fa-book-open text-xl"></i>
             </div>
             <h3 class="mb-2 text-sm font-bold text-kcs-ink">Academics</h3>
@@ -333,7 +360,7 @@
           </a>
 
           <a href="gallery.html" class="group flex flex-col items-center rounded-2xl border border-gray-200 bg-white p-8 text-center transition-all hover:-translate-y-1 hover:shadow-lg">
-            <div class="mb-5 flex h-14 w-14 items-center justify-center rounded-xl bg-kcs-ink text-white transition-transform group-hover:scale-110">
+            <div class="mb-5 flex h-14 w-14 items-center justify-center rounded-xl bg-kcs-green text-white transition-transform group-hover:scale-110">
               <i class="fa-solid fa-images text-xl"></i>
             </div>
             <h3 class="mb-2 text-sm font-bold text-kcs-ink">Gallery</h3>
@@ -341,7 +368,7 @@
           </a>
 
           <a href="contact.html" class="group flex flex-col items-center rounded-2xl border border-gray-200 bg-white p-8 text-center transition-all hover:-translate-y-1 hover:shadow-lg">
-            <div class="mb-5 flex h-14 w-14 items-center justify-center rounded-xl bg-kcs-blue text-white transition-transform group-hover:scale-110">
+            <div class="mb-5 flex h-14 w-14 items-center justify-center rounded-xl bg-kcs-green text-white transition-transform group-hover:scale-110">
               <i class="fa-solid fa-phone text-xl"></i>
             </div>
             <h3 class="mb-2 text-sm font-bold text-kcs-ink">Contact School</h3>
@@ -352,7 +379,7 @@
     </section>
 
     <!-- ===== MARQUEE BANNER ===== -->
-    <div class="relative overflow-hidden bg-kcs-yellow py-4" style="transform:rotate(-2deg);margin:0 -20px">
+    <div class="relative overflow-hidden bg-kcs-yellow py-4 max-w-[100vw]" style="transform:rotate(-2deg);margin:0">
       <div class="flex animate-marquee whitespace-nowrap">
         <span class="mx-8 text-sm font-extrabold tracking-wider text-kcs-ink">
           <i class="fa-solid fa-diamond mr-2 text-kcs-blue"></i>WE LABOUR FOR THE FUTURE
@@ -382,7 +409,7 @@
     </div>
 
     <!-- ===== PROGRAMS ===== -->
-    <section id="programs" class="bg-white py-20 lg:py-28">
+ <section id="programs" class="bg-white py-20 lg:py-28">
       <div class="mx-auto max-w-7xl px-4 lg:px-8">
         <div class="text-center">
           <p class="mb-2 text-xs font-semibold uppercase tracking-widest text-kcs-blue">
@@ -429,37 +456,6 @@
       </div>
     </section>
 
-    <!-- ===== ACADEMIC CALENDAR ===== -->
-    <section id="calendar" class="py-20 lg:py-28">
-      <div class="mx-auto max-w-7xl px-4 lg:px-8">
-        <div class="text-center">
-          <p class="mb-2 text-xs font-semibold uppercase tracking-widest text-kcs-blue">
-            <i class="fa-solid fa-calendar-days mr-2"></i>Stay Updated
-          </p>
-          <h2 class="font-serif text-3xl font-bold text-kcs-ink md:text-4xl">Academic Calendar</h2>
-        </div>
-
-        <div class="mt-14 grid gap-8 lg:grid-cols-3">
-          <div class="lg:col-span-2 rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
-            <div class="mb-6 flex items-center justify-between">
-              <button onclick="prevMonth()" class="flex h-9 w-9 items-center justify-center rounded-full bg-cream transition-colors hover:bg-kcs-blue/10" aria-label="Previous month">
-                <i class="fa-solid fa-chevron-left"></i>
-              </button>
-              <h3 id="calendarMonthYear" class="text-lg font-bold text-kcs-ink">September 2026</h3>
-              <button onclick="nextMonth()" class="flex h-9 w-9 items-center justify-center rounded-full bg-cream transition-colors hover:bg-kcs-blue/10" aria-label="Next month">
-                <i class="fa-solid fa-chevron-right"></i>
-              </button>
-            </div>
-            <div id="calendarGrid" class="grid grid-cols-7 gap-1"></div>
-          </div>
-
-          <div class="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
-            <h3 id="eventsSidebarTitle" class="mb-4 text-lg font-bold text-kcs-ink">September 2026</h3>
-            <ul id="eventsList" class="space-y-4"></ul>
-          </div>
-        </div>
-      </div>
-    </section>
 
     <!-- ===== TESTIMONIALS ===== -->
     <section class="bg-white py-20 lg:py-28">
@@ -649,7 +645,7 @@
       },
       alevel: {
         title: 'Advanced Level (S5–S6)',
-        image: 'assets/images/Felista1.jpg',
+        image: 'assets/images/kids1.jpeg',
         description: 'Deep academic focus, leadership development, and preparation for university and life beyond school.',
         highlights: ['Subject combinations', 'Leadership roles', 'Academic excellence', 'University preparation']
       }
@@ -693,100 +689,7 @@
 
     switchTab('lower');
 
-    // ---- Academic Calendar (simple demo) ----
-    const calendarEvents = {
-      '2026-2-3':  ['Term I Opens'],
-      '2026-3-10': ['Mid-Term Assessments'],
-      '2026-4-2':  ['Visiting Day'],
-      '2026-5-15': ['End of Term I'],
-      '2026-6-7':  ['Term II Opens'],
-      '2026-9-8':  ['Term III Opens'],
-      '2026-10-12':['UNEB Exams Begin']
-    };
-
-    const MONTHS = ['January','February','March','April','May','June','July','August','September','October','November','December'];
-    const DAYS = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
-
-    const now = new Date();
-    let calMonth = now.getMonth();
-    let calYear  = now.getFullYear();
-
-    function renderCalendar() {
-      const daysInMonth = new Date(calYear, calMonth + 1, 0).getDate();
-      const firstDay = new Date(calYear, calMonth, 1).getDay();
-
-      document.getElementById('calendarMonthYear').textContent = MONTHS[calMonth] + ' ' + calYear;
-      document.getElementById('eventsSidebarTitle').textContent = MONTHS[calMonth] + ' ' + calYear;
-
-      const grid = document.getElementById('calendarGrid');
-      grid.innerHTML = '';
-
-      DAYS.forEach(function(d) {
-        const div = document.createElement('div');
-        div.className = 'pb-2 text-center text-xs font-semibold text-kcs-ink/40';
-        div.textContent = d;
-        grid.appendChild(div);
-      });
-
-      for (let i = 0; i < firstDay; i++) grid.appendChild(document.createElement('div'));
-
-      for (let day = 1; day <= daysInMonth; day++) {
-        const key = calYear + '-' + (calMonth + 1) + '-' + day;
-        const hasEvent = calendarEvents[key] && calendarEvents[key].length > 0;
-
-        const div = document.createElement('div');
-        div.className =
-          'relative flex h-10 items-center justify-center rounded-lg text-sm transition-colors cursor-default ' +
-          (hasEvent ? 'bg-kcs-blue font-bold text-white' : 'text-kcs-ink hover:bg-cream');
-
-        div.textContent = day;
-        if (hasEvent) div.title = calendarEvents[key].join(', ');
-        grid.appendChild(div);
-      }
-
-      const eventsList = document.getElementById('eventsList');
-      eventsList.innerHTML = '';
-
-      const monthEvts = Object.entries(calendarEvents).filter(function(entry) {
-        const parts = entry[0].split('-').map(Number);
-        return parts[0] === calYear && parts[1] === calMonth + 1;
-      });
-
-      if (monthEvts.length === 0) {
-        eventsList.innerHTML = '<li class="text-sm text-kcs-ink/60">No events this month.</li>';
-      } else {
-        monthEvts.sort((a,b)=> Number(a[0].split('-')[2]) - Number(b[0].split('-')[2]));
-        monthEvts.forEach(function(entry) {
-          const dayNum = entry[0].split('-')[2];
-          const evts = entry[1];
-          const li = document.createElement('li');
-          li.className = 'flex gap-3';
-          li.innerHTML =
-            '<div class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-kcs-green text-sm font-bold text-white">' +
-              '<i class="fa-solid fa-calendar-check mr-1"></i>' + dayNum +
-            '</div><div>' +
-            evts.map(function(e) { return '<p class="text-sm font-medium text-kcs-ink"><i class="fa-solid fa-bell mr-2 text-kcs-blue"></i>' + e + '</p>'; }).join('') +
-            '</div>';
-          eventsList.appendChild(li);
-        });
-      }
-    }
-
-    function prevMonth() {
-      if (calMonth === 0) { calMonth = 11; calYear--; }
-      else calMonth--;
-      renderCalendar();
-    }
-
-    function nextMonth() {
-      if (calMonth === 11) { calMonth = 0; calYear++; }
-      else calMonth++;
-      renderCalendar();
-    }
-
-    window.prevMonth = prevMonth;
-    window.nextMonth = nextMonth;
-    renderCalendar();
+   
 
     // ---- Testimonials ----
     const testimonials = [

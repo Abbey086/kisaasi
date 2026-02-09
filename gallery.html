@@ -57,66 +57,94 @@
 <body class="min-h-screen bg-white text-slate-900 kcs-bg font-sans antialiased">
 
   <!-- NAVBAR -->
-  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-slate-100">
-    <div class="mx-auto max-w-7xl px-4 py-4 flex items-center justify-between">
-      <a href="index.html" class="flex items-center gap-3">
-        <div class="h-12 w-12 rounded-full bg-white border border-slate-200 overflow-hidden flex items-center justify-center shadow-sm">
-          <img
-            src="assets/images/logo.png"
-            alt="Kisaasi College School Logo"
-            class="h-full w-full object-contain p-1"
-            onerror="this.closest('div').innerHTML='<span class=&quot;font-black text-[var(--kcs-green)]&quot;>KCS</span>';"
-          />
-        </div>
+  <header id="navbar" class="fixed top-0 left-0 right-0 z-50 w-screen bg-white/95 backdrop-blur-sm shadow-sm transition-shadow">
+    <div class="mx-auto flex max-w-7xl items-center justify-between  px-4 py-2 lg:px-8">
 
-        <div class="leading-tight">
-          <div class="font-extrabold tracking-wide">KISAASI COLLEGE SCHOOL</div>
-          <div class="text-xs text-slate-500">We labour for the future</div>
+      <!-- Logo -->
+      <a href="index.html" class="flex items-center gap-2">
+        <div class="flex h-12 w-12 items-center justify-center rounded-full bg-white overflow-hidden">
+          <img src="assets/images/logo.png"
+               alt="Kisaasi College School"
+               class="h-full w-full object-contain p-1"
+               onerror="this.closest('div').innerHTML='<span style=&quot;font-weight:900;color:#1F8A4C;font-size:12px&quot;>KCS</span>';" />
         </div>
+        <span class=" font-extrabold text-kcs-ink leading-tight">
+          Kisaasi College School
+        </span>
       </a>
 
-      <button class="sm:hidden inline-flex items-center justify-center rounded-xl border border-slate-200 px-3 py-2"
-              data-menu-btn aria-expanded="false" aria-label="Open menu">
-        <i class="fa-solid fa-bars"></i>
-      </button>
-
-      <nav class="hidden sm:flex items-center gap-2">
-        <a class="px-3 py-2 rounded-xl hover:bg-slate-100" href="index.html">
-          <i class="fa-solid fa-house fa-fw mr-1 text-[var(--kcs-blue)]"></i>Home
+      <!-- Desktop Nav -->
+      <nav class="hidden items-center gap-6 lg:flex">
+        <a href="index.html" class="text-sm font-medium text-kcs-ink/70 transition-colors hover:text-kcs-blue">
+          <i class="fa-solid fa-house mr-2"></i>Home
         </a>
-        <a class="px-3 py-2 rounded-xl hover:bg-slate-100" href="about.html">
-          <i class="fa-solid fa-circle-info fa-fw mr-1 text-[var(--kcs-blue)]"></i>About
+        <a href="about.html" class="text-sm font-medium text-kcs-ink/70 transition-colors hover:text-kcs-blue">
+          <i class="fa-solid fa-circle-info mr-2"></i>About
         </a>
-        <a class="px-3 py-2 rounded-xl hover:bg-slate-100" href="academics.html">
-          <i class="fa-solid fa-graduation-cap fa-fw mr-1 text-[var(--kcs-blue)]"></i>Academics
+        <a href="gallery.html" class="text-sm font-medium text-kcs-ink/70 transition-colors hover:text-kcs-blue">
+          <i class="fa-solid fa-graduation-cap mr-2"></i>Programs
         </a>
-        <a class="px-3 py-2 rounded-xl hover:bg-slate-100" href="admissions.html">
-          <i class="fa-solid fa-file-signature fa-fw mr-1 text-[var(--kcs-blue)]"></i>Admissions
+        <a href="contact.html" class="text-sm font-medium text-kcs-ink/70 transition-colors hover:text-kcs-blue">
+          <i class="fa-solid fa-file-signature mr-2"></i>Admissions
         </a>
-        <a class="px-3 py-2 rounded-xl bg-slate-100" href="gallery.html">
-          <i class="fa-regular fa-images fa-fw mr-1 text-[var(--kcs-blue)]"></i>Gallery
+        <a href="academics.html" class="text-sm font-medium text-kcs-ink/70 transition-colors hover:text-kcs-blue">
+          <i class="fa-solid fa-calendar-days mr-2"></i>Calendar
         </a>
-        <a class="px-3 py-2 rounded-xl hover:bg-slate-100" href="contact.html">
-          <i class="fa-solid fa-phone fa-fw mr-1 text-[var(--kcs-blue)]"></i>Contact
-        </a>
-        <a class="ml-2 px-4 py-2 rounded-xl bg-[var(--kcs-blue)] text-white hover:opacity-90 inline-flex items-center gap-2" href="admissions.html">
-          <i class="fa-solid fa-paper-plane"></i> Apply Online
+        <a href="admissions.html" class="rounded-full bg-[#1F8A4C] px-6 py-2.5 text-sm font-semibold text-white transition-colors hover:opacity-90">
+          <i class="fa-solid fa-paper-plane mr-2"></i>Apply Online
         </a>
       </nav>
+
+      <!-- Mobile Toggle -->
+      <button id="menuToggle" class="lg:hidden text-kcs-ink" aria-label="Toggle menu">
+        <i id="menuOpen" class="fa-solid fa-bars text-xl"></i>
+        <i id="menuClose" class="fa-solid fa-xmark text-xl hidden"></i>
+      </button>
     </div>
 
-    <!-- Mobile menu -->
-    <div class="hidden sm:hidden border-t border-slate-100" data-menu>
-      <div class="mx-auto max-w-7xl px-4 py-3 flex flex-col gap-1">
-        <a class="px-3 py-2 rounded-xl hover:bg-slate-100" href="index.html"><i class="fa-solid fa-house fa-fw mr-2 text-[var(--kcs-blue)]"></i>Home</a>
-        <a class="px-3 py-2 rounded-xl hover:bg-slate-100" href="about.html"><i class="fa-solid fa-circle-info fa-fw mr-2 text-[var(--kcs-blue)]"></i>About</a>
-        <a class="px-3 py-2 rounded-xl hover:bg-slate-100" href="academics.html"><i class="fa-solid fa-graduation-cap fa-fw mr-2 text-[var(--kcs-blue)]"></i>Academics</a>
-        <a class="px-3 py-2 rounded-xl hover:bg-slate-100" href="admissions.html"><i class="fa-solid fa-file-signature fa-fw mr-2 text-[var(--kcs-blue)]"></i>Admissions</a>
-        <a class="px-3 py-2 rounded-xl bg-slate-100" href="gallery.html"><i class="fa-regular fa-images fa-fw mr-2 text-[var(--kcs-blue)]"></i>Gallery</a>
-        <a class="px-3 py-2 rounded-xl hover:bg-slate-100" href="contact.html"><i class="fa-solid fa-phone fa-fw mr-2 text-[var(--kcs-blue)]"></i>Contact</a>
-        <a class="px-3 py-2 rounded-xl bg-[var(--kcs-blue)] text-white inline-flex items-center gap-2" href="admissions.html"><i class="fa-solid fa-paper-plane"></i> Apply Online</a>
-      </div>
+    <!-- Mobile Nav -->
+    <div id="mobileMenu" class="hidden border-t border-gray-200 bg-white px-4 pb-4 lg:hidden">
+      <a href="index.html" class="block py-3 text-sm font-medium text-kcs-ink/70 hover:text-kcs-blue" onclick="closeMobileMenu()">
+        <i class="fa-solid fa-house mr-2"></i>Home
+      </a>
+      <a href="about.html" class="block py-3 text-sm font-medium text-kcs-ink/70 hover:text-kcs-blue" onclick="closeMobileMenu()">
+        <i class="fa-solid fa-circle-info mr-2"></i>About
+      </a>
+      <a href="academics.html" class="block py-3 text-sm font-medium text-kcs-ink/70 hover:text-kcs-blue" onclick="closeMobileMenu()">
+        <i class="fa-solid fa-graduation-cap mr-2"></i>Academics
+      </a>
+      <a href="gallery.html" class="block py-3 text-sm font-medium text-kcs-ink/70 hover:text-kcs-blue" onclick="closeMobileMenu()">
+        <i class="fa-solid fa-file-signature mr-2"></i>Gallery
+      </a>
+      <a href="contact.html" class="block py-3 text-sm font-medium text-kcs-ink/70 hover:text-kcs-blue" onclick="closeMobileMenu()">
+        <i class="fa-solid fa-calendar-days mr-2"></i>Contact 
+      </a>
+      <a href="admissions.html" class="mt-2 block rounded-full bg-[#1F8A4C] px-6 py-2.5 text-center text-sm font-semibold text-white" onclick="closeMobileMenu()">
+        <i class="fa-solid fa-paper-plane mr-2"></i>Apply Online
+      </a>
     </div>
+    <script>
+       const menuToggle = document.getElementById('menuToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const menuOpen = document.getElementById('menuOpen');
+    const menuClose = document.getElementById('menuClose');
+    let menuIsOpen = false;
+
+    menuToggle.addEventListener('click', function() {
+      menuIsOpen = !menuIsOpen;
+      mobileMenu.classList.toggle('hidden', !menuIsOpen);
+      menuOpen.classList.toggle('hidden', menuIsOpen);
+      menuClose.classList.toggle('hidden', !menuIsOpen);
+    });
+
+    function closeMobileMenu() {
+      menuIsOpen = false;
+      mobileMenu.classList.add('hidden');
+      menuOpen.classList.remove('hidden');
+      menuClose.classList.add('hidden');
+    }
+    window.closeMobileMenu = closeMobileMenu;
+    </script>
   </header>
 
   <!-- HERO -->
