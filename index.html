@@ -60,6 +60,15 @@
 
     /* small fade utility for image switches */
     .fade-img { transition: opacity .25s ease; }
+    .hero-slide {
+  opacity: 0;
+  transition: opacity 1.2s ease-in-out;
+}
+
+.hero-slide.active {
+  opacity: 1;
+}
+
 
     /* make FA icons align nicely inside circles */
     .fa-center { line-height: 1; display: inline-flex; align-items: center; justify-content: center; }
@@ -94,13 +103,13 @@
           <i class="fa-solid fa-circle-info mr-2"></i>About
         </a>
         <a href="gallery.html" class="text-sm font-medium text-kcs-ink/70 transition-colors hover:text-kcs-blue">
-          <i class="fa-solid fa-graduation-cap mr-2"></i>Programs
+          <i class="fa-solid fa-file-signature mr-2"></i>Gallery
         </a>
         <a href="contact.html" class="text-sm font-medium text-kcs-ink/70 transition-colors hover:text-kcs-blue">
-          <i class="fa-solid fa-file-signature mr-2"></i>Admissions
+          <i class="fa-solid fa-phone fa-fw mr-2"></i>Contact
         </a>
         <a href="academics.html" class="text-sm font-medium text-kcs-ink/70 transition-colors hover:text-kcs-blue">
-          <i class="fa-solid fa-calendar-days mr-2"></i>Calendar
+          <i class="fa-solid fa-graduation-cap mr-2"></i>Academics
         </a>
         <a href="admissions.html" class="rounded-full bg-kcs-blue px-6 py-2.5 text-sm font-semibold text-white transition-colors hover:opacity-90">
           <i class="fa-solid fa-paper-plane mr-2"></i>Apply Online
@@ -129,7 +138,7 @@
         <i class="fa-solid fa-file-signature mr-2"></i>Gallery
       </a>
       <a href="contact.html" class="block py-3 text-sm font-medium text-kcs-ink/70 hover:text-kcs-blue" onclick="closeMobileMenu()">
-        <i class="fa-solid fa-calendar-days mr-2"></i>Contact 
+        <i class="fa-solid fa-phone fa-fw mr-2"></i>Contact 
       </a>
       <a href="admissions.html" class="mt-2 block rounded-full bg-kcs-blue px-6 py-2.5 text-center text-sm font-semibold text-white" onclick="closeMobileMenu()">
         <i class="fa-solid fa-paper-plane mr-2"></i>Apply Online
@@ -141,13 +150,44 @@
 
     <!-- ===== HERO ===== -->
     <section class="relative flex min-h-[620px] items-end overflow-hidden pt-6 lg:min-h-[720px]">
-      <img src="assets/images/feli.jpeg" alt="Students of Kisaasi College School" class="absolute mt-16 inset-0 h-full w-full object-cover object-top" />
+      <!-- HERO SLIDER -->
+<div class="absolute mt-16 inset-0 overflow-hidden" id="heroSlider">
+
+  <img src="assets/images/feli.jpeg"
+       class="hero-slide active absolute inset-0 h-full w-full object-cover object-top"
+       alt="Students of Kisaasi College School">
+
+  <img src="assets/images/comp.jpeg"
+       class="hero-slide absolute inset-0 h-full w-full object-cover object-top"
+       alt="School environment">
+
+  <img src="assets/images/dirs.jpeg"
+       class="hero-slide absolute inset-0 h-full w-full object-cover object-top"
+       alt="Learning at Kisaasi College School">
+
+  <img src="assets/images/school-gate.jpeg"
+       class="hero-slide absolute inset-0 h-full w-full object-cover object-top"
+       alt="School environment">
+
+       <img src="assets/images/all.jpeg"
+       class="hero-slide absolute inset-0 h-full w-full object-cover object-top"
+       alt="School environment">
+
+       <img src="assets/images/office.jpeg"
+       class="hero-slide absolute inset-0 h-full w-full object-cover object-top"
+       alt="School environment">
+
+  <img src="assets/images/school.jpeg"
+       class="hero-slide absolute inset-0 h-full w-full object-cover object-top"
+       alt="Learning at Kisaasi College School">
+
+</div>
+
       <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/45 to-black/20"></div>
 
       <div class="relative z-10 mx-auto w-full max-w-7xl px-4 pb-10 lg:pb-16 lg:pt-24">
-        <p class="mb-2 text-xs font-semibold uppercase tracking-widest text-white/70">
-          <i class="fa-solid fa-school mr-2"></i>Welcome to our school
-        </p>
+        <p class="mb-2 text-xs font-semibold  tracking-widest text-white/70">
+          <i class="fa-solid fa-school mr-2"></i>You're welcome, feel at home
 
         <h1 class="font-serif text-5xl font-bold leading-tight text-white md:text-5xl lg:text-7xl" style="text-wrap:balance">
           Kisaasi College School
@@ -270,8 +310,8 @@
                        class="h-40 w-full object-cover transition-transform duration-500 hover:scale-105"/>
                 </div>
                 <div class="overflow-hidden rounded-2xl">
-                  <img src="assets/images/director.jpeg" alt="School leadership"
-                       class="h-64 w-full object-cover transition-transform duration-500 hover:scale-105"/>
+                  <img src="assets/images/dirs.jpeg" alt="School leadership"
+                       class="h-64 w-full object-cover transition-transform duration-500 hover:scale-110"/>
                 </div>
               </div>
             </div>
@@ -283,6 +323,78 @@
         </div>
       </div>
     </section>
+
+    <!-- ===== IPLE RESULTS 2025 (SOCIAL PROOF) ===== -->
+<section id="results" class="py-20 lg:py-28 bg-slate-50">
+  <div class="mx-auto max-w-7xl px-4 lg:px-8">
+
+    <div class="text-center">
+      <p class="mb-2 text-xs font-semibold uppercase tracking-widest text-kcs-blue">
+        <i class="fa-solid fa-trophy mr-2"></i>Academic Excellence
+      </p>
+      <h2 class="font-serif text-3xl font-bold text-kcs-ink md:text-4xl">
+        IPLE Results 2025
+      </h2>
+      <p class="mt-3 mx-auto max-w-2xl text-sm text-kcs-ink/70">
+        We congratulate our candidates for their excellent performance and commitment to success.
+      </p>
+    </div>
+
+    <div class="mt-10 grid gap-8 lg:grid-cols-[1.1fr_.9fr] items-start">
+      <!-- Image -->
+      <div class="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm">
+        <img
+          src="assets/images/iple-results-2025.jpeg"
+          alt="Kisaasi College School IPLE Results 2025"
+          class="w-full h-auto object-cover"
+        />
+      </div>
+
+      <!-- Highlights -->
+      <div class="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
+        <h3 class="text-lg font-extrabold text-kcs-ink">
+          <i class="fa-solid fa-medal mr-2 text-kcs-blue"></i>Highlights
+        </h3>
+
+        <div class="mt-5 grid grid-cols-2 gap-4">
+          <div class="rounded-xl bg-kcs-blue/10 p-4">
+            <p class="text-xs font-semibold text-kcs-ink/60">First Grades</p>
+            <p class="mt-1 text-2xl font-extrabold text-kcs-blue">21</p>
+          </div>
+          <div class="rounded-xl bg-kcs-yellow/50 p-4">
+            <p class="text-xs font-semibold text-kcs-ink/60">Total Candidates</p>
+            <p class="mt-1 text-2xl font-extrabold text-kcs-green">25</p>
+          </div>
+          <div class="rounded-xl bg-kcs-green/10 p-4 border border-black/10">
+            <p class="text-xs font-semibold text-kcs-ink/60">Second Grades</p>
+            <p class="mt-1 text-2xl font-extrabold text-kcs-ink">03</p>
+          </div>
+          <div class="rounded-xl bg-slate-100 p-4 border border-slate-200">
+            <p class="text-xs font-semibold text-kcs-ink/60">Third Grades</p>
+            <p class="mt-1 text-2xl font-extrabold text-kcs-ink">01</p>
+          </div>
+        </div>
+
+        <p class="mt-5 text-sm text-kcs-ink/70">
+          Admissions are ongoing. Talk to us for guidance on joining Kisaasi College School.
+        </p>
+
+        <div class="mt-6 flex flex-wrap gap-3">
+          <a href="admissions.html"
+             class="rounded-full bg-kcs-blue px-6 py-3 text-sm font-semibold text-white hover:opacity-90">
+            <i class="fa-solid fa-paper-plane mr-2"></i>Apply Online
+          </a>
+          <a href="contact.html"
+             class="rounded-full border border-gray-300 bg-white px-6 py-3 text-sm font-semibold text-kcs-ink hover:bg-cream">
+            <i class="fa-solid fa-phone mr-2"></i>Contact Admissions
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
 
     <!-- ===== WHY LEARN WITH US ===== -->
     <section class="bg-white py-20 lg:py-28">
@@ -454,6 +566,7 @@
           </div>
         </div>
       </div>
+
     </section>
 
 
@@ -468,7 +581,7 @@
             <h2 class="font-serif text-3xl font-bold text-kcs-ink md:text-4xl" style="text-wrap:balance">
               What Parents Say<br/>About Us
             </h2>
-            <p class="mt-4 text-sm text-kcs-ink/70">Real feedback from our community (replace with actual quotes anytime).</p>
+            <p class="mt-4 text-sm text-kcs-ink/70">Real feedback from our community .</p>
           </div>
 
           <div class="relative rounded-2xl bg-cream p-8 shadow-sm lg:p-10">
@@ -562,7 +675,6 @@
             <li><a href="#about" class="text-xs text-white/60 transition-colors hover:text-kcs-yellow"><i class="fa-solid fa-circle-info mr-2"></i>About Us</a></li>
             <li><a href="#programs" class="text-xs text-white/60 transition-colors hover:text-kcs-yellow"><i class="fa-solid fa-graduation-cap mr-2"></i>Programs</a></li>
             <li><a href="#connect" class="text-xs text-white/60 transition-colors hover:text-kcs-yellow"><i class="fa-solid fa-file-signature mr-2"></i>Admissions</a></li>
-            <li><a href="#calendar" class="text-xs text-white/60 transition-colors hover:text-kcs-yellow"><i class="fa-solid fa-calendar-days mr-2"></i>Calendar</a></li>
             <li><a href="contact.html" class="text-xs text-white/60 transition-colors hover:text-kcs-yellow"><i class="fa-solid fa-phone mr-2"></i>Contact</a></li>
           </ul>
         </div>
@@ -570,18 +682,25 @@
         <div>
           <h3 class="mb-4 text-sm font-bold text-white"><i class="fa-solid fa-location-dot mr-2 text-kcs-yellow"></i>Address</h3>
           <p class="text-xs text-white/60">P.O. Box 5167, Kampala-Uganda</p>
-          <p class="mt-2 text-xs text-white/60"><i class="fa-brands fa-facebook mr-2"></i>Facebook: <span class="text-white/80 font-semibold">Kisaasi College School</span></p>
-          <p class="mt-1 text-xs text-white/60"><i class="fa-brands fa-tiktok mr-2"></i>TikTok: <span class="text-white/80 font-semibold">Kisaasicollegeschool</span></p>
+          <p class="mt-2 text-xs text-white/60"><i class="fa-brands fa-facebook mr-2"></i>Facebook:<a class="hover:text-white underline underline-offset-4 font-semibold"
+         href="https://www.facebook.com/p/Kisaasi-College-School-61566858642165/"
+         target="_blank"
+         rel="noopener">
+        Kisaasi College School
+      </a></p>
+          <p class="mt-1 text-xs text-white/60"><i class="fa-brands fa-tiktok mr-2"></i>TikTok: <a class="hover:text-white underline underline-offset-4 font-semibold"
+         href="https://www.tiktok.com/@kisaasicollegeschool"
+         target="_blank"
+         rel="noopener">
+        @kisaasicollegeschool
+      </a></p>
         </div>
-
         <div>
           <h3 class="mb-4 text-sm font-bold text-white"><i class="fa-solid fa-phone mr-2 text-kcs-yellow"></i>Contact</h3>
           <ul class="space-y-2 text-xs text-white/60">
-            <li><i class="fa-solid fa-phone mr-2"></i>+256 701 750 708</li>
-            <li><i class="fa-solid fa-phone mr-2"></i>+256 392 001 705</li>
-            <li><i class="fa-solid fa-phone mr-2"></i>+256 772 420 741</li>
-            <li><i class="fa-solid fa-phone mr-2"></i>+256 703 704 281</li>
-            <li class="pt-2">
+          <p><i class="fa-solid fa-phone fa-fw mr-2 text-[var(--kcs-yellow)]"></i> <a class="underline underline-offset-4 hover:text-[var(--kcs-blue)]" href="tel:+256 703 704 281">+256 703 704 281</a></p>
+          <p><i class="fa-solid fa-phone fa-fw mr-2 text-[var(--kcs-yellow)]"></i> <a class="underline underline-offset-4 hover:text-[var(--kcs-blue)]" href="tel:+256 392 001 705">+256 392 001 705</a></p>
+          <li class="pt-2">
               <i class="fa-solid fa-envelope mr-2"></i>
               <a class="underline underline-offset-4 hover:text-white" href="mailto:kisaasicollege.sch@gmail.com">kisaasicollege.sch@gmail.com</a>
             </li>
@@ -739,6 +858,20 @@
     window.nextTestimonial = nextTestimonial;
     renderTestimonial();
   </script>
+<script>
+  (function () {
+    const slides = document.querySelectorAll('#heroSlider .hero-slide');
+    if (slides.length < 2) return;
+
+    let index = 0;
+
+    setInterval(() => {
+      slides[index].classList.remove('active');
+      index = (index + 1) % slides.length;
+      slides[index].classList.add('active');
+    }, 5000); // change every 5 seconds
+  })();
+</script>
 
 </body>
 </html>
