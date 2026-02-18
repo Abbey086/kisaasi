@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#1F8A4C" />
+  <title>404 - Page Not Found • Kisaasi College School</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@400;600;700;800&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-5oK6CzFzC7m+X2XyZ5kzZ6GQZz8zv5Kp6tF9M1v5n9E0zYpL3bJk3U8Z1z1Z9QGJpKx2fM8d2Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            serif: ['Playfair Display', 'Georgia', 'serif'],
+          },
+          colors: {
+            kcs: {
+              yellow: '#FFFF8F',
+              green:  '#2B6CB0',
+              blue:   '#1F8A4C',
+              ink:    '#0f172a',
+            },
+            cream: { DEFAULT: '#F6F3EA', dark: '#EFE8D8' },
+            dark:  { DEFAULT: '#0f172a', card: '#141b2a' },
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body { background: #F6F3EA; color: #0f172a; }
+  </style>
+</head>
+
+<body class="font-sans antialiased flex min-h-screen items-center justify-center p-6">
+
+  <main class="text-center max-w-2xl relative">
+    
+    <div class="absolute -top-10 -left-10 -z-10 h-32 w-32 rounded-full bg-kcs-blue/10 blur-2xl"></div>
+    <div class="absolute -bottom-10 -right-10 -z-10 h-32 w-32 rounded-full bg-kcs-yellow/40 blur-2xl"></div>
+
+    
+    <h1 class="font-serif text-8xl font-extrabold text-kcs-blue md:text-9xl mb-2 drop-shadow-sm">404</h1>
+    
+    <h2 class="font-serif text-3xl font-bold text-kcs-ink md:text-4xl mb-6">
+      Oops! You seem to have gone astray...
+    </h2>
+    
+    <p class="text-base leading-relaxed text-kcs-ink/70 mb-10">
+      Are you lost in the corridors? In our school prayer, we ask to be shown the right path, "not the path of those who go astray"! It looks like you've wandered into a classroom that doesn't exist. We may always "labour for the future", but unfortunately, there is no future for this specific link.
+    </p>
+
+    <div class="flex flex-wrap justify-center gap-4">
+      <a href="index.html" class="inline-flex items-center rounded-full bg-kcs-blue px-8 py-3.5 text-sm font-semibold text-white transition-all hover:-translate-y-1 hover:shadow-lg hover:opacity-90">
+        <i class="fa-solid fa-person-walking-arrow-right mr-2"></i> Report Back to Assembly (Home)
+      </a>
+      <a href="contact.html" class="inline-flex items-center rounded-full border-2 border-kcs-ink/10 bg-white px-8 py-3.5 text-sm font-semibold text-kcs-ink transition-all hover:-translate-y-1 hover:shadow-lg hover:border-kcs-blue/30">
+        <i class="fa-solid fa-map-location-dot mr-2"></i> Ask for Directions
+      </a>
+    </div>
+
+  </main>
+
+</body>
+</html>

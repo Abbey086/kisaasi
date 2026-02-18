@@ -672,86 +672,71 @@
   </button>
 
   <!-- FOOTER -->
-  <footer class="bg-[var(--kcs-ink)] text-white">
-    <div class="mx-auto max-w-7xl px-4 py-12 grid md:grid-cols-3 gap-8">
-      <div>
-        <div class="flex items-center gap-3">
-          <div class="h-12 w-12 rounded-full bg-white border border-white/20 overflow-hidden flex items-center justify-center">
-            <img src="assets/images/logo.png" alt="Kisaasi College School Logo" class="h-full w-full object-contain p-1"
-                 onerror="this.closest('div').innerHTML='<span class=&quot;font-black text-[var(--kcs-green)]&quot;>KCS</span>';" />
+  <footer id="contact" class="bg-[#0f172a] text-white">
+    <div class="mx-auto max-w-7xl px-4 py-16 lg:px-8">
+      <div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+
+        <div>
+          <div class="flex items-center gap-2">
+            <div class="flex h-10 w-10 items-center justify-center rounded-full border-2 border-kcs-blue bg-white overflow-hidden">
+              <img src="assets/images/logo.png" alt="KCS" class="h-full w-full object-contain p-1"
+                   onerror="this.closest('div').innerHTML='<span style=&quot;font-weight:900;color:#1F8A4C;font-size:12px&quot;>KCS</span>';" />
+            </div>
+            <span class="text-sm font-extrabold leading-tight text-white">Kisaasi<br/>College School</span>
           </div>
-          <div>
-            <div class="font-extrabold text-lg">KISAASI COLLEGE SCHOOL</div>
-            <div class="text-white/70 text-sm">As we labour for the future</div>
-          </div>
+          <p class="mt-4 text-xs leading-relaxed text-white/60">
+            A private mixed day & boarding secondary school established in 1995. Islamic-based and welcoming to all religions.
+          </p>
         </div>
 
-        <p class="mt-4 text-white/70">
-          A private mixed day and boarding secondary school established in 1995. Islamic-based and welcoming to all religions.
-        </p>
+        <div>
+          <h3 class="mb-4 text-sm font-bold text-white"><i class="fa-solid fa-link mr-2 text-kcs-yellow"></i>Quick Links</h3>
+          <ul class="space-y-2">
+            <li><a href="index.html" class="text-xs text-white/60 transition-colors hover:text-kcs-yellow"><i class="fa-solid fa-house mr-2"></i>Home</a></li>
+            <li><a href="about.html" class="text-xs text-white/60 transition-colors hover:text-kcs-yellow"><i class="fa-solid fa-circle-info mr-2"></i>About Us</a></li>
+            <li><a href="academics.html" class="text-xs text-white/60 transition-colors hover:text-kcs-yellow"><i class="fa-solid fa-graduation-cap mr-2"></i>Academics</a></li>
+            <li><a href="gallery.html" class="text-xs text-white/60 transition-colors hover:text-kcs-yellow"><i class="fa-solid fa-graduation-cap mr-2"></i>Gallery</a></li>
+            <li><a href="admissions.html" class="text-xs text-white/60 transition-colors hover:text-kcs-yellow"><i class="fa-solid fa-file-signature mr-2"></i>Admissions</a></li>
+            <li><a href="contact.html" class="text-xs text-white/60 transition-colors hover:text-kcs-yellow"><i class="fa-solid fa-phone mr-2"></i>Contact</a></li>
+          </ul>
+        </div>
 
-        <p class="mt-4 text-sm text-white/70">
-          © <span id="yr"></span> Kisaasi College School. All rights reserved.
-        </p>
-      </div>
-
-      <div>
-  <div class="font-bold">
-    <i class="fa-solid fa-location-dot mr-2 text-[var(--kcs-yellow)]"></i>
-    Address
-  </div>
-
-  <div class="mt-3 space-y-2 text-white/80">
-
-    <p>P.O. Box 5167, Kampala-Uganda</p>
-
-    <!-- Website -->
-    <p>
-      <i class="fa-solid fa-globe mr-2 text-[var(--kcs-yellow)]"></i>
-      Website:
-      <a class="hover:text-white underline underline-offset-4"
-         href="https://www.kisaasicollegeschool.com"
-         target="_blank"
-         rel="noopener">
-        www.kisaasicollegeschool.com
-      </a>
-    </p>
-
-    <!-- Facebook -->
-    <p>
-      <i class="fa-brands fa-facebook mr-2 text-[var(--kcs-yellow)]"></i>
-      Facebook:
-      <a class="hover:text-white underline underline-offset-4 font-semibold"
+        <div>
+          <h3 class="mb-4 text-sm font-bold text-white"><i class="fa-solid fa-location-dot mr-2 text-kcs-yellow"></i>Address</h3>
+          <p class="text-xs text-white/60">P.O. Box 5167, Kampala-Uganda</p>
+          <p class="mt-2 text-xs text-white/60"><i class="fa-brands fa-facebook mr-2"></i>Facebook:<a class="hover:text-white underline underline-offset-4 font-semibold"
          href="https://www.facebook.com/p/Kisaasi-College-School-61566858642165/"
          target="_blank"
          rel="noopener">
         Kisaasi College School
-      </a>
-    </p>
-
-    <!-- TikTok -->
-    <p>
-      <i class="fa-brands fa-tiktok mr-2 text-[var(--kcs-yellow)]"></i>
-      TikTok:
-      <a class="hover:text-white underline underline-offset-4 font-semibold"
+      </a></p>
+          <p class="mt-1 text-xs text-white/60"><i class="fa-brands fa-tiktok mr-2"></i>TikTok: <a class="hover:text-white underline underline-offset-4 font-semibold"
          href="https://www.tiktok.com/@kisaasicollegeschool"
          target="_blank"
          rel="noopener">
         @kisaasicollegeschool
-      </a>
-    </p>
-
-  </div>
-</div>
-      <div>
-        <div class="font-bold"><i class="fa-solid fa-phone mr-2 text-[var(--kcs-yellow)]"></i>Contact</div>
-        <div class="mt-3 space-y-2 text-white/80">
-        <p><i class="fa-solid fa-phone fa-fw mr-2 text-[var(--kcs-yellow)]"></i> <a class="underline underline-offset-4 hover:text-[var(--kcs-blue)]" href="tel:+256 703 704 281">+256 703 704 281</a></p>
+      </a></p>
+        </div>
+        <div>
+          <h3 class="mb-4 text-sm font-bold text-white"><i class="fa-solid fa-phone mr-2 text-kcs-yellow"></i>Contact</h3>
+          <ul class="space-y-2 text-xs text-white/60">
+          <p><i class="fa-solid fa-phone fa-fw mr-2 text-[var(--kcs-yellow)]"></i> <a class="underline underline-offset-4 hover:text-[var(--kcs-blue)]" href="tel:+256 703 704 281">+256 703 704 281</a></p>
           <p><i class="fa-solid fa-phone fa-fw mr-2 text-[var(--kcs-yellow)]"></i> <a class="underline underline-offset-4 hover:text-[var(--kcs-blue)]" href="tel:+256 392 001 705">+256 392 001 705</a></p>
-           <p class="pt-2">
-            <i class="fa-solid fa-envelope fa-fw"></i>
-            <a class="hover:text-white underline underline-offset-4" href="mailto:kisaasicollege.sch@gmail.com">kisaasicollege.sch@gmail.com</a>
-          </p>
+          <li class="pt-2">
+              <i class="fa-solid fa-envelope mr-2"></i>
+              <a class="underline underline-offset-4 hover:text-white" href="mailto:kisaasicollege.sch@gmail.com">kisaasicollege.sch@gmail.com</a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="border-t border-white/10">
+      <div class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-2 px-4 py-4 text-xs text-white/40 sm:flex-row lg:px-8">
+        <p>&copy; <span id="yr"></span> Kisaasi College School. All rights reserved.</p>
+        <div class="flex gap-4">
+          <a href="tel: 256753943599" class="hover:text-white/70 text-white underline">Developed by Amanda Technologies</a>
         </div>
       </div>
     </div>
