@@ -4,28 +4,24 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Gallery • KISAASI COLLEGE SCHOOL</title>
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" referrerpolicy="no-referrer">
-
-  <!-- Tailwind -->
-  <script src="https://cdn.tailwindcss.com"></script>
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@400;600;700;800&display=swap" rel="stylesheet" />
 
-  <!-- Font Awesome 6 -->
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
-  />
- <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
-<link rel="manifest" href="assets/favicon/site.webmanifest">
-  <!-- Tailwind font theme -->
+  <!-- Font Awesome 6 (keep ONLY once) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" referrerpolicy="no-referrer">
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+  <link rel="manifest" href="assets/favicon/site.webmanifest">
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
   <script>
     tailwind.config = {
       theme: {
@@ -61,7 +57,7 @@
 
   <!-- NAVBAR -->
   <header id="navbar" class="fixed top-0 left-0 right-0 z-50 w-screen bg-white/95 backdrop-blur-sm shadow-sm transition-shadow">
-    <div class="mx-auto flex max-w-7xl items-center justify-between  px-4 py-2 lg:px-8">
+    <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-2 lg:px-8">
 
       <!-- Logo -->
       <a href="index.html" class="flex items-center gap-2">
@@ -71,35 +67,35 @@
                class="h-full w-full object-contain p-1"
                onerror="this.closest('div').innerHTML='<span style=&quot;font-weight:900;color:#1F8A4C;font-size:12px&quot;>KCS</span>';" />
         </div>
-        <span class=" font-extrabold text-kcs-ink leading-tight">
+        <span class="font-extrabold leading-tight text-[var(--kcs-ink)]">
           Kisaasi College School
         </span>
       </a>
 
       <!-- Desktop Nav -->
       <nav class="hidden items-center gap-6 lg:flex">
-        <a href="index.html" class="text-sm font-medium text-kcs-ink/70 transition-colors hover:text-kcs-blue">
+        <a href="index.html" class="text-sm font-medium text-[var(--kcs-ink)]/70 transition-colors hover:text-[var(--kcs-blue)]">
           <i class="fa-solid fa-house mr-2"></i>Home
         </a>
-        <a href="about.html" class="text-sm font-medium text-kcs-ink/70 transition-colors hover:text-kcs-blue">
+        <a href="about.html" class="text-sm font-medium text-[var(--kcs-ink)]/70 transition-colors hover:text-[var(--kcs-blue)]">
           <i class="fa-solid fa-circle-info mr-2"></i>About
         </a>
-        <a href="gallery.html" class="text-sm font-medium text-kcs-ink/70 transition-colors hover:text-kcs-blue">
-          <i class="fa-solid fa-file-signature mr-2"></i>Gallery
+        <a href="gallery.html" class="text-sm font-semibold text-[var(--kcs-blue)]">
+          <i class="fa-regular fa-images mr-2"></i>Gallery
         </a>
-        <a href="contact.html" class="text-sm font-medium text-kcs-ink/70 transition-colors hover:text-kcs-blue">
+        <a href="contact.html" class="text-sm font-medium text-[var(--kcs-ink)]/70 transition-colors hover:text-[var(--kcs-blue)]">
           <i class="fa-solid fa-phone fa-fw mr-2"></i>Contact
         </a>
-        <a href="academics.html" class="text-sm font-medium text-kcs-ink/70 transition-colors hover:text-kcs-blue">
+        <a href="academics.html" class="text-sm font-medium text-[var(--kcs-ink)]/70 transition-colors hover:text-[var(--kcs-blue)]">
           <i class="fa-solid fa-graduation-cap mr-2"></i>Academics
         </a>
-        <a href="admissions.html" class="rounded-full bg-[#1F8A4C] px-6 py-2.5 text-sm font-semibold text-white transition-colors hover:opacity-90">
+        <a href="admissions.html" class="rounded-full bg-[var(--kcs-green)] px-6 py-2.5 text-sm font-semibold text-white transition-colors hover:opacity-90">
           <i class="fa-solid fa-paper-plane mr-2"></i>Apply Online
         </a>
       </nav>
 
       <!-- Mobile Toggle -->
-      <button id="menuToggle" class="lg:hidden text-kcs-ink" aria-label="Toggle menu">
+      <button id="menuToggle" class="lg:hidden text-[var(--kcs-ink)]" aria-label="Toggle menu" aria-expanded="false">
         <i id="menuOpen" class="fa-solid fa-bars text-xl"></i>
         <i id="menuClose" class="fa-solid fa-xmark text-xl hidden"></i>
       </button>
@@ -107,47 +103,25 @@
 
     <!-- Mobile Nav -->
     <div id="mobileMenu" class="hidden border-t border-gray-200 bg-white px-4 pb-4 lg:hidden">
-      <a href="index.html" class="block py-3 text-sm font-medium text-kcs-ink/70 hover:text-kcs-blue" onclick="closeMobileMenu()">
+      <a href="index.html" class="block py-3 text-sm font-medium text-[var(--kcs-ink)]/70 hover:text-[var(--kcs-blue)]" onclick="closeMobileMenu()">
         <i class="fa-solid fa-house mr-2"></i>Home
       </a>
-      <a href="about.html" class="block py-3 text-sm font-medium text-kcs-ink/70 hover:text-kcs-blue" onclick="closeMobileMenu()">
+      <a href="about.html" class="block py-3 text-sm font-medium text-[var(--kcs-ink)]/70 hover:text-[var(--kcs-blue)]" onclick="closeMobileMenu()">
         <i class="fa-solid fa-circle-info mr-2"></i>About
       </a>
-      <a href="academics.html" class="block py-3 text-sm font-medium text-kcs-ink/70 hover:text-kcs-blue" onclick="closeMobileMenu()">
+      <a href="academics.html" class="block py-3 text-sm font-medium text-[var(--kcs-ink)]/70 hover:text-[var(--kcs-blue)]" onclick="closeMobileMenu()">
         <i class="fa-solid fa-graduation-cap mr-2"></i>Academics
       </a>
-      <a href="gallery.html" class="block py-3 text-sm font-medium text-kcs-ink/70 hover:text-kcs-blue" onclick="closeMobileMenu()">
-        <i class="fa-solid fa-file-signature mr-2"></i>Gallery
+      <a href="gallery.html" class="block py-3 text-sm font-semibold text-[var(--kcs-blue)]" onclick="closeMobileMenu()">
+        <i class="fa-regular fa-images mr-2"></i>Gallery
       </a>
-      <a href="contact.html" class="block py-3 text-sm font-medium text-kcs-ink/70 hover:text-kcs-blue" onclick="closeMobileMenu()">
-        <i class="fa-solid fa-phone fa-fw mr-2"></i>Contact 
+      <a href="contact.html" class="block py-3 text-sm font-medium text-[var(--kcs-ink)]/70 hover:text-[var(--kcs-blue)]" onclick="closeMobileMenu()">
+        <i class="fa-solid fa-phone fa-fw mr-2"></i>Contact
       </a>
-      <a href="admissions.html" class="mt-2 block rounded-full bg-[#1F8A4C] px-6 py-2.5 text-center text-sm font-semibold text-white" onclick="closeMobileMenu()">
+      <a href="admissions.html" class="mt-2 block rounded-full bg-[var(--kcs-green)] px-6 py-2.5 text-center text-sm font-semibold text-white hover:opacity-90" onclick="closeMobileMenu()">
         <i class="fa-solid fa-paper-plane mr-2"></i>Apply Online
       </a>
     </div>
-    <script>
-       const menuToggle = document.getElementById('menuToggle');
-    const mobileMenu = document.getElementById('mobileMenu');
-    const menuOpen = document.getElementById('menuOpen');
-    const menuClose = document.getElementById('menuClose');
-    let menuIsOpen = false;
-
-    menuToggle.addEventListener('click', function() {
-      menuIsOpen = !menuIsOpen;
-      mobileMenu.classList.toggle('hidden', !menuIsOpen);
-      menuOpen.classList.toggle('hidden', menuIsOpen);
-      menuClose.classList.toggle('hidden', !menuIsOpen);
-    });
-
-    function closeMobileMenu() {
-      menuIsOpen = false;
-      mobileMenu.classList.add('hidden');
-      menuOpen.classList.remove('hidden');
-      menuClose.classList.add('hidden');
-    }
-    window.closeMobileMenu = closeMobileMenu;
-    </script>
   </header>
 
   <!-- HERO -->
@@ -156,7 +130,7 @@
     <div class="absolute -top-24 -right-24 h-72 w-72 rounded-full bg-[var(--kcs-blue)]/15 blur-2xl"></div>
     <div class="absolute -bottom-24 -left-24 h-72 w-72 rounded-full bg-[var(--kcs-green)]/15 blur-2xl"></div>
 
-    <div class="relative mx-auto max-w-7xl px-4 py-14">
+    <div class="relative mx-auto max-w-7xl px-4 py-14 pt-28">
       <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6">
         <div>
           <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-slate-200 text-sm">
@@ -172,247 +146,183 @@
             A glimpse into learning, leadership, sports, faith, and community at Kisaasi College School.
           </p>
         </div>
- </section><!-- VIDEO TOUR (LOCAL VIDEOS) -->
-<section class="mx-auto max-w-7xl px-4 py-10">
-  <div class="rounded-3xl border border-slate-200 bg-white overflow-hidden shadow-sm reveal">
-    <div class="p-6 sm:p-8 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
 
-      <!-- Text -->
-      <div class="lg:max-w-xl">
-        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[var(--kcs-yellow)]/60 border border-slate-200 text-sm">
-          <i class="fa-solid fa-video text-[var(--kcs-blue)]"></i>
-          Video • Tour • Highlights
-        </div>
-
-        <h2 class="mt-3 text-2xl sm:text-3xl font-extrabold font-serif text-[var(--kcs-ink)]">
-          School Video Tour
-        </h2>
-
-        <p class="mt-2 text-slate-700 max-w-2xl">
-          Watch short videos of our campus, academics, student life and activities.
-        </p>
-
-        <!-- Controls -->
-        <div class="mt-5 flex flex-wrap items-center gap-2">
-          <button type="button"
-                  class="px-5 py-3 rounded-xl bg-[var(--kcs-green)] text-white font-semibold hover:opacity-90 inline-flex items-center gap-2"
-                  onclick="openVideoModal()">
-            <i class="fa-solid fa-play"></i> Watch Fullscreen
-          </button>
-
-          <a id="openVideoNewTab"
-             href="assets/videos/tour-1.mp4"
-             target="_blank" rel="noopener"
-             class="px-5 py-3 rounded-xl border border-slate-200 bg-white font-semibold hover:bg-slate-50 inline-flex items-center gap-2">
-            <i class="fa-solid fa-up-right-from-square text-[var(--kcs-blue)]"></i> Open Video
-          </a>
-        </div>
-
-        <p class="mt-3 text-xs text-slate-500">
-          Tip: Video auto-plays muted for preview. Click play for sound.
-        </p>
-      </div>
-
-      <!-- Video Slider -->
-      <div class="w-full lg:w-[560px]">
-        <div class="relative w-full overflow-hidden rounded-2xl border border-slate-200 bg-black">
-
-          <video id="galleryVideo"
-                 class="w-full h-[320px] sm:h-[360px] object-cover"
-                 controls
-                 playsinline
-                 muted
-                 preload="metadata"
-                 poster="assets/images/school.jpeg">
-            <source id="galleryVideoSource" src="assets/videos/tour-1.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-
-          <!-- Prev/Next buttons -->
-          <button type="button"
-                  class="absolute left-3 top-1/2 -translate-y-1/2 px-4 py-3 rounded-2xl bg-white/10 text-white border border-white/20 hover:bg-white/20"
-                  aria-label="Previous video"
-                  onclick="prevVideo()">
-            <i class="fa-solid fa-chevron-left"></i>
-          </button>
-
-          <button type="button"
-                  class="absolute right-3 top-1/2 -translate-y-1/2 px-4 py-3 rounded-2xl bg-white/10 text-white border border-white/20 hover:bg-white/20"
-                  aria-label="Next video"
-                  onclick="nextVideo()">
-            <i class="fa-solid fa-chevron-right"></i>
-          </button>
-        </div>
-
-        <!-- Dots -->
-        <div class="mt-3 flex items-center justify-center gap-2">
-          <button class="videoDot h-3 w-3 rounded-full border border-slate-300 bg-[var(--kcs-blue)]"
-                  aria-label="Video 1" onclick="setVideo(0)"></button>
-          <button class="videoDot h-3 w-3 rounded-full border border-slate-300 bg-white"
-                  aria-label="Video 2" onclick="setVideo(1)"></button>
-          <button class="videoDot h-3 w-3 rounded-full border border-slate-300 bg-white"
-                  aria-label="Video 3" onclick="setVideo(2)"></button>
-                  <button class="videoDot h-3 w-3 rounded-full border border-slate-300 bg-white"
-                  aria-label="Video 4" onclick="setVideo(3)"></button>
+        <!-- Right side slot (optional) -->
+        <div class="hidden lg:block text-sm text-slate-600">
+          <span class="inline-flex items-center gap-2 rounded-full bg-white/70 border border-slate-200 px-4 py-2">
+            <i class="fa-solid fa-camera text-[var(--kcs-blue)]"></i> Updated regularly
+          </span>
         </div>
       </div>
+    </div>
+  </section>
 
+  <!-- VIDEO TOUR (LOCAL VIDEOS) -->
+  <section class="mx-auto max-w-7xl px-4 py-10">
+    <div class="rounded-3xl border border-slate-200 bg-white overflow-hidden shadow-sm reveal">
+      <div class="p-6 sm:p-8 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
+
+        <!-- Text -->
+        <div class="lg:max-w-xl">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[var(--kcs-yellow)]/60 border border-slate-200 text-sm">
+            <i class="fa-solid fa-video text-[var(--kcs-blue)]"></i>
+            Video • Tour • Highlights
+          </div>
+
+          <h2 class="mt-3 text-2xl sm:text-3xl font-extrabold font-serif text-[var(--kcs-ink)]">
+            School Video Tour
+          </h2>
+
+          <p class="mt-2 text-slate-700 max-w-2xl">
+            Watch short videos of our campus, academics, student life and activities.
+          </p>
+
+          <!-- Controls -->
+          <div class="mt-5 flex flex-wrap items-center gap-2">
+            <button type="button"
+                    class="px-5 py-3 rounded-xl bg-[var(--kcs-green)] text-white font-semibold hover:opacity-90 inline-flex items-center gap-2"
+                    onclick="openVideoModal()">
+              <i class="fa-solid fa-play"></i> Watch Fullscreen
+            </button>
+
+            <a id="openVideoNewTab"
+               href="assets/videos/vid.mp4"
+               target="_blank" rel="noopener"
+               class="px-5 py-3 rounded-xl border border-slate-200 bg-white font-semibold hover:bg-slate-50 inline-flex items-center gap-2">
+              <i class="fa-solid fa-up-right-from-square text-[var(--kcs-blue)]"></i> Open Video
+            </a>
+          </div>
+
+          <p class="mt-3 text-xs text-slate-500">
+            Tip: Video auto-plays muted for preview. Click play for sound.
+          </p>
+        </div>
+
+        <!-- Video Slider -->
+        <div class="w-full lg:w-[560px]">
+          <div class="relative w-full overflow-hidden rounded-2xl border border-slate-200 bg-black">
+
+            <video id="galleryVideo"
+                   class="w-full h-[320px] sm:h-[360px] object-cover"
+                   controls
+                   playsinline
+                   muted
+                   preload="metadata"
+                   poster="assets/images/school.jpeg">
+              <source id="galleryVideoSource" src="assets/videos/vid.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+
+            <!-- Prev/Next buttons -->
+            <button type="button"
+                    class="absolute left-3 top-1/2 -translate-y-1/2 px-4 py-3 rounded-2xl bg-white/10 text-white border border-white/20 hover:bg-white/20"
+                    aria-label="Previous video"
+                    onclick="prevVideo()">
+              <i class="fa-solid fa-chevron-left"></i>
+            </button>
+
+            <button type="button"
+                    class="absolute right-3 top-1/2 -translate-y-1/2 px-4 py-3 rounded-2xl bg-white/10 text-white border border-white/20 hover:bg-white/20"
+                    aria-label="Next video"
+                    onclick="nextVideo()">
+              <i class="fa-solid fa-chevron-right"></i>
+            </button>
+          </div>
+
+          <!-- Dots (keep 4 to match KCS_VIDEOS length) -->
+          <div class="mt-3 flex items-center justify-center gap-2">
+            <button class="videoDot h-3 w-3 rounded-full border border-slate-300 bg-[var(--kcs-blue)]"
+                    aria-label="Video 1" onclick="setVideo(0)"></button>
+            <button class="videoDot h-3 w-3 rounded-full border border-slate-300 bg-white"
+                    aria-label="Video 2" onclick="setVideo(1)"></button>
+            <button class="videoDot h-3 w-3 rounded-full border border-slate-300 bg-white"
+                    aria-label="Video 3" onclick="setVideo(2)"></button>
+            <button class="videoDot h-3 w-3 rounded-full border border-slate-300 bg-white"
+                    aria-label="Video 4" onclick="setVideo(3)"></button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- VIDEO MODAL (Fullscreen) -->
+  <div id="videoModal" class="fixed inset-0 hidden z-[90] items-center justify-center">
+    <div class="absolute inset-0 bg-black/70" onclick="closeVideoModal()"></div>
+
+    <div class="relative w-[95%] max-w-5xl rounded-3xl overflow-hidden border border-white/10 bg-black shadow-2xl">
+      <div class="flex items-center justify-between p-4 bg-black/40 backdrop-blur border-b border-white/10">
+        <div class="text-white">
+          <div class="font-extrabold">School Video Tour</div>
+          <div class="text-sm text-white/70">KISAASI COLLEGE SCHOOL</div>
+        </div>
+
+        <button class="px-3 py-2 rounded-xl border border-white/20 text-white hover:bg-white/10"
+                onclick="closeVideoModal()" aria-label="Close">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <div class="p-3 bg-black">
+        <video id="modalVideo"
+               class="w-full max-h-[75vh] object-contain bg-black rounded-2xl"
+               controls
+               playsinline
+               preload="metadata">
+          <source id="modalVideoSource" src="assets/videos/vid.mp4" type="video/mp4">
+        </video>
+      </div>
     </div>
   </div>
-</section>
 
-<!-- VIDEO MODAL (Fullscreen) -->
-<div id="videoModal" class="fixed inset-0 hidden z-[90] items-center justify-center">
-  <div class="absolute inset-0 bg-black/70" onclick="closeVideoModal()"></div>
-
-  <div class="relative w-[95%] max-w-5xl rounded-3xl overflow-hidden border border-white/10 bg-black shadow-2xl">
-    <div class="flex items-center justify-between p-4 bg-black/40 backdrop-blur border-b border-white/10">
-      <div class="text-white">
-        <div class="font-extrabold">School Video Tour</div>
-        <div class="text-sm text-white/70">KISAASI COLLEGE SCHOOL</div>
+  <!-- CONTROLS + FILTERS -->
+  <section class="mx-auto max-w-7xl px-4 pb-4">
+    <div class="w-full reveal">
+      <label class="text-sm font-semibold text-slate-700">
+        <i class="fa-solid fa-magnifying-glass mr-2 text-[var(--kcs-blue)]"></i>Search photos
+      </label>
+      <div class="mt-2 flex items-center gap-2 rounded-2xl border border-slate-200 bg-white px-3 py-2">
+        <i class="fa-solid fa-magnifying-glass text-slate-400"></i>
+        <input id="searchInput" class="w-full bg-transparent outline-none px-1 py-2"
+               placeholder="e.g. ICT, Library, Campus, Students..." />
+        <button id="clearSearch" class="px-3 py-2 rounded-xl border border-slate-200 hover:bg-slate-50 inline-flex items-center gap-2">
+          <i class="fa-solid fa-xmark text-[var(--kcs-blue)]"></i> Clear
+        </button>
       </div>
+    </div>
 
-      <button class="px-3 py-2 rounded-xl border border-white/20 text-white hover:bg-white/10"
-              onclick="closeVideoModal()" aria-label="Close">
-        <i class="fa-solid fa-xmark"></i>
+    <div class="mt-8 flex flex-wrap gap-2">
+      <button class="filterBtn px-4 py-2 rounded-xl border border-slate-200 bg-white hover:bg-slate-50" data-filter="all">
+        <i class="fa-solid fa-layer-group mr-2 text-[var(--kcs-blue)]"></i>All
+      </button>
+      <button class="filterBtn px-4 py-2 rounded-xl border border-slate-200 bg-white hover:bg-slate-50" data-filter="campus">
+        <i class="fa-solid fa-school mr-2 text-[var(--kcs-blue)]"></i>Campus
+      </button>
+      <button class="filterBtn px-4 py-2 rounded-xl border border-slate-200 bg-white hover:bg-slate-50" data-filter="academics">
+        <i class="fa-solid fa-book-open mr-2 text-[var(--kcs-blue)]"></i>Academics
+      </button>
+      <button class="filterBtn px-4 py-2 rounded-xl border border-slate-200 bg-white hover:bg-slate-50" data-filter="ict">
+        <i class="fa-solid fa-computer mr-2 text-[var(--kcs-blue)]"></i>ICT
+      </button>
+      <button class="filterBtn px-4 py-2 rounded-xl border border-slate-200 bg-white hover:bg-slate-50" data-filter="library">
+        <i class="fa-solid fa-book mr-2 text-[var(--kcs-blue)]"></i>Library
+      </button>
+      <button class="filterBtn px-4 py-2 rounded-xl border border-slate-200 bg-white hover:bg-slate-50" data-filter="sports">
+        <i class="fa-solid fa-volleyball mr-2 text-[var(--kcs-blue)]"></i>Sports
+      </button>
+      <button class="filterBtn px-4 py-2 rounded-xl border border-slate-200 bg-white hover:bg-slate-50" data-filter="students">
+        <i class="fa-solid fa-people-group mr-2 text-[var(--kcs-blue)]"></i>Students
       </button>
     </div>
 
-    <div class="p-3 bg-black">
-      <video id="modalVideo"
-             class="w-full max-h-[75vh] object-contain bg-black rounded-2xl"
-             controls
-             playsinline
-             preload="metadata">
-        <source id="modalVideoSource" src="assets/videos/nba.mp4" type="video/mp4">
-      </video>
-    </div>
-  </div>
-</div>
+    <p class="mt-3 text-sm text-slate-600">
+      <i class="fa-solid fa-circle-info mr-2 text-[var(--kcs-blue)]"></i>
+      Tip: Click any photo to view full size.
+    </p>
+  </section>
 
-<script>
-  // ✅ Put your 3 local video paths here
-  const KCS_VIDEOS = [
-    "assets/videos/vid.mp4",
-    "assets/videos/vid3.mp4",
-    "assets/videos/nba.mp4",
-    "assets/videos/vid2.mp4"
-  ];
-
-  let currentVideoIndex = 0;
-
-  const galleryVideo = document.getElementById("galleryVideo");
-  const galleryVideoSource = document.getElementById("galleryVideoSource");
-  const openVideoNewTab = document.getElementById("openVideoNewTab");
-  const dots = Array.from(document.querySelectorAll(".videoDot"));
-
-  function updateDots() {
-    dots.forEach((d, i) => {
-      d.classList.toggle("bg-[var(--kcs-blue)]", i === currentVideoIndex);
-      d.classList.toggle("bg-white", i !== currentVideoIndex);
-    });
-  }
-
-  function setVideo(i) {
-    currentVideoIndex = (i + KCS_VIDEOS.length) % KCS_VIDEOS.length;
-
-    const src = KCS_VIDEOS[currentVideoIndex];
-    galleryVideo.pause();
-    galleryVideoSource.src = src;
-    galleryVideo.load();
-
-    // update "Open Video"
-    openVideoNewTab.href = src;
-
-    // auto preview (muted)
-    galleryVideo.muted = true;
-    galleryVideo.play().catch(() => { /* autoplay may be blocked */ });
-
-    updateDots();
-  }
-
-  function nextVideo() { setVideo(currentVideoIndex + 1); }
-  function prevVideo() { setVideo(currentVideoIndex - 1); }
-
-  // Fullscreen modal
-  function openVideoModal() {
-    const m = document.getElementById("videoModal");
-    const mv = document.getElementById("modalVideo");
-    const mvs = document.getElementById("modalVideoSource");
-
-    m.classList.remove("hidden");
-    m.classList.add("flex");
-    document.body.style.overflow = "hidden";
-
-    // set current src in modal
-    mvs.src = KCS_VIDEOS[currentVideoIndex];
-    mv.load();
-    mv.play().catch(() => {});
-  }
-
-  function closeVideoModal() {
-    const m = document.getElementById("videoModal");
-    const mv = document.getElementById("modalVideo");
-    mv.pause();
-
-    m.classList.add("hidden");
-    m.classList.remove("flex");
-    document.body.style.overflow = "";
-  }
-
-  window.setVideo = setVideo;
-  window.nextVideo = nextVideo;
-  window.prevVideo = prevVideo;
-  window.openVideoModal = openVideoModal;
-  window.closeVideoModal = closeVideoModal;
-
-  // ESC closes modal
-  document.addEventListener("keydown", (e) => {
-    const m = document.getElementById("videoModal");
-    if (!m || m.classList.contains("hidden")) return;
-    if (e.key === "Escape") closeVideoModal();
-  });
-
-  // Start with first video
-  setVideo(0);
-
-  // Optional: auto-switch video every 12 seconds (comment out if not needed)
-  setInterval(() => nextVideo(), 12000);
-</script>
-        <div class="w-full lg:w-[420px] reveal">
-          <label class="text-sm font-semibold text-slate-700"><i class="fa-solid fa-magnifying-glass mr-2 text-[var(--kcs-blue)]"></i>Search photos</label>
-          <div class="mt-2 flex items-center gap-2 rounded-2xl border border-slate-200 bg-white px-3 py-2">
-            <i class="fa-solid fa-magnifying-glass text-slate-400"></i>
-            <input id="searchInput" class="w-full bg-transparent outline-none px-1 py-2"
-                   placeholder="e.g. ICT, Library, Campus, Students..." />
-            <button id="clearSearch" class="px-3 py-2 rounded-xl border border-slate-200 hover:bg-slate-50 inline-flex items-center gap-2">
-              <i class="fa-solid fa-xmark text-[var(--kcs-blue)]"></i> Clear
-            </button>
-          </div>
-        </div>
-      </div>
-
-      <!-- Filters -->
-      <div class="mt-8 flex flex-wrap gap-2">
-        <button class="filterBtn px-4 py-2 rounded-xl border border-slate-200 bg-white hover:bg-slate-50" data-filter="all"><i class="fa-solid fa-layer-group mr-2 text-[var(--kcs-blue)]"></i>All</button>
-        <button class="filterBtn px-4 py-2 rounded-xl border border-slate-200 bg-white hover:bg-slate-50" data-filter="campus"><i class="fa-solid fa-school mr-2 text-[var(--kcs-blue)]"></i>Campus</button>
-        <button class="filterBtn px-4 py-2 rounded-xl border border-slate-200 bg-white hover:bg-slate-50" data-filter="academics"><i class="fa-solid fa-book-open mr-2 text-[var(--kcs-blue)]"></i>Academics</button>
-        <button class="filterBtn px-4 py-2 rounded-xl border border-slate-200 bg-white hover:bg-slate-50" data-filter="ict"><i class="fa-solid fa-computer mr-2 text-[var(--kcs-blue)]"></i>ICT</button>
-        <button class="filterBtn px-4 py-2 rounded-xl border border-slate-200 bg-white hover:bg-slate-50" data-filter="library"><i class="fa-solid fa-book mr-2 text-[var(--kcs-blue)]"></i>Library</button>
-        <button class="filterBtn px-4 py-2 rounded-xl border border-slate-200 bg-white hover:bg-slate-50" data-filter="sports"><i class="fa-solid fa-volleyball mr-2 text-[var(--kcs-blue)]"></i>Sports</button>
-        <button class="filterBtn px-4 py-2 rounded-xl border border-slate-200 bg-white hover:bg-slate-50" data-filter="students"><i class="fa-solid fa-people-group mr-2 text-[var(--kcs-blue)]"></i>Students</button>
-      </div>
-
-      <p class="mt-3 text-sm text-slate-600">
-        <i class="fa-solid fa-circle-info mr-2 text-[var(--kcs-blue)]"></i>
-        Tip: Click any photo to view full size.
-      </p>
-    </div>
- 
-
-
-
-  <main class="mx-auto max-w-7xl px-4 py-12">
+  <!-- GRID -->
+  <main class="mx-auto max-w-7xl px-4 py-10">
     <div id="grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
 
       <!-- CARD 1 -->
@@ -566,8 +476,6 @@
       </figure>
 
     </div>
-
-    <!-- Load more (demo) -->
   </main>
 
   <!-- LIGHTBOX -->
@@ -623,7 +531,7 @@
 
         <div>
           <div class="flex items-center gap-2">
-            <div class="flex h-10 w-10 items-center justify-center rounded-full border-2 border-kcs-blue bg-white overflow-hidden">
+            <div class="flex h-10 w-10 items-center justify-center rounded-full border-2 border-[var(--kcs-blue)] bg-white overflow-hidden">
               <img src="assets/images/logo.png" alt="KCS" class="h-full w-full object-contain p-1"
                    onerror="this.closest('div').innerHTML='<span style=&quot;font-weight:900;color:#1F8A4C;font-size:12px&quot;>KCS</span>';" />
             </div>
@@ -635,39 +543,56 @@
         </div>
 
         <div>
-          <h3 class="mb-4 text-sm font-bold text-white"><i class="fa-solid fa-link mr-2 text-kcs-yellow"></i>Quick Links</h3>
+          <h3 class="mb-4 text-sm font-bold text-white">
+            <i class="fa-solid fa-link mr-2 text-[var(--kcs-yellow)]"></i>Quick Links
+          </h3>
           <ul class="space-y-2">
-            <li><a href="index.html" class="text-xs text-white/60 transition-colors hover:text-kcs-yellow"><i class="fa-solid fa-house mr-2"></i>Home</a></li>
-            <li><a href="about.html" class="text-xs text-white/60 transition-colors hover:text-kcs-yellow"><i class="fa-solid fa-circle-info mr-2"></i>About Us</a></li>
-            <li><a href="academics.html" class="text-xs text-white/60 transition-colors hover:text-kcs-yellow"><i class="fa-solid fa-graduation-cap mr-2"></i>Academics</a></li>
-            <li><a href="gallery.html" class="text-xs text-white/60 transition-colors hover:text-kcs-yellow"><i class="fa-solid fa-graduation-cap mr-2"></i>Gallery</a></li>
-            <li><a href="admissions.html" class="text-xs text-white/60 transition-colors hover:text-kcs-yellow"><i class="fa-solid fa-file-signature mr-2"></i>Admissions</a></li>
-            <li><a href="contact.html" class="text-xs text-white/60 transition-colors hover:text-kcs-yellow"><i class="fa-solid fa-phone mr-2"></i>Contact</a></li>
+            <li><a href="index.html" class="text-xs text-white/60 transition-colors hover:text-[var(--kcs-yellow)]"><i class="fa-solid fa-house mr-2"></i>Home</a></li>
+            <li><a href="about.html" class="text-xs text-white/60 transition-colors hover:text-[var(--kcs-yellow)]"><i class="fa-solid fa-circle-info mr-2"></i>About Us</a></li>
+            <li><a href="academics.html" class="text-xs text-white/60 transition-colors hover:text-[var(--kcs-yellow)]"><i class="fa-solid fa-graduation-cap mr-2"></i>Academics</a></li>
+            <li><a href="gallery.html" class="text-xs text-white/60 transition-colors hover:text-[var(--kcs-yellow)]"><i class="fa-regular fa-images mr-2"></i>Gallery</a></li>
+            <li><a href="admissions.html" class="text-xs text-white/60 transition-colors hover:text-[var(--kcs-yellow)]"><i class="fa-solid fa-file-signature mr-2"></i>Admissions</a></li>
+            <li><a href="contact.html" class="text-xs text-white/60 transition-colors hover:text-[var(--kcs-yellow)]"><i class="fa-solid fa-phone mr-2"></i>Contact</a></li>
           </ul>
         </div>
 
         <div>
-          <h3 class="mb-4 text-sm font-bold text-white"><i class="fa-solid fa-location-dot mr-2 text-kcs-yellow"></i>Address</h3>
+          <h3 class="mb-4 text-sm font-bold text-white">
+            <i class="fa-solid fa-location-dot mr-2 text-[var(--kcs-yellow)]"></i>Address
+          </h3>
           <p class="text-xs text-white/60">P.O. Box 5167, Kampala-Uganda</p>
-          <p class="mt-2 text-xs text-white/60"><i class="fa-brands fa-facebook mr-2"></i>Facebook:<a class="hover:text-white underline underline-offset-4 font-semibold"
-         href="https://www.facebook.com/p/Kisaasi-College-School-61566858642165/"
-         target="_blank"
-         rel="noopener">
-        Kisaasi College School
-      </a></p>
-          <p class="mt-1 text-xs text-white/60"><i class="fa-brands fa-tiktok mr-2"></i>TikTok: <a class="hover:text-white underline underline-offset-4 font-semibold"
-         href="https://www.tiktok.com/@kisaasicollegeschool"
-         target="_blank"
-         rel="noopener">
-        @kisaasicollegeschool
-      </a></p>
+
+          <p class="mt-2 text-xs text-white/60">
+            <i class="fa-brands fa-facebook mr-2"></i>
+            Facebook:
+            <a class="hover:text-white underline underline-offset-4 font-semibold"
+               href="https://www.facebook.com/p/Kisaasi-College-School-61566858642165/"
+               target="_blank" rel="noopener">Kisaasi College School</a>
+          </p>
+
+          <p class="mt-1 text-xs text-white/60">
+            <i class="fa-brands fa-tiktok mr-2"></i>
+            TikTok:
+            <a class="hover:text-white underline underline-offset-4 font-semibold"
+               href="https://www.tiktok.com/@kisaasicollegeschool"
+               target="_blank" rel="noopener">@kisaasicollegeschool</a>
+          </p>
         </div>
+
         <div>
-          <h3 class="mb-4 text-sm font-bold text-white"><i class="fa-solid fa-phone mr-2 text-kcs-yellow"></i>Contact</h3>
+          <h3 class="mb-4 text-sm font-bold text-white">
+            <i class="fa-solid fa-phone mr-2 text-[var(--kcs-yellow)]"></i>Contact
+          </h3>
           <ul class="space-y-2 text-xs text-white/60">
-          <p><i class="fa-solid fa-phone fa-fw mr-2 text-[var(--kcs-yellow)]"></i> <a class="underline underline-offset-4 hover:text-[var(--kcs-blue)]" href="tel:+256 703 704 281">+256 703 704 281</a></p>
-          <p><i class="fa-solid fa-phone fa-fw mr-2 text-[var(--kcs-yellow)]"></i> <a class="underline underline-offset-4 hover:text-[var(--kcs-blue)]" href="tel:+256 392 001 705">+256 392 001 705</a></p>
-          <li class="pt-2">
+            <li>
+              <i class="fa-solid fa-phone fa-fw mr-2 text-[var(--kcs-yellow)]"></i>
+              <a class="underline underline-offset-4 hover:text-white" href="tel:+256703704281">+256 703 704 281</a>
+            </li>
+            <li>
+              <i class="fa-solid fa-phone fa-fw mr-2 text-[var(--kcs-yellow)]"></i>
+              <a class="underline underline-offset-4 hover:text-white" href="tel:+256392001705">+256 392 001 705</a>
+            </li>
+            <li class="pt-2">
               <i class="fa-solid fa-envelope mr-2"></i>
               <a class="underline underline-offset-4 hover:text-white" href="mailto:kisaasicollege.sch@gmail.com">kisaasicollege.sch@gmail.com</a>
             </li>
@@ -681,27 +606,44 @@
       <div class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-2 px-4 py-4 text-xs text-white/40 sm:flex-row lg:px-8">
         <p>&copy; <span id="yr"></span> Kisaasi College School. All rights reserved.</p>
         <div class="flex gap-4">
-          <a href="tel: 256753943599" class="hover:text-white/70 text-white underline">Developed by Amanda Technologies</a>
+          <a href="tel:256753943599" class="hover:text-white/70 text-white underline">Developed by Amanda Technologies</a>
         </div>
       </div>
     </div>
   </footer>
 
+  <!-- SCRIPTS -->
   <script>
-    // Year
+    // Footer year
     document.getElementById('yr').textContent = new Date().getFullYear();
 
-    // Mobile menu
+    // Mobile Menu (single source of truth)
     (function () {
-      const btn = document.querySelector('[data-menu-btn]');
-      const menu = document.querySelector('[data-menu]');
-      if (!btn || !menu) return;
+      const menuToggle = document.getElementById('menuToggle');
+      const mobileMenu = document.getElementById('mobileMenu');
+      const menuOpen   = document.getElementById('menuOpen');
+      const menuClose  = document.getElementById('menuClose');
 
-      btn.addEventListener('click', () => {
-        const willShow = menu.classList.contains('hidden');
-        menu.classList.toggle('hidden');
-        btn.setAttribute('aria-expanded', willShow ? 'true' : 'false');
+      if (!menuToggle || !mobileMenu) return;
+
+      let menuIsOpen = false;
+
+      function sync() {
+        mobileMenu.classList.toggle('hidden', !menuIsOpen);
+        if (menuOpen)  menuOpen.classList.toggle('hidden', menuIsOpen);
+        if (menuClose) menuClose.classList.toggle('hidden', !menuIsOpen);
+        menuToggle.setAttribute('aria-expanded', menuIsOpen ? 'true' : 'false');
+      }
+
+      menuToggle.addEventListener('click', function() {
+        menuIsOpen = !menuIsOpen;
+        sync();
       });
+
+      window.closeMobileMenu = function () {
+        menuIsOpen = false;
+        sync();
+      };
     })();
 
     // Reveal on scroll
@@ -741,6 +683,102 @@
       btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
     })();
 
+    // Video Slider + Modal
+    (function () {
+      const KCS_VIDEOS = [
+        "assets/videos/vid.mp4",
+        "assets/videos/vid3.mp4",
+        "assets/videos/nba.mp4",
+        "assets/videos/vid2.mp4"
+      ];
+
+      let currentVideoIndex = 0;
+
+      const galleryVideo = document.getElementById("galleryVideo");
+      const galleryVideoSource = document.getElementById("galleryVideoSource");
+      const openVideoNewTab = document.getElementById("openVideoNewTab");
+      const dots = Array.from(document.querySelectorAll(".videoDot"));
+
+      function updateDots() {
+        dots.forEach((d, i) => {
+          d.classList.toggle("bg-[var(--kcs-blue)]", i === currentVideoIndex);
+          d.classList.toggle("bg-white", i !== currentVideoIndex);
+        });
+      }
+
+      function setVideo(i, { autoplayPreview = true } = {}) {
+        currentVideoIndex = (i + KCS_VIDEOS.length) % KCS_VIDEOS.length;
+
+        const src = KCS_VIDEOS[currentVideoIndex];
+        if (galleryVideo) galleryVideo.pause();
+        if (galleryVideoSource) galleryVideoSource.src = src;
+        if (galleryVideo) galleryVideo.load();
+
+        if (openVideoNewTab) openVideoNewTab.href = src;
+
+        if (autoplayPreview && galleryVideo) {
+          galleryVideo.muted = true;
+          galleryVideo.play().catch(() => {});
+        }
+
+        updateDots();
+      }
+
+      function nextVideo() { setVideo(currentVideoIndex + 1); }
+      function prevVideo() { setVideo(currentVideoIndex - 1); }
+
+      function openVideoModal() {
+        const m = document.getElementById("videoModal");
+        const mv = document.getElementById("modalVideo");
+        const mvs = document.getElementById("modalVideoSource");
+
+        if (!m || !mv || !mvs) return;
+
+        if (galleryVideo) galleryVideo.pause();
+
+        m.classList.remove("hidden");
+        m.classList.add("flex");
+        document.body.style.overflow = "hidden";
+
+        mvs.src = KCS_VIDEOS[currentVideoIndex];
+        mv.load();
+        mv.play().catch(() => {});
+      }
+
+      function closeVideoModal() {
+        const m = document.getElementById("videoModal");
+        const mv = document.getElementById("modalVideo");
+        if (!m || !mv) return;
+
+        mv.pause();
+        m.classList.add("hidden");
+        m.classList.remove("flex");
+        document.body.style.overflow = "";
+      }
+
+      // expose for onclick handlers
+      window.setVideo = setVideo;
+      window.nextVideo = nextVideo;
+      window.prevVideo = prevVideo;
+      window.openVideoModal = openVideoModal;
+      window.closeVideoModal = closeVideoModal;
+
+      // ESC closes modal
+      document.addEventListener("keydown", (e) => {
+        const m = document.getElementById("videoModal");
+        if (!m || m.classList.contains("hidden")) return;
+        if (e.key === "Escape") closeVideoModal();
+      });
+
+      // init first video
+      setVideo(0, { autoplayPreview: true });
+
+      // auto-switch ONLY if not playing
+      setInterval(() => {
+        if (galleryVideo && galleryVideo.paused) nextVideo();
+      }, 12000);
+    })();
+
     // Filtering + Search
     (function () {
       const buttons = Array.from(document.querySelectorAll('.filterBtn'));
@@ -774,10 +812,10 @@
       });
 
       // default active
-      buttons[0].classList.add('bg-[var(--kcs-blue)]','text-white','border-[var(--kcs-blue)]');
+      if (buttons[0]) buttons[0].classList.add('bg-[var(--kcs-blue)]','text-white','border-[var(--kcs-blue)]');
 
-      search.addEventListener('input', apply);
-      clear.addEventListener('click', () => { search.value=''; apply(); });
+      if (search) search.addEventListener('input', apply);
+      if (clear) clear.addEventListener('click', () => { search.value=''; apply(); });
 
       apply();
     })();
@@ -794,6 +832,8 @@
       const lbPrev = document.getElementById('lbPrev');
       const lbNext = document.getElementById('lbNext');
       const lbOpenNew = document.getElementById('lbOpenNew');
+
+      if (!lb || !lbImg) return;
 
       let items = [];
       let idx = 0;
@@ -814,9 +854,9 @@
         const desc = btn.getAttribute('data-desc') || '';
 
         lbImg.src = src;
-        lbTitle.textContent = title;
-        lbDesc.textContent = desc;
-        lbOpenNew.href = src;
+        if (lbTitle) lbTitle.textContent = title;
+        if (lbDesc) lbDesc.textContent = desc;
+        if (lbOpenNew) lbOpenNew.href = src;
 
         lb.classList.remove('hidden');
         lb.classList.add('flex');
@@ -836,10 +876,10 @@
         });
       });
 
-      lbPrev.addEventListener('click', () => show(idx - 1));
-      lbNext.addEventListener('click', () => show(idx + 1));
-      lbClose.addEventListener('click', close);
-      lbBackdrop.addEventListener('click', close);
+      if (lbPrev) lbPrev.addEventListener('click', () => show(idx - 1));
+      if (lbNext) lbNext.addEventListener('click', () => show(idx + 1));
+      if (lbClose) lbClose.addEventListener('click', close);
+      if (lbBackdrop) lbBackdrop.addEventListener('click', close);
 
       document.addEventListener('keydown', (e) => {
         if (lb.classList.contains('hidden')) return;
@@ -848,17 +888,6 @@
         if (e.key === 'ArrowRight') show(idx + 1);
       });
     })();
-
-    // Load more demo
-    (function () {
-      const btn = document.getElementById('loadMore');
-      if (!btn) return;
-
-      btn.addEventListener('click', () => {
-        alert('For now, add more <figure class="card"> blocks or connect to a backend later. ✅');
-      });
-    })();
   </script>
 </body>
 </html>
-
