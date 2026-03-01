@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+                      http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+  <!-- Home -->
+  <url>
+    <loc>https://kisaasicollegeschool.com/</loc>
+    <lastmod>2026-03-01</lastmod>
+    <priority>1.00</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+
+  <!-- About -->
+  <url>
+    <loc>https://kisaasicollegeschool.com/about.html</loc>
+    <lastmod>2026-03-01</lastmod>
+    <priority>0.90</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <!-- Academics -->
+  <url>
+    <loc>https://kisaasicollegeschool.com/academics.html</loc>
+    <lastmod>2026-03-01</lastmod>
+    <priority>0.90</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <!-- Admissions -->
+  <url>
+    <loc>https://kisaasicollegeschool.com/admissions.html</loc>
+    <lastmod>2026-03-01</lastmod>
+    <priority>0.95</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <!-- Gallery -->
+  <url>
+    <loc>https://kisaasicollegeschool.com/gallery.html</loc>
+    <lastmod>2026-03-01</lastmod>
+    <priority>0.80</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+
+  <!-- Events -->
+  <url>
+    <loc>https://kisaasicollegeschool.com/events.html</loc>
+    <lastmod>2026-03-01</lastmod>
+    <priority>0.85</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+
+  <!-- Contact -->
+  <url>
+    <loc>https://kisaasicollegeschool.com/contact.html</loc>
+    <lastmod>2026-03-01</lastmod>
+    <priority>0.80</priority>
+    <changefreq>yearly</changefreq>
+  </url>
+
+</urlset>

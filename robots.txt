@@ -1,0 +1,16 @@
+User-agent: *
+Allow: /
+
+# Block private/system folders (only if they exist)
+Disallow: /admin/
+Disallow: /core/
+Disallow: /includes/
+Disallow: /private/
+Disallow: /vendor/
+
+# Allow assets
+Allow: /assets/
+Allow: /images/
+
+# Sitemap
+Sitemap: https://kisaasicollegeschool.com/sitemap.xml
